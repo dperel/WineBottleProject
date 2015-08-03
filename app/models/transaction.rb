@@ -1,6 +1,4 @@
 class Transaction < ActiveRecord::Base
-$:.unshift( File.expand_path("../../config", __FILE__) )
-
   require 'chain'
   require 'bitcoin'
 

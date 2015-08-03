@@ -20,8 +20,5 @@ require 'bitcoin'
      @address = Bitcoin::pubkey_to_address(@pub_key)
   end
 
-  def check_balance
-
-  end
 
 end

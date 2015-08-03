@@ -5,10 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :addresses
-  has_many :transctions
+  has_many :transactions
 
   attr_accessor :address
 
+  def show
+  end
   # The point of this model is: 
   # 1. Create a user account using Devise
   # 2. Edit personal detail
