@@ -29,3 +29,65 @@ Migrating to CreateTransactions (20150803181532)
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150803181532"]]
   [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20150803212347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_sent_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_ip" varchar
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803212347"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/users/sign_up" for ::1 at 2015-08-03 17:25:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/devise-3.5.1/app/views/devise/shared/_links.html.erb (8.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/devise-3.5.1/app/views/devise/registrations/new.html.erb within layouts/application (81.9ms)
+Completed 200 OK in 2264ms (Views: 2222.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-03 17:25:35 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-03 17:25:35 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-08-03 17:25:35 -0400
