@@ -1,7 +1,4 @@
-
-
-<h3>Welcome to WineChain</h3><br><br>
-
+<h1> hi </h1>
 
 
 <h2>Click below to see all your wine bottles</h2><br>
@@ -10,3 +7,8 @@
 <h3>Currently all users can create wine bottles</h3>
 <%= link_to "New Wine Bottle Account with Zero Balance", new_address_path%> 
 
+<% if current_user.is_vineyard %>
+  <p> THIS IS A VINEYARD ACCOUNT! </p> <br>
+  <p> Because you are a vineyard you can instantiate an address (coin?) for each new bottle </p>
+
+<% end %>
