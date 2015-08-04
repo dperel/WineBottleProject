@@ -12225,3 +12225,326 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-08-04 15:43:06 -0400
+
+
+Started GET "/" for ::1 at 2015-08-04 16:34:38 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (141.4ms)
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (3.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAddresses (20150803145022)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vineyard_id" integer, "btc_address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803145022"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Migrating to CreateUsers (20150803145040)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803145040"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Migrating to CreateVineyards (20150803145047)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "vineyards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "city" varchar, "country" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803145047"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to CreateTransactions (20150803181532)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803181532"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Migrating to AddDeviseToUsers (20150803212347)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "remember_created_at" datetime
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" datetime
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150803212347"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Migrating to Addresses (20150804134858)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "addresses" ADD "description" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150804134858"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Migrating to AddIsVineyardToUsers (20150804164709)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "is_vineyard" boolean
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150804164709"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Migrating to AddPrivateKeyToAddresses (20150804192105)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "addresses" ADD "private_key" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150804192105"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+Migrating to AddPublicKeyToAddresses (20150804192126)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "addresses" ADD "public_key" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150804192126"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2015-08-04 16:35:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered home/index.html.erb within layouts/application (24.1ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (undefined method `is_vineyard' for nil:NilClass):
+     7: <h3>Currently all users can create wine bottles</h3>
+     8: <%= link_to "New Wine Bottle Account with Zero Balance", new_address_path%> 
+     9: 
+    10: <% if current_user.is_vineyard %>
+    11:   <p> THIS IS A VINEYARD ACCOUNT! </p> <br>
+    12:   <p> Because you are a vineyard you can instantiate an address (coin?) for each new bottle </p>
+    13: 
+  app/views/home/index.html.erb:10:in `_app_views_home_index_html_erb__4369159615919594467_70295932017400'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started PUT "/console/repl_sessions/03f19041387ddeb4f30b8c4057a3d34b" for ::1 at 2015-08-04 16:39:59 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-08-04 16:40:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 272ms (Views: 256.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 16:40:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-08-04 16:40:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow9I2hdWoa2H1bMbgDa8Nqf1gtq9956q3DvNhQ9lNG7iX6lLzMCyUNndtWlVlEOIATIyiZoaaZuEvIIVFaddhA==", "user"=>{"email"=>"david3@l.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "david3@l.com"]]
+Completed 401 Unauthorized in 3ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow9I2hdWoa2H1bMbgDa8Nqf1gtq9956q3DvNhQ9lNG7iX6lLzMCyUNndtWlVlEOIATIyiZoaaZuEvIIVFaddhA==", "user"=>{"email"=>"david3@l.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 106ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-08-04 16:40:32 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-04 16:40:44 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5XDMEfKCAqDA/SqH5B4yvZrSN82hiVmILpuS+NeU1nuxSKhnFwb990L8tjKMod0UKz4jBFr0ld4PSHb+Zw6sw==", "user"=>{"name"=>"David P", "email"=>"dp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "is_vineyard"=>"0"}, "commit"=>"Sign up"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dp@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "is_vineyard", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "David P"], ["email", "dp@gmail.com"], ["encrypted_password", "$2a$10$bYQF2hKkI5nxsFnOJCoc8eAJDQi3BdTJQu20saqnPhrQtNaW303LG"], ["is_vineyard", "f"], ["created_at", "2015-08-04 20:40:44.283423"], ["updated_at", "2015-08-04 20:40:44.283423"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-04 20:40:44.289663"], ["current_sign_in_at", "2015-08-04 20:40:44.289663"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-08-04 20:40:44.291024"], ["id", 1]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 16:40:44 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 16:40:55 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 16:40:57 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/addresses/new" for ::1 at 2015-08-04 16:40:59 -0400
+Processing by AddressesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "addresses" ("private_key", "public_key", "btc_address", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["private_key", "0c81c416d4985f08a6067454f7d58ae03f997e3c7dbeea169e035bcf85f50eae"], ["public_key", "041e4e1d51bd1d94ee03b3bd3158a413e734e6201db142ca5d6a57a57912c833f99c2b8935e85afd68a6595483172a1a7dba0f85ec144bf29c492e0b27dfacaa8f"], ["btc_address", "mr7wZW4tYT6XEp35fdn4iM2hWVdQoxe45d"], ["user_id", 1], ["created_at", "2015-08-04 20:40:59.715015"], ["updated_at", "2015-08-04 20:40:59.715015"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 26ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-04 16:40:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  app/controllers/users_controller.rb:31:in `user_params'
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.6ms)
+
+
+Started GET "/addresses/new" for ::1 at 2015-08-04 16:40:59 -0400
+Processing by AddressesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "addresses" ("private_key", "public_key", "btc_address", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["private_key", "eeff48c9aab963e8a36f37e00739402f37f5c153c098eee96c540dafbe475cdd"], ["public_key", "04313d056d50f0f52ceb4c20f90c0c0577bf0332499669a6ef23592e683999264f3134cfd731bf36705f312720395c401256aa9d317a932c4134991b2322b2efda"], ["btc_address", "n2Z4eoeQnshiXoFcx6eBERnUBcHAzMyj7e"], ["user_id", 1], ["created_at", "2015-08-04 20:40:59.988676"], ["updated_at", "2015-08-04 20:40:59.988676"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-04 16:40:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  app/controllers/users_controller.rb:31:in `user_params'
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.2ms)

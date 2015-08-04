@@ -22,15 +22,9 @@ class UsersController < ApplicationController
 
   private
 
-# <<<<<<< HEAD
-#     def user_params
-#       params.permit(:id)
-#     end
-# =======
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :is_vineyard)
   end
-# >>>>>>> a55e12c4abaea257c940ef9f15001290deb45d01
 
 end 
 
