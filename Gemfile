@@ -46,5 +46,7 @@ group :development, :test do
   gem 'devise'
   gem 'paperclip'
   gem 'figaro'
+  gem 'ffi'
+  gem 'devise'
 end
 
