@@ -1,20 +1,15 @@
 class Transaction < ActiveRecord::Base
+
   attr_accessor :chain_client 
   belongs_to :user
   require 'chain'
 
-
-
-  def chain_client
-    unless @chain_client 
-      @chain_client = Chain::Client.new(key_id: 'a9c71386c1e7d619906f66c1ad13f01d', key_secret: 'API-KEY-SECRET')
-      @chain_client.block_chain = 'testnet3'
-      @chain_client
-    end
-  end
-
+  # key_secret = ENV["key_secret"]
   
 
+  def chain_client
+    @chain_client ||= ChainWrapper.new
+  end
 
   def make_transaction
     sender_address = 'mfZtBwXrvXXUqiViUEDsx13t9C5jEriyJs'
