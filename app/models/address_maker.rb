@@ -1,4 +1,4 @@
-class AddressMaker
+class Address_Maker
 
 require 'bitcoin'
 

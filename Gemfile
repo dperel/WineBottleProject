@@ -42,8 +42,8 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'chain-ruby', '~> 2.3.0'
+  gem 'chain'
   gem 'bitcoin-ruby'
-  gem 'devise'
   gem 'paperclip'
   gem 'figaro'
   gem 'ffi'

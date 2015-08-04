@@ -19,4 +19,8 @@
 # Ignore application configuration
 /config/application.yml
 /config/initializers/chain.rb
+
 /config/initializers/devise.rb
+
+/config/initializers/config.rb
+
