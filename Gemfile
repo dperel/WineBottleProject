@@ -49,5 +49,6 @@ group :development, :test do
   gem 'ffi'
   gem 'devise'
   gem 'pundit'
+  gem 'pry'
 end
 

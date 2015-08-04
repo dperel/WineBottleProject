@@ -1,4 +1,4 @@
-class VineyardsController < ApplicationContro  
+class VineyardsController < ApplicationController
   def new 
     @vineyard = Vineyard.new
   end
@@ -19,7 +19,7 @@ class VineyardsController < ApplicationContro
   private
 
   def vineyard_params
-    params.require(:vineyard).permit(:name)
+    params.require(:staff).permit(:name, :email, :password, :password_confirmation, :is_vineyard)
   end
 
 end 
