@@ -9,56 +9,10 @@
 <body>
 
 
-        </div><!--top bar wrap end-->
+        <!-- </div>top bar wrap end -->
         <!--navigation -->
         <!-- Static navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <h2>WineChain</h2> <br>
-                    <p class= "small grey">Authenticators of Luxury Wine Market</p>
-                </div><!--.navbar header-->
-                <div class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">                        
-                    <% if user_signed_in? %>
-                      <div class ="custom-auth">
-                      Welcome, <strong><%= current_user.email %></strong>!
-                      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-                      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-                      </div>
-                    <% else %>
-                      <div class ="custom-auth">
-                      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-                      <%= link_to "Log in", new_user_session_path, :class => 'navbar-link'  %>
-                      </div>
-                    <% end %>
-                    </ul><!--navbar-right for navbar-left replace class with navbar-left-->
-                </div><!--/.nav-collapse -->
-            </div><!--.container-->
-        </div><!--.navbar-default-->
-
-
-
-
-
-
-
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
+<%= render "layouts/header" %> 
 <%= yield %>
 
 </body>

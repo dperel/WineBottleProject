@@ -5633,3 +5633,104 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-08-03 21:47:41 -0400
 >>>>>>> master
+
+
+Started GET "/" for ::1 at 2015-08-04 17:20:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (10.7ms)
+Completed 200 OK in 1162ms (Views: 1126.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 17:20:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (84.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (287.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 472ms (Views: 396.4ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 17:20:56 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (33.9ms)
+Completed 200 OK in 426ms (Views: 328.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 17:21:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (146.4ms)
+  Rendered layouts/_header.html.erb (31.6ms)
+Completed 200 OK in 1136ms (Views: 1075.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 17:22:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (17.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (316.5ms)
+  Rendered layouts/_header.html.erb (19.1ms)
+Completed 200 OK in 614ms (Views: 514.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-08-04 17:22:19 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-04 17:22:20 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-08-04 17:22:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (13.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (73.2ms)
+  Rendered layouts/_header.html.erb (34.5ms)
+Completed 200 OK in 388ms (Views: 369.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-08-04 17:22:24 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (103.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 282ms (Views: 264.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 17:24:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (27.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (175.9ms)
+  Rendered layouts/_header.html.erb (14.0ms)
+Completed 200 OK in 433ms (Views: 393.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-04 17:24:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (25.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (95.2ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 383ms (Views: 351.3ms | ActiveRecord: 0.0ms)
