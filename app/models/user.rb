@@ -16,4 +16,5 @@ class User < ActiveRecord::Base
   # 2. Edit personal detail
   address = Address.new
 
+
 end
