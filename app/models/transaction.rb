@@ -3,8 +3,6 @@ class Transaction < ActiveRecord::Base
   attr_accessor :chain_client 
   belongs_to :user
   require 'chain'
-
-  # key_secret = ENV["key_secret"]
   
 
   def chain_client
@@ -12,7 +10,7 @@ class Transaction < ActiveRecord::Base
   end
 
   def make_transaction
-    sender_address = 'mfZtBwXrvXXUqiViUEDsx13t9C5jEriyJs'
+    sender_address = current_user.addresses.first
     sender_priv_key = 'd3d135d1eabfa5510803ccc508cf66835bc321c7548d5e54a8679d26c18763c9'
     receiver = Address_Maker.new
     receiver_address = receiver.address
@@ -23,8 +21,7 @@ class Transaction < ActiveRecord::Base
     puts "Receiver Public Key"
     puts receiver.pub_key
     puts "Chain Client:"
-    chain_client
-    @chain_client.transact(
+    chain_client.transact(
       inputs: [ 
         {
           address: sender_address,
