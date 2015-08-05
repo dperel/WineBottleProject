@@ -1,11 +1,19 @@
 <h1>unusable space</h1><br><br><br><br>
-<h2> This page shows you all your wine bottles<br>
-It is your wine cellar!!!!!!!!!!!!!!!!
-</h2>
-
+<h2> Your Wine Cellar <br></h2>
+<strong>Most recent bottle created:</strong> <br>
+<%=@user.addresses.last.btc_address%><br>
+Created at <%=@user.addresses.last.created_at%><br>
+Address ID #<%=@user.addresses.last.id%>.<br> 
+Belongs to user #<%=@user.addresses.last.user_id%>.  
+<br><br>
+<strong>All your bottles:</strong> <br>
 <%= @user.addresses.map do |ad| %> 
+<li>
 <p>
-<%= ad.user_id %>
+Bitcoin address: <%= ad.btc_address %> <br>
+Address ID #<%= ad.id%>.<br>
+Belongs to user #<%=ad.user_id%>.  
 </p>
+</li> 
 <%end%> 
 
