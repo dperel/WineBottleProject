@@ -24,3 +24,5 @@
 
 /config/initializers/config.rb
 
+/log/development.log
+
