@@ -17,8 +17,9 @@ class UsersController < ApplicationController
   end
 
   def show
-     @user = User.find(user_params)
-     @user_addresses = @user.addresses
+     @user = current_user
+     @user_addresses = current_user.addresses
+     @all_users = User.all
   end
 
   private
