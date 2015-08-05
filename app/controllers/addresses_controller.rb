@@ -30,24 +30,15 @@ require 'bitcoin'
     else 
       redirect_to '/addresses/new'
     end
-
   end 
 
-  # def create
-  #   @address = Address_Maker.new
-  #   if @address
-  #     redirect_to '/user#show'
-  #   else 
-  #     redirect_to '/addresses/new'
-  #   end
+  #Task to be done tomorrow 
+  # def check_balance
+  #   @balance = @chain_client.get_address(@address)
   # end
 
-  def show
-    
-  end
 
   def index
-    @user_addresses = Addresses.find(params[:user_id])
   end
 
   private

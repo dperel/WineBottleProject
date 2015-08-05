@@ -1,14 +1,15 @@
-<h1> hi </h1>
+<h1>unusable space</h1><br><br><br><br>
 
-
-<h2>Click below to see all your wine bottles</h2><br>
-<%= link_to "See your cellar", current_user%> 
-<h2>Send a bottle to another user</h2><br>
-<h3>Currently all users can create wine bottles</h3>
-<%= link_to "New Wine Bottle Account with Zero Balance", new_address_path%> 
+<h2>Manage Your Bottles</h2><br>
+<%= link_to "See your cellar", current_user%> ||
+<%= link_to "Add a new bottle your cellar", new_address_path%> <br>
+<h2>Send a bottle</h2>
+Link to new transaction path here  
 
 <% if current_user.is_vineyard %>
   <p> THIS IS A VINEYARD ACCOUNT! </p> <br>
-  <p> Because you are a vineyard you can instantiate an address (coin?) for each new bottle </p>
+  <p> Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>. Anyone can create an address, but only vineyards can get their own balance. 
+
+  </p>
 
 <% end %>
