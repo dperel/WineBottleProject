@@ -13,7 +13,7 @@ class Address < ActiveRecord::Base
 
 
 
-  def generate_btc_address_and_keys
+  def generate_btc_address_and_keys #will take description as argument
      key_pair = Bitcoin::generate_key
      self.description = "THIS IS FRRRAANZIA."
      self.private_key = key_pair[0]
