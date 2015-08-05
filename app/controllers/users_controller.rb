@@ -17,13 +17,14 @@ class UsersController < ApplicationController
   end
 
   def show
-     @user = User.find(user_params[:id])
+     @user = User.find(user_params)
+     @user_addresses = @user.addresses
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :is_vineyard)
+    params.require(:id)
   end
 
 end 
