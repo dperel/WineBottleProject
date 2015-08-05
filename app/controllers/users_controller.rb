@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     else 
       redirect_to '/users/new'
     end
+    #test line
   end
 
   def show
