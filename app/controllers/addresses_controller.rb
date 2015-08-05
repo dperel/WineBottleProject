@@ -3,6 +3,7 @@ class AddressesController < ApplicationController
    def new # following pressing a 'create new address' button
     @address = Address.new
     @address.user_id = current_user.id
+    @address.description = "FRANZIA"
 
     @address.generate_btc_address_and_keys
     if @address.save
