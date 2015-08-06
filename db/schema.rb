@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804192126) do
+ActiveRecord::Schema.define(version: 20150806021138) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "user_id" 
-    t.integer  "vineyard_id" #user input
+    t.integer  "user_id"
+    t.integer  "vineyard_id"
     t.string   "btc_address"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "description" #user input
+    t.string   "description"
     t.string   "private_key"
     t.string   "public_key"
   end
@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 20150804192126) do
     t.string   "name"
     t.string   "city"
     t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wine_faucets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

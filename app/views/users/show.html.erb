@@ -4,7 +4,9 @@
 <%=@user.addresses.last.btc_address%><br>
 Created at <%=@user.addresses.last.created_at%><br>
 Address ID #<%=@user.addresses.last.id%>.<br> 
+Description: <%=@user.addresses.last.description%>.<br>
 Belongs to user #<%=@user.addresses.last.user_id%>.  
+
 <br><br>
 <strong>All your bottles:</strong> <br>
 <%= @user.addresses.map do |ad| %> 
@@ -12,7 +14,8 @@ Belongs to user #<%=@user.addresses.last.user_id%>.
 <p>
 Bitcoin address: <%= ad.btc_address %> <br>
 Address ID #<%= ad.id%>.<br>
-Belongs to user #<%=ad.user_id%>.  
+Belongs to user #<%=ad.user_id%>.
+Description: #<%=ad.description%>.   
 </p>
 <div>
 
