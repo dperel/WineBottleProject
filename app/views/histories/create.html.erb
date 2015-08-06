@@ -1,3 +1,7 @@
 <h1>unusable space</h1><br><br><br><br>
-History !
-<%=@@history_array%> 
+
+<h2>History has been made!</h2>
+
+<%= @history.map do |h| %> 
+  <li><%= h %></li>
+<% end %>

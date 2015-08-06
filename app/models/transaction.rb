@@ -6,7 +6,7 @@ class Transaction < ActiveRecord::Base
 
   belongs_to :user
 
-  FEE = 10000
+  ANGELS_SHARE = 10000
 
   def make_transaction(receiver_id, bottle_description, params)
     receiver_address(receiver_id, bottle_description)
@@ -29,20 +29,21 @@ class Transaction < ActiveRecord::Base
     current_address_info = chain_client.get_address(sender_address)
     balance = current_address_info[0]["confirmed"]["balance"]
     chain_client.transact(
-        inputs: [ 
-          {
-            address: sender_address,
-            private_key: sender_private_key
-          }
-          ],
-        outputs: [
-          {
-            address: @address.btc_address,
-            amount: balance.to_i - FEE
-          }
-        ]
-      )
-    flash[:notice] = "Successfully sent a bottle"
+      inputs: 
+      [ 
+        {
+          address: sender_address,
+          private_key: sender_private_key
+        }
+      ],
+      outputs: 
+      [
+        {
+          address: @address.btc_address,
+          amount: balance.to_i - ANGELS_SHARE
+        }
+      ]
+    )
   end
   
 end
