@@ -6276,3 +6276,1859 @@ Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2
 
 
 Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 22:37:20 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 09:40:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 573ms (Views: 538.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 09:40:40 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-06 09:40:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAddress Load (1.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/show.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 208ms (Views: 161.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:34:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 4354ms
+
+ActionView::Template::Error (couldn't find file 'jquery-2.1.3.min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:20
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (148.6ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:34:22 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (couldn't find file 'jquery-2.1.3.min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:20
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.2ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:35:48 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (couldn't find file 'jquery-2.1.3.min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:20
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (120.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:35:49 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (couldn't find file 'jquery-2.1.3.min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:20
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:36:05 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (couldn't find file 'jquery.mb.YTPlayer.min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:22
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (124.6ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:36:34 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (couldn't find file 'appear' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:22
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4130883242753008_70229328847260'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.8ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:38:41 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2700ms (Views: 2699.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:38:43 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-apollo.self-55618c14eb6bb1ade374661dfa12e6d4eb9a13703e31fda874e441478f53a91d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/addresses.self-aa55acbf4367cb7a5caa410095bae5f82255181eeec363da7ea8f299e71c3c0f.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-basic.self-ee95fdad69b9d47f8252987f7484d8bf2cde8550c38cbac9b60c99d30a563ebf.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-clj.self-8ca8885279565f61d749ab003752068cc6898b636ab4beb7b0288a3e7b9702f3.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-css.self-f5085d8294e7017d16c2e962bc09e886ab4f87bd9c602699cb31b73ecff22e1d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-erlang.self-2fe2218cf2fb84d59ce0440adf881f4133649aceaad89da53ba8a743b2c59e63.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-dart.self-0e24af9c749b0c37dddc95bc8fa096b761de29f13c778fc7e1bf0030746b44cd.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-go.self-cc2c08a6f5bf8fb52eae49742a26fa5938ba56899395a35e4f6cbc4e41991edc.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-hs.self-154650c8c3266d27d82f96e60122f2bba7badf08506f29922484c84eb3f506a4.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-lisp.self-b256bc286d85390b3f0fb291ec7f70cb2f36ffdceb1e5754386275881f634b36.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-llvm.self-a301dbfdaf4666add6ae2dac1448e7fcb6c30f3c726705b3db2ed9336453b83c.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-lua.self-3066b862e9bdbec260197aa8489e11797b07ac36a7809481967e25a5611e5bb3.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-matlab.self-bef1576ddf009cb5a472e68525c74cc6124a64b90640318c4bea1e48bcffca06.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-mumps.self-3e7abcebc4dafd9f3162b6b472b7dae72d13c44300f0771ffa43241d9c9fb5aa.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-ml.self-91e6bc988f8587b0f196e7424f17e7b70779f92722b56b063339201104cee5d2.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-n.self-9bd599c17b5d59e2269ba04601ebf716abb9054354af27e4f0e91c7ac533b73c.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-pascal.self-7cab50a391988b45a4e943d1718b9ed5690eb49c64c769cc2fd03b65240a3b83.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-proto.self-cd5c8cea567f07c5f9b40074b5df8d96014169b58987654c29caec8c7895fb52.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-r.self-227cb572f582e7ba863542783f8e7e42b9a683d2300999bfa36a752e44b008b7.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-rd.self-5fb0426b83eec81e9bc351a6b3d46b0fec8cc86b32ab8f45ce970f1542cbed86.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-scala.self-bfd0d4bf356e8fce430f13766f0c9aecb036d16a56df9371e3a3888c89890c03.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-sql.self-2a046e88b3c0aefbb2323ff3df78856878784ec501eb11ff53ab705fd0834c43.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-tcl.self-7528a0f3e77ca8828cb877b6911105b33fbc28afc356f79afd06dd18fbf72f63.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-tex.self-4144a9bcf3353f6a99f82da8df09ab83009142877058d99e84d821876ea0798e.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-vb.self-3e9fdc4c1db2d0b477f5858a105e6b1aba641a8e155219c4a95b3a470c4a7418.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-vhdl.self-6ced503f288aed689edadc803ce3255de88fdb5e07b8a8aed450d9b01c29524d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-wiki.self-011b833b8add1f2852192b88f64b9f4ebecf4c31e354f52286b25154daa157e4.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-xq.self-725182f4bf7e20328096eee553c1d7c465a62b93936f8ded9477a97c982ac37a.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/lang-yaml.self-172d74071f1ab707963809f62c3a3938b0248d39ea919b78820e5acab5ba9749.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/prettify.self-f48d85c6ea701e417a857cd9292de12c2c0ff795c5ba45f7127c51cc6a97cf3d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/prettify/run_prettify.self-d5215d4d796cc3446443e88ed04f752c3b211a221b3e24d8a89b68d29c78c1db.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:38:44 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:42:03 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 1350ms (Views: 1342.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:42:04 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:42:04 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:42:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:42:04 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/addresses.self-aa55acbf4367cb7a5caa410095bae5f82255181eeec363da7ea8f299e71c3c0f.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-apollo.self-55618c14eb6bb1ade374661dfa12e6d4eb9a13703e31fda874e441478f53a91d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-basic.self-ee95fdad69b9d47f8252987f7484d8bf2cde8550c38cbac9b60c99d30a563ebf.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-clj.self-8ca8885279565f61d749ab003752068cc6898b636ab4beb7b0288a3e7b9702f3.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-css.self-f5085d8294e7017d16c2e962bc09e886ab4f87bd9c602699cb31b73ecff22e1d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-dart.self-0e24af9c749b0c37dddc95bc8fa096b761de29f13c778fc7e1bf0030746b44cd.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-erlang.self-2fe2218cf2fb84d59ce0440adf881f4133649aceaad89da53ba8a743b2c59e63.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-go.self-cc2c08a6f5bf8fb52eae49742a26fa5938ba56899395a35e4f6cbc4e41991edc.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-hs.self-154650c8c3266d27d82f96e60122f2bba7badf08506f29922484c84eb3f506a4.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-lisp.self-b256bc286d85390b3f0fb291ec7f70cb2f36ffdceb1e5754386275881f634b36.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-llvm.self-a301dbfdaf4666add6ae2dac1448e7fcb6c30f3c726705b3db2ed9336453b83c.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-lua.self-3066b862e9bdbec260197aa8489e11797b07ac36a7809481967e25a5611e5bb3.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-matlab.self-bef1576ddf009cb5a472e68525c74cc6124a64b90640318c4bea1e48bcffca06.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-ml.self-91e6bc988f8587b0f196e7424f17e7b70779f92722b56b063339201104cee5d2.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-n.self-9bd599c17b5d59e2269ba04601ebf716abb9054354af27e4f0e91c7ac533b73c.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-mumps.self-3e7abcebc4dafd9f3162b6b472b7dae72d13c44300f0771ffa43241d9c9fb5aa.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-pascal.self-7cab50a391988b45a4e943d1718b9ed5690eb49c64c769cc2fd03b65240a3b83.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-r.self-227cb572f582e7ba863542783f8e7e42b9a683d2300999bfa36a752e44b008b7.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-rd.self-5fb0426b83eec81e9bc351a6b3d46b0fec8cc86b32ab8f45ce970f1542cbed86.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-scala.self-bfd0d4bf356e8fce430f13766f0c9aecb036d16a56df9371e3a3888c89890c03.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-proto.self-cd5c8cea567f07c5f9b40074b5df8d96014169b58987654c29caec8c7895fb52.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-sql.self-2a046e88b3c0aefbb2323ff3df78856878784ec501eb11ff53ab705fd0834c43.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-tcl.self-7528a0f3e77ca8828cb877b6911105b33fbc28afc356f79afd06dd18fbf72f63.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-tex.self-4144a9bcf3353f6a99f82da8df09ab83009142877058d99e84d821876ea0798e.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-vb.self-3e9fdc4c1db2d0b477f5858a105e6b1aba641a8e155219c4a95b3a470c4a7418.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-vhdl.self-6ced503f288aed689edadc803ce3255de88fdb5e07b8a8aed450d9b01c29524d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-wiki.self-011b833b8add1f2852192b88f64b9f4ebecf4c31e354f52286b25154daa157e4.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-xq.self-725182f4bf7e20328096eee553c1d7c465a62b93936f8ded9477a97c982ac37a.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/lang-yaml.self-172d74071f1ab707963809f62c3a3938b0248d39ea919b78820e5acab5ba9749.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/prettify.self-f48d85c6ea701e417a857cd9292de12c2c0ff795c5ba45f7127c51cc6a97cf3d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/prettify/run_prettify.self-d5215d4d796cc3446443e88ed04f752c3b211a221b3e24d8a89b68d29c78c1db.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:42:05 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:43:33 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1593ms (Views: 1591.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/addresses.self-51a79826dc65cbcd0eade05969cf75cdd8f91998ce350ebab5afb92fe4b26b81.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:43:34 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-apollo.self-55618c14eb6bb1ade374661dfa12e6d4eb9a13703e31fda874e441478f53a91d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-basic.self-ee95fdad69b9d47f8252987f7484d8bf2cde8550c38cbac9b60c99d30a563ebf.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-clj.self-8ca8885279565f61d749ab003752068cc6898b636ab4beb7b0288a3e7b9702f3.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-css.self-f5085d8294e7017d16c2e962bc09e886ab4f87bd9c602699cb31b73ecff22e1d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-dart.self-0e24af9c749b0c37dddc95bc8fa096b761de29f13c778fc7e1bf0030746b44cd.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-erlang.self-2fe2218cf2fb84d59ce0440adf881f4133649aceaad89da53ba8a743b2c59e63.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-go.self-cc2c08a6f5bf8fb52eae49742a26fa5938ba56899395a35e4f6cbc4e41991edc.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-hs.self-154650c8c3266d27d82f96e60122f2bba7badf08506f29922484c84eb3f506a4.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-lisp.self-b256bc286d85390b3f0fb291ec7f70cb2f36ffdceb1e5754386275881f634b36.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-llvm.self-a301dbfdaf4666add6ae2dac1448e7fcb6c30f3c726705b3db2ed9336453b83c.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-matlab.self-bef1576ddf009cb5a472e68525c74cc6124a64b90640318c4bea1e48bcffca06.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-lua.self-3066b862e9bdbec260197aa8489e11797b07ac36a7809481967e25a5611e5bb3.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-ml.self-91e6bc988f8587b0f196e7424f17e7b70779f92722b56b063339201104cee5d2.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-mumps.self-3e7abcebc4dafd9f3162b6b472b7dae72d13c44300f0771ffa43241d9c9fb5aa.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-n.self-9bd599c17b5d59e2269ba04601ebf716abb9054354af27e4f0e91c7ac533b73c.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-pascal.self-7cab50a391988b45a4e943d1718b9ed5690eb49c64c769cc2fd03b65240a3b83.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-proto.self-cd5c8cea567f07c5f9b40074b5df8d96014169b58987654c29caec8c7895fb52.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-r.self-227cb572f582e7ba863542783f8e7e42b9a683d2300999bfa36a752e44b008b7.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-rd.self-5fb0426b83eec81e9bc351a6b3d46b0fec8cc86b32ab8f45ce970f1542cbed86.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-scala.self-bfd0d4bf356e8fce430f13766f0c9aecb036d16a56df9371e3a3888c89890c03.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-sql.self-2a046e88b3c0aefbb2323ff3df78856878784ec501eb11ff53ab705fd0834c43.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-tcl.self-7528a0f3e77ca8828cb877b6911105b33fbc28afc356f79afd06dd18fbf72f63.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-tex.self-4144a9bcf3353f6a99f82da8df09ab83009142877058d99e84d821876ea0798e.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-vb.self-3e9fdc4c1db2d0b477f5858a105e6b1aba641a8e155219c4a95b3a470c4a7418.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-vhdl.self-6ced503f288aed689edadc803ce3255de88fdb5e07b8a8aed450d9b01c29524d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-wiki.self-011b833b8add1f2852192b88f64b9f4ebecf4c31e354f52286b25154daa157e4.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-xq.self-725182f4bf7e20328096eee553c1d7c465a62b93936f8ded9477a97c982ac37a.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/lang-yaml.self-172d74071f1ab707963809f62c3a3938b0248d39ea919b78820e5acab5ba9749.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/run_prettify.self-d5215d4d796cc3446443e88ed04f752c3b211a221b3e24d8a89b68d29c78c1db.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/prettify/prettify.self-f48d85c6ea701e417a857cd9292de12c2c0ff795c5ba45f7127c51cc6a97cf3d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:43:35 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:43:42 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1499ms (Views: 1497.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:43:44 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-apollo.self-55618c14eb6bb1ade374661dfa12e6d4eb9a13703e31fda874e441478f53a91d.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-basic.self-ee95fdad69b9d47f8252987f7484d8bf2cde8550c38cbac9b60c99d30a563ebf.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-clj.self-8ca8885279565f61d749ab003752068cc6898b636ab4beb7b0288a3e7b9702f3.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-css.self-f5085d8294e7017d16c2e962bc09e886ab4f87bd9c602699cb31b73ecff22e1d.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-dart.self-0e24af9c749b0c37dddc95bc8fa096b761de29f13c778fc7e1bf0030746b44cd.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-go.self-cc2c08a6f5bf8fb52eae49742a26fa5938ba56899395a35e4f6cbc4e41991edc.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-erlang.self-2fe2218cf2fb84d59ce0440adf881f4133649aceaad89da53ba8a743b2c59e63.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-hs.self-154650c8c3266d27d82f96e60122f2bba7badf08506f29922484c84eb3f506a4.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-lisp.self-b256bc286d85390b3f0fb291ec7f70cb2f36ffdceb1e5754386275881f634b36.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-llvm.self-a301dbfdaf4666add6ae2dac1448e7fcb6c30f3c726705b3db2ed9336453b83c.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-matlab.self-bef1576ddf009cb5a472e68525c74cc6124a64b90640318c4bea1e48bcffca06.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-lua.self-3066b862e9bdbec260197aa8489e11797b07ac36a7809481967e25a5611e5bb3.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-ml.self-91e6bc988f8587b0f196e7424f17e7b70779f92722b56b063339201104cee5d2.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-n.self-9bd599c17b5d59e2269ba04601ebf716abb9054354af27e4f0e91c7ac533b73c.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-mumps.self-3e7abcebc4dafd9f3162b6b472b7dae72d13c44300f0771ffa43241d9c9fb5aa.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-proto.self-cd5c8cea567f07c5f9b40074b5df8d96014169b58987654c29caec8c7895fb52.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-pascal.self-7cab50a391988b45a4e943d1718b9ed5690eb49c64c769cc2fd03b65240a3b83.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-r.self-227cb572f582e7ba863542783f8e7e42b9a683d2300999bfa36a752e44b008b7.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-rd.self-5fb0426b83eec81e9bc351a6b3d46b0fec8cc86b32ab8f45ce970f1542cbed86.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-scala.self-bfd0d4bf356e8fce430f13766f0c9aecb036d16a56df9371e3a3888c89890c03.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-sql.self-2a046e88b3c0aefbb2323ff3df78856878784ec501eb11ff53ab705fd0834c43.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-tcl.self-7528a0f3e77ca8828cb877b6911105b33fbc28afc356f79afd06dd18fbf72f63.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-tex.self-4144a9bcf3353f6a99f82da8df09ab83009142877058d99e84d821876ea0798e.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-vb.self-3e9fdc4c1db2d0b477f5858a105e6b1aba641a8e155219c4a95b3a470c4a7418.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-wiki.self-011b833b8add1f2852192b88f64b9f4ebecf4c31e354f52286b25154daa157e4.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-vhdl.self-6ced503f288aed689edadc803ce3255de88fdb5e07b8a8aed450d9b01c29524d.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-xq.self-725182f4bf7e20328096eee553c1d7c465a62b93936f8ded9477a97c982ac37a.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/lang-yaml.self-172d74071f1ab707963809f62c3a3938b0248d39ea919b78820e5acab5ba9749.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/prettify.self-f48d85c6ea701e417a857cd9292de12c2c0ff795c5ba45f7127c51cc6a97cf3d.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/prettify/run_prettify.self-d5215d4d796cc3446443e88ed04f752c3b211a221b3e24d8a89b68d29c78c1db.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:43:45 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:45:39 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 965ms (Views: 963.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:45:40 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:45:41 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:45:41 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:45:41 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:45:41 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:45:41 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:46:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 1116ms (Views: 1095.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:46:09 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:48:11 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 119ms
+
+ActionView::Template::Error (couldn't find file 'flexslider-min' with type 'application/javascript'):
+    3: <head>
+    4:   <title>WineProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:28
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__944189485197558554_70285073269360'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.2ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-06 11:48:22 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 437ms (Views: 435.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:48:22 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.flexslider.self-a39a9ee7950b2e114d92029602799abc54e4071ed11488cec7075345e92fdf36.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:48:23 -0400
+
+
+Started GET "/" for ::1 at 2015-08-06 11:48:24 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 562ms (Views: 560.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/application.self-8b3f0f68a85b94d0a7d7b72736c4625ea9486044419fc11cf12ed54b2615f040.css?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.self-1e689a3a99f1f7f98e4632cbd823fc94da7cb6ce9c94b9f168d954866046a0fc.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/application.self-0fd12d698908183638c807a2410e8c843d21a55e57d9bc05bb32671428ab6321.js?body=1" for ::1 at 2015-08-06 11:48:25 -0400
+
+
+Started GET "/assets/isotope.pkgd.self-4c4d3d212251cde3ffd33aa09cabd76e566d38a7b0020d6760d0f575fae70f2a.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery-1.11.0.self-e87902a88decab79219ed591f69f2d9a44babbca4e20eb77fd83240a9b360d18.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery-2.1.3.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.self-4991a25937f6effc83b0a92a6f69b3473814704e6e8d9803aa043f609bb183f3.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.self-b9e3a79602fe4a3a6553584e57ced22701ed69e23401c16d982f1bc2bbd2b29f.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/owl.carousel.self-356da1275c02184d8e20410d0de1057d9c2daccadc1be86177e9ac7c6197046a.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-06 11:48:29 -0400
