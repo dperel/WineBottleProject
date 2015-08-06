@@ -2594,3 +2594,33 @@ Vertival margin, padding
 	.mb-xs-80 {margin-bottom:80px !important}
 
 }
+
+
+
+
+
+
+
+
+
+/*custom*/
+
+.authentication {
+	color: white;
+	margin-top: 1.3em;
+	padding-left: 1em;
+	list-style: none;
+}
+
+.menu {
+	float: right;
+}
+
+.home-section {
+	background-image: image-url("grape_hands.jpg");
+}
+
+.greeting {
+	margin-top: 1.45em;
+	padding-right: 2.5em;
+}
