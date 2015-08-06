@@ -1,4 +1,4 @@
-class WineFaucetController < ApplicationController
+class WineFaucetsController < ApplicationController
     attr_accessor :bottle_group
   #Goals of new route: 
   #1. Make new address with description from params
@@ -7,7 +7,6 @@ class WineFaucetController < ApplicationController
   def new
     @address = Address.new
   end
-
 
   def show
   end

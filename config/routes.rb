@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :users
   resources :transactions
   resources :addresses
-  resources :wine_faucet
+  resources :wine_faucets
+  resources :verifications
+  resources :histories
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

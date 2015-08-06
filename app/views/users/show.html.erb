@@ -14,7 +14,7 @@
     <li>Created at <%=@user.addresses.last.created_at%></li>
     <li>Address ID #<%=@user.addresses.last.id%>.</li>
     <li>Belongs to user #<%=@user.addresses.last.user_id%>.</li>
-    <li>Description: #<%=@user.addresses.last.description%>.</li>
+    <li>Description: <%=@user.addresses.last.description%>.</li>
   </ul>
   <hr>
 
@@ -23,6 +23,7 @@
     <ul>
       <li>Bitcoin address: <%= ad.btc_address %></li>
       <li>Address ID #<%= ad.id%>.</li>
+      <li>Bottle description: <%= ad.description %></li>
       <li>Belongs to user #<%=ad.user_id%>.</li>
       <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
         <%= f.hidden_field :address_description, :value => ad.description %>
@@ -30,8 +31,19 @@
         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
         <%= f.collection_select( :user_id, @all_users, :id, :name, {:prompt => true}) %>
         <%= f.submit "Sell" %> 
-        </ul>
-        <% end %>
+      <% end %>
+
+      <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
+        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+        <%= f.submit "Verrrrrify" %> 
+      <% end %>
+
+      <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
+       <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+       <%= f.submit "Get History" %> 
+    </ul>
+      <% end %>
+    <hr>
     </br>
   <% end %> 
 
