@@ -12,9 +12,6 @@
  *
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 //= require bootstrap.min
 //= require simpletextrotator
 //= require font-awesome.min
@@ -24,6 +21,7 @@
 //= require owl.carousel
 //= require animate
 //= require style
+//= require_tree . 
 
 
 

@@ -1131,6 +1131,7 @@ Team
 .team-image {
 	position: relative;
 	overflow: hidden;
+/*	background-image: image-url("team-2.jpg");*/
 }
 
 .team-image img {
