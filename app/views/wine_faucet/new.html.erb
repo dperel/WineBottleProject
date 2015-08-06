@@ -1,0 +1,16 @@
+<h1>unusable space</h1><br><br><br><br>
+
+<h2>Register New Wine Bottles</h2>
+(use some AJAX here)
+Directions: <br>
+<strong>Enter your wine bottle's description here:</strong><br>
+<br>
+  <%= form_for @address do |f| %> 
+    <%= f.label :description %>
+    <%= f.text_field :description%>
+    <%= f.submit "Submit" %> 
+  <%end%> 
+
+
+
+<br><strong>3. Click submit. The bottle will appear in your cellar.</strong> <br> 

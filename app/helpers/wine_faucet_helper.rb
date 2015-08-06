@@ -1,0 +1,2 @@
+module WineFaucetHelper
+end
