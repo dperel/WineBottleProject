@@ -1,6 +1,8 @@
 class History < ActiveRecord::Base
 
-  @@history_array = []
+  def self.history_array
+    @@history_array = []
+  end
 
   def self.get_history(address) 
     chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
@@ -15,7 +17,7 @@ class History < ActiveRecord::Base
     end
 
     if prior_address == "mgEZRfavVcZ3MHkYSwfQGD2S2eZWZ7wdsZ"# if the source == master faucet
-      @@history_array << "Master Bottle Account"
+      @@history_array << "WINE FAUCET"
     else
       @@history_array << prior_address
       address = prior_address
