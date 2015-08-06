@@ -1,11 +1,12 @@
 class Transaction < ActiveRecord::Base
 
-  attr_accessor :chain_client 
-  belongs_to :user
-  
   require 'chain'
-  
 
+  belongs_to :user
+
+  attr_accessor :chain_client 
+
+  
   def chain_client
     @chain_client ||= ChainWrapper.new
   end
@@ -46,47 +47,39 @@ class Transaction < ActiveRecord::Base
   #   )
   # end
 
-def make_transaction(receiver_id, bottle_description, params)
-  receiver_address(receiver_id, bottle_description)
-  transfer_balance(params, chain_client)
-end
+  def make_transaction(receiver_id, bottle_description, params)
+    receiver_address(receiver_id, bottle_description)
+    transfer_balance(params, chain_client)
+  end
 
+  def receiver_address(receiver_id, bottle_description)
+    @address = Address.new
+    @address.user_id = receiver_id
+    @address.description = bottle_description
+    @address.generate_btc_address_and_keys
+    @address.save
+  end
 
-def receiver_address(receiver_id, bottle_description)
-      @address = Address.new
-      @address.user_id = receiver_id
-      @address.description = bottle_description
-      @address.generate_btc_address_and_keys
-      @address.save
-end
+  def transfer_balance(params, chain_client)
+    sender_address = params[:address][:sending_btc_address]
+    sender_private_key = params[:address][:sending_private_key]
+    new_chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
+    new_chain_client.block_chain = 'testnet3'
+    new_chain_client.transact(
 
-def transfer_balance(params, chain_client)
-  sender_address = params[:address][:sending_btc_address]
-  sender_private_key = params[:address][:sending_private_key]
-  new_chain_client = Chain::Client.new(key_id: 'a9c71386c1e7d619906f66c1ad13f01d', key_secret: '781ed927e326b189e90c5ad94e1e25f3')
-  new_chain_client.block_chain = 'testnet3'
-  new_chain_client.transact(
+        inputs: [ 
+          {
+            address: sender_address,
+            private_key: sender_private_key
+          }
+          ],
+        outputs: [
+          {
+            address: @address.btc_address,
+            amount: 0.00001
+          }
+        ]
+      )
+  end
 
-      inputs: [ 
-        {
-          address: sender_address,
-          private_key: sender_private_key
-        }
-        ],
-      outputs: [
-        {
-          address: @address.btc_address,
-          amount: 0.00001
-        }
-      ]
-    )
-end
-
-
-  # Sends the transaction data to the bitcoin network, but does not store anything in the database
-  
-  # The point of this model is: 
-  # 1. take sender address and user address
-  # 2. Submit a transaction request to the BTC network 
-  # 3. Return a confirmation to somewhere 
 end
