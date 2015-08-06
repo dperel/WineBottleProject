@@ -23,7 +23,7 @@ class Transaction < ActiveRecord::Base
   def transfer_balance(params)
     sender_address = params[:address][:sending_btc_address]
     sender_private_key = params[:address][:sending_private_key]
-    new_chain_client = Chain::Client.new(key_id: 'a9c71386c1e7d619906f66c1ad13f01d', key_secret: ENV['key_secret'])
+    new_chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
     new_chain_client.block_chain = 'testnet3'
     new_chain_client.transact(
 
@@ -36,7 +36,7 @@ class Transaction < ActiveRecord::Base
         outputs: [
           {
             address: @address.btc_address,
-            amount: 0.00001
+            amount: 0.001
           }
         ]
       )

@@ -6,7 +6,6 @@ class Address < ActiveRecord::Base
   belongs_to :vineyard 
 
   validates :description,
-            uniqueness: true, 
             presence: true, 
             length: {maximum: 100}
   
@@ -22,7 +21,7 @@ class Address < ActiveRecord::Base
      self.description = "THIS IS FRRRAANZIA."
      self.private_key = key_pair[0]
      self.public_key = key_pair[1]
-     self.btc_address = Bitcoin::pubkey_to_address(@pub_key)
+     self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
      self.save
   end
 

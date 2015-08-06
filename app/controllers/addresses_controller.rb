@@ -22,7 +22,7 @@ class AddressesController < ApplicationController
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]
-    @address.btc_address = Bitcoin::pubkey_to_address(@pub_key)
+    @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
     @address.save
     new_address = @address
     WineFaucet.transfer_balance(new_address)

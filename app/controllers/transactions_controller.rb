@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
   end
 
   def show
-  end
 
+  end
 
 end
