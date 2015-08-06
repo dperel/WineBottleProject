@@ -11,7 +11,7 @@
   </ul>
   <hr>
 
-  <strong>Your entire cellar:</strong>
+  <strong>Your current cellar:</strong>
   <%= @user.addresses.map do |ad| %> 
     <ul>
       <li>Bitcoin address: <%= ad.btc_address %></li>
@@ -23,10 +23,11 @@
         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
         <%= f.collection_select( :user_id, @all_users, :id, :name, {:prompt => true}) %>
         <%= f.submit "Sell" %> 
+        </ul>
         <% end %>
-    </ul>
-    <hr>
+    </br>
   <% end %> 
 
-
+    <strong>Your former cellar:</strong>
+      Insert former bottles here
 
