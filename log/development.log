@@ -3978,3 +3978,8 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
   Rendered users/show.html.erb within layouts/application (58.9ms)
 Completed 200 OK in 362ms (Views: 358.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/histories" for ::1 at 2015-08-06 16:55:07 -0400
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XE1avfsntjLka2GWi5mghqITL1nyAv+9zgQZ0xI3hRRLZ7wsfOlKwsccfUIsF3jlc6PwHPP6l91PqNuKqM84Q==", "address"=>{"sending_btc_address"=>"myTRQxJydLw4UWJDVRyU6vLZa5hLiFeGL3"}, "commit"=>"Get History"}

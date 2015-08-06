@@ -2,9 +2,7 @@
 
 <h2>Manage Your Bottles</h2>
   <br>
-  <%= link_to "See your cellar", current_user%> ||
-  <%= link_to "Add a new bottle to your cellar", new_address_path%> 
-  <br> 
+    <%= link_to "See your cellar", current_user%> 
   <br> 
 
  <% if current_user && current_user.is_vineyard %>
@@ -14,9 +12,9 @@
     <h2>Register a New Bottle</h2>
     <%= link_to "Register a new series of bottles", new_wine_faucet_path%>
     <p> 
-      Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>.
+      Because you are a vineyard, you can <strong> create an address that draws a balance from our testnet coin stash.</strong>.
       <br> 
-      Anyone can create an address, but only vineyards can get their own balance. 
+      Anyone can create an address, which is a feature, not a bug, but only vineyards can get their own balance. 
     </p>
   <% else %>
     <br>
