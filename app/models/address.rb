@@ -18,7 +18,6 @@ class Address < ActiveRecord::Base
 
   def generate_btc_address_and_keys 
      key_pair = Bitcoin::generate_key
-     self.description = "THIS IS FRRRAANZIA."
      self.private_key = key_pair[0]
      self.public_key = key_pair[1]
      self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])

@@ -18,7 +18,7 @@ class WineFaucet < ActiveRecord::Base
           outputs: [
             {
               address: new_address.btc_address,
-              amount: 0.01
+              amount: 100000
             }
           ]
         )

@@ -8,7 +8,6 @@ class WineFaucetsController < ApplicationController
     @address = Address.new
   end
 
-
   def show
   end
   

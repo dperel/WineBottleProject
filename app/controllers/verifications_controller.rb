@@ -6,6 +6,8 @@ class VerificationsController < ApplicationController
     chain_client.block_chain = 'testnet3'
     @response = chain_client.get_address(address)
     @response[0]["confirmed"]["balance"] > 0 ? @verification_status = "verified" : @verification_status = "UNVERIFIED"
+    @address_balance = @response[0]["confirmed"]["balance"]
+    
   end 
 
 end
