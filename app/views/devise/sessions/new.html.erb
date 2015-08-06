@@ -1,11 +1,31 @@
+<section class="module-small bg-dark bg-dark-60" data-background="assets/images/section-4.jpg" style="background-image: url(http://mycookroom.ru/mywork/Rival/Rival-v1.5.1/Site/assets/images/section-4.jpg);">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <h1 class="module-title font-alt">Login</h1>
+          </div>
+        </div><!-- .row -->
+      </div>
+    </section>
 
 
-<h2>Log in</h2>
-<br><br><br><br><br>
+<div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
+
+            <h4 class="font-alt">Log in</h4>
+
+            <!-- Divider -->
+            <hr class="divider-w mb-10">
+            <!-- Divider -->
+
 
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

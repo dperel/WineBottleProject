@@ -13,10 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require bootstrap-sprockets
-//= require_tree ../../../vendor/assets/javascripts/.
-
 //= require jquery-2.1.3.min
 //= require bootstrap.min
 //= require appear
@@ -32,4 +28,7 @@
 //= require wow.min
 //= require owl.carousel.min
 //= require contact
+//= require jquery.mb.YTPlayer.min
 //= require custom
+//= require_tree .
+//= require bootstrap-sprockets

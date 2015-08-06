@@ -1131,6 +1131,7 @@ Team
 .team-image {
 	position: relative;
 	overflow: hidden;
+/*	background-image: image-url("team-2.jpg");*/
 }
 
 .team-image img {
@@ -2592,4 +2593,39 @@ Vertival margin, padding
 	.mb-xs-70 {margin-bottom:70px !important}
 	.mb-xs-80 {margin-bottom:80px !important}
 
+}
+
+
+
+
+
+
+
+
+
+/*custom*/
+
+.authentication {
+	color: white;
+	margin-top: 1.3em;
+	padding-left: 1em;
+	list-style: none;
+}
+
+.menu {
+	float: right;
+}
+
+.home-section {
+	background-image: image-url("grape_hands.jpg");
+}
+
+.greeting {
+	margin-top: 1.45em;
+	padding-right: 2.5em;
+}
+
+.intro-banner {
+	padding-top: 15em;
+	padding-left: 25em;
 }

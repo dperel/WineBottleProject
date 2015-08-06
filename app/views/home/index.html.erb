@@ -1,31 +1,150 @@
-<h1>unusable space</h1><br><br><br><br>
 
-<h2>Manage Your Bottles</h2>
-  <br>
-    <%= link_to "See your cellar", current_user%> 
-  <br> 
-
- <% if current_user && current_user.is_vineyard %>
-    <p>
-      <strong> You are using a Vineyard Level account </strong>
-    </p> 
-    <h2>Register a New Bottle</h2>
-    <%= link_to "Register a new series of bottles", new_wine_faucet_path%>
-    <p> 
-      Because you are a vineyard, you can <strong> create an address that draws a balance from our testnet coin stash.</strong>.
-      <br> 
-      Anyone can create an address, which is a feature, not a bug, but only vineyards can get their own balance. 
-    </p>
-  <% else %>
-    <br>
-    <br>
-    <p> 
-      You should sign up or login and start transferring bottles 
-    </p>
-  <% end %>
-
-<% if flash[:notice] %>
-  <div class="notice">
-    <%= flash[:notice] %>
+  <!-- Preloader -->
+  <div class="page-loader">
+    <div class="loader">Loading...</div>
   </div>
-<% end %>
+
+
+
+  <!-- Home start -->
+  <section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" style="background-image: url(https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?q=80&fm=jpg&s=f500087a88b8b870139230b457826dc3); >
+
+    <div class="hs-caption ">
+      <div class="caption-content intro-banner">
+        <div class="hs-title-size-1 font-alt mb-30">
+          A Luxury Wine Authentication System
+        </div>
+        <div class="hs-title-size-4 font-alt mb-40">This is Stem
+        </div>
+        <a href="#about" class="section-scroll btn btn-border-w btn-round">Learn More</a>
+      </div>
+    </div>
+
+  </section >
+  <!-- Home end -->
+
+  <!-- Wrapper start -->
+  <div class="main">
+
+    <!-- About start -->
+    <section id="about" class="module">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-8 col-sm-offset-2">
+
+            <h2 class="module-title font-alt">Welcome to Stem</h2>
+            <div class="module-subtitle font-serif large-text">
+              Stem is a decentralized authentication system that uses block chain technology to verify and track wine products. 
+            </div>
+
+          </div>
+
+        </div><!-- .row -->
+
+        <div class="row">
+
+          <div class="col-sm-2 col-sm-offset-5">
+
+            <div class="large-text align-center">
+              <a href="#features" class="section-scroll"><i class="fa fa-angle-down"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div><!-- .container -->
+    </section>
+    <!-- About end -->
+
+    <!-- Divider -->
+    <hr class="divider-w">
+    <!-- Divider -->
+
+    <!-- Features start -->
+    <section id="features" class="module">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-6 col-sm-offset-3">
+
+            <h2 class="module-title font-alt">Our Services</h2>
+            <div class="module-subtitle font-serif">
+              This above all:<br>
+              To thine own self be true,<br>
+              And it must follow, as the night the day,<br>
+              Thou canst not then be false to any man.<br><br>
+            </div>
+
+          </div>
+
+        </div><!-- .row -->
+
+        <div class="row multi-columns-row">
+
+          <!-- Features start -->
+          <div class="col-sm-6 col-md-3 col-lg-3">
+
+            <div class="features-item">
+              <div class="features-icon">
+                <span class="icon-lightbulb"></span>
+              </div>
+              <h3 class="features-title font-alt">Transact</h3>
+              Transfer bottle ownership to a user after making a sale. Recording a transaction has never been so transparent.
+            </div>
+
+          </div>
+          <!-- Features end -->
+
+          <!-- Features start -->
+          <div class="col-sm-6 col-md-3 col-lg-3">
+
+            <div class="features-item">
+              <div class="features-icon">
+                <span class="icon-bike"></span>
+              </div>
+              <h3 class="features-title font-alt">Track</h3>
+              Search bottles the pique your interest. If a seller claims the bottle is in Lausanne, and Stem says so too, you're good to go.
+            </div>
+
+          </div>
+          <!-- Features end -->
+
+          <!-- Features start -->
+          <div class="col-sm-6 col-md-3 col-lg-3">
+
+            <div class="features-item">
+              <div class="features-icon">
+                <span class="icon-tools"></span>
+              </div>
+              <h3 class="features-title font-alt">Verify</h3>
+              Be confident that your prospective Scharzhofberger Riesling was <em> really </em> produced in Germany's Rheingau vineyard.
+            </div>
+
+          </div>
+          <!-- Features end -->
+
+          <!-- Features start -->
+          <div class="col-sm-6 col-md-3 col-lg-3">
+
+            <div class="features-item">
+              <div class="features-icon">
+                <span class="icon-gears"></span>
+              </div>
+              <h3 class="features-title font-alt"> Explore</h3>
+              Browse popular bottles and strategize your next big purchase with our online catalog of the world's greatest wines.
+            </div>
+
+          </div>
+          <!-- Features end -->
+
+        </div><!-- .row -->
+
+      </div><!-- .container -->
+    </section>
+    <!-- Features end -->
+
+  

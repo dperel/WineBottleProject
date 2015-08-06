@@ -1,4 +1,10 @@
-<h1>unusable space</h1><br><br><br><br>
+<% if current_user && current_user.is_vineyard %>
+  <p><strong> You are using a Vineyard Level account </strong></p> 
+  
+
+  <%= link_to "Register a new bottle", new_wine_faucet_path%>
+  <p> Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>.<br> Anyone can create an address, but only vineyards can get their own balance. 
+  </p>
 
   <h2>Your Wine Cellar:</h2>
   <hr>
@@ -43,4 +49,5 @@
 
     <strong>Your former cellar:</strong>
       Insert former bottles here
+<% end %>
 
