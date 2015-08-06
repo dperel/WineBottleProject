@@ -6,7 +6,6 @@ class Transaction < ActiveRecord::Base
 
   attr_accessor :chain_client 
 
-  
   def chain_client
     @chain_client ||= ChainWrapper.new
   end

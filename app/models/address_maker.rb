@@ -1,6 +1,6 @@
 class Address_Maker
 
-require 'bitcoin'
+  require 'bitcoin'
 
   attr_accessor :address, 
                 :key_pair,
@@ -19,6 +19,5 @@ require 'bitcoin'
      @pub_key = @key_pair[1]
      @address = Bitcoin::pubkey_to_address(@pub_key)
   end
-
 
 end
