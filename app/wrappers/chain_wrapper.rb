@@ -8,6 +8,5 @@ class ChainWrapper
       @api_client
     end
   end
-  # do we need to initialize with a new chain client every time?
 
 end

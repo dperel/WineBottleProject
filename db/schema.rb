@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20150804192126) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "user_id" 
-    t.integer  "vineyard_id" #user input
+    t.integer  "user_id"
+    t.integer  "vineyard_id"
     t.string   "btc_address"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "description" #user input
+    t.string   "description"
     t.string   "private_key"
     t.string   "public_key"
   end
