@@ -4,75 +4,13 @@
     <div class="loader">Loading...</div>
   </div>
 
-  <!-- Navigation start -->
-  <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top" role="navigation">
-
-    <div class="container">
-  
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Stem</a>
-      </div>
-  
-      <div class="collapse navbar-collapse" id="custom-collapse">
-  
-        <ul class="nav navbar-nav navbar menu">
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu</a>
-            <ul class="dropdown-menu" role="menu">
-              <li>"<%= link_to "See your cellar", current_user%>"</li>
-              <li><a href="#">Your Transactions</a></li>
-              <li><"<%= link_to "Logout", destroy_user_session_path, method: :delete%>"</li>
-            </ul>
-          </li>
-  
-        </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li class ="dropdown authentication greeting">                 
-              <% if user_signed_in? %>
-                <div>
-                <strong> Hello, <%= current_user.name %></strong>
-                
-                </div>
-              <% else %>
-                <div>
-                <%= link_to "Sign up", new_user_registration_path, :class => 'authentication'  %> |
-                <%= link_to "Log in", new_user_session_path, :class => 'authentication'  %>
-                </div>
-              <% end %>
-              <li>
-            </ul>
-
-
-
-
-
-      </div>
-  
-    </div>
-
-  </nav>
-  <!-- Navigation end -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- Home start -->
-  <section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30"  >
+  <section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" style="background-image: url(https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?q=80&fm=jpg&s=f500087a88b8b870139230b457826dc3); >
 
-    <div class="hs-caption">
-      <div class="caption-content">
+    <div class="hs-caption ">
+      <div class="caption-content intro-banner">
         <div class="hs-title-size-1 font-alt mb-30">
           A Luxury Wine Authentication System
         </div>
@@ -209,24 +147,4 @@
     </section>
     <!-- Features end -->
 
-
-
-
-
-<h2>Manage Your Bottles</h2><br>
-<%= link_to "See your cellar", current_user%> ||
-<%= link_to "Add a new bottle to your cellar", new_address_path%> <br>
-<h2>Send a bottle</h2>
-Link to new transaction path here<br>  
- <br> 
- <br> 
- <% if current_user && current_user.is_vineyard %>
-    <p><strong> You are using a Vineyard Level account </strong></p> 
-<h2>Register a New Bottle</h2>
-<%= link_to "Register a new series of bottles", new_wine_faucet_path%>
-<p> Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>.<br> Anyone can create an address, but only vineyards can get their own balance. 
- </p>
- <% else %>
-  <br><br>
-  <p> You should sign up or login and start transferring bottles </p>
-<% end %>
+  
