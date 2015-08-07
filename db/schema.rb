@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806182112) do
+ActiveRecord::Schema.define(version: 20150807144450) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "vineyard_id"
     t.string   "btc_address"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "description"
     t.string   "private_key"
     t.string   "public_key"
+    t.boolean  "is_sold",     default: false
   end
 
   create_table "histories", force: :cascade do |t|
@@ -49,6 +50,10 @@ ActiveRecord::Schema.define(version: 20150806182112) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "is_vineyard"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "business_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -18,7 +18,6 @@ class AddressesController < ApplicationController
     @address = Address.new
     @address.user_id = current_user.id
     @address.description = params["address"]["description"]
-    binding.pry
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]

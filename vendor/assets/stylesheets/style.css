@@ -2629,3 +2629,7 @@ Vertival margin, padding
 	padding-top: 15em;
 	padding-left: 25em;
 }
+
+.unusable {
+	color: white;
+}
