@@ -1,7 +1,12 @@
 <h1>unusable space</h1><br><br><br><br>
 
-<h2>History has been made!</h2>
+<h2>These are the past owners of your bottle:</h2>
 
-<%= @history.map do |h| %> 
-  <li><%= h %></li>
+<ul>
+<%= @users.map do |h| %> 
+  <li>
+  <%= h.name.strip %>
+  </li>
 <% end %>
+</ul>
+
