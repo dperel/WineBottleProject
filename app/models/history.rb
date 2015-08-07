@@ -25,4 +25,13 @@ class History < ActiveRecord::Base
     end
   end
 
-end
+  def self.past_owners
+    user_ids = []
+    @users = []
+    
+    @@history_array.map{|address| user_ids << Address.where(btc_address: address).pluck(:user_id)}
+    @users = user_ids.map { |user_id| User.find(user_id)}.flatten
+    # binding.pry
+  end 
+
+end 
