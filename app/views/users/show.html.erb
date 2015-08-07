@@ -5,51 +5,86 @@
     </p>
   <%= link_to "Register a new bottle", new_wine_faucet_path%>
 
+<% end %> 
+<!-- ends if statement -->
   
-  <h2>Your Wine Cellar:</h2>
+  <h2>Most Recent Bottle</h2>
   <% if @user.addresses.count > 0 %>
-  <hr>
-  <strong>Most recent bottle created:</strong>
-  <ul>
-    <li>Address: <%=@user.addresses.last.btc_address%></li>
-    <li>Created at <%=@user.addresses.last.created_at%></li>
-    <li>Address ID #<%=@user.addresses.last.id%>.</li>
-    <li>Belongs to user #<%=@user.addresses.last.user_id%>.</li>
-    <li>Description: <%=@user.addresses.last.description%>.</li>
-  </ul>
-  <hr>
-
-  <strong>Your current cellar</strong>
-  <%= @user.addresses.map do |ad| %> 
+    <hr>
     <ul>
-      <li>Bitcoin address: <%= ad.btc_address %></li>
-      <li>Address ID #<%= ad.id%>.</li>
-      <li>Bottle description: <%= ad.description %></li>
-      <li>Belongs to user #<%=ad.user_id%>.</li>
-      <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
-        <%= f.hidden_field :address_description, :value => ad.description %>
-        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-        <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
-        <%= f.collection_select( :user_id, @all_users, :id, :name, {:prompt => true}) %>
-        <%= f.submit "Sell" %> 
-      <% end %>
-
-      <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
-        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-        <%= f.submit "Verrrrrify" %> 
-      <% end %>
-
-      <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
-       <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-       <%= f.submit "Get History" %> 
+      <li>Address: <%=@user.addresses.last.btc_address%></li>
+      <li>Created at <%=@user.addresses.last.created_at%></li>
+      <li>Address ID #<%=@user.addresses.last.id%>.</li>
+      <li>Belongs to user #<%=@user.addresses.last.user_id%>.</li>
+      <li>Description: <%=@user.addresses.last.description%>.</li>
     </ul>
-      <% end %>
+    <hr>
+
+
+
+    <h2>Your Current Cellar:</h2>
+    <%=@current_bottles.map do |ad| %> 
+      <ul>
+        <li>Bitcoin address: <%= ad.btc_address %></li>
+        <li>Address ID #<%= ad.id%>.</li>
+        <li>Bottle description: <%= ad.description %></li>
+        <li>Belongs to user #<%=ad.user_id%>.</li>
+        <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
+          <%= f.hidden_field :address_description, :value => ad.description %>
+          <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+          <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
+          <%= f.collection_select( :user_id, @all_users, :id, :name, {:prompt => true}) %>
+          <%= f.submit "Sell" %> 
+        <% end %> 
+        <!-- ends do block for sell form -->
+
+        <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
+          <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+          <%= f.submit "Verrrrrify" %> 
+        <% end %>
+        <!-- ends do block for verify form -->
+
+        <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
+         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+         <%= f.submit "Get History" %> 
+      </ul>
+        <% end %>
+        <!-- ends do block for get history form -->
+
     <hr>
     </br>
-  <% end %> <br> <br>
+    <% end %> <br> <br>
+    <!-- end map current bottles -->
 
-    <strong>Your former cellar:</strong>
-      Insert former bottles here
+    <!-- former cellar starts here -->
+    <h2>Your Former Cellar:</h2>
+    <%= @former_bottles.map do |ad| %> 
+      <ul>
+        <li>Bitcoin address: <%= ad.btc_address %></li>
+        <li>Address ID #<%= ad.id%>.</li>
+        <li>Bottle description: <%= ad.description %></li>
+
+        <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
+          <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+          <%= f.submit "Verrrrrify" %> 
+        <% end %>
+        <!-- ends do block for verify form -->
+
+        <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
+         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+         <%= f.submit "Get History" %> 
+      </ul>
+        <% end %>
+        <!-- ends do block for get history form -->
+
+      <hr>
+      </br>
+    <% end %> <br> <br>
+    <!-- end map former bottles -->
+    
   <% end %>
-<% end %>
+  <!-- ends if @user.addresses.count -->
+
+
+
   

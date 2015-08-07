@@ -50,7 +50,7 @@ class Transaction < ActiveRecord::Base
   def change_to_sold(params)
     target = Address.where(btc_address: params[:address][:sending_btc_address])
     target[0][:is_sold] = true
-    binding.pry
+    target[0].save
   end
   
 end

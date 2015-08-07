@@ -12,16 +12,16 @@ class User < ActiveRecord::Base
   has_many :addresses
   has_many :transactions
 
-  validates_presence_of :name, :city, :state, :country
+  validates_presence_of :name, :city, :country
 
   attr_accessor :address
 
   def self.current_bottles(current_user)
-    binding.pry
-    current_user.addresses.where(is_sold: true)
+    current_user.addresses.where(is_sold: false)
   end
 
-  def former_bottles
+  def self.former_bottles(current_user)
+    current_user.addresses.where(is_sold: true)
   end
 
   def show

@@ -18,7 +18,8 @@ class UsersController < ApplicationController
 
   def show
      @user = current_user
-     # User.current_bottles(current_user)
+     @current_bottles = User.current_bottles(current_user)
+     @former_bottles = User.former_bottles(current_user)
      @user_addresses = current_user.addresses
      @all_users = User.all
   end
