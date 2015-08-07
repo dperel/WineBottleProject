@@ -6,7 +6,6 @@ class WineFaucet < ActiveRecord::Base
       faucet_private_key = ENV['faucet_key_secret']
       new_chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
       new_chain_client.block_chain = 'testnet3'
-      binding.pry
       new_chain_client.transact(
 
           inputs: [ 
