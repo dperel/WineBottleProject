@@ -17,17 +17,11 @@ class User < ActiveRecord::Base
   attr_accessor :address
 
   def self.current_bottles(current_user)
-    binding.pry
+    current_user.addresses.where(is_sold: false)
+  end
+
+  def self.former_bottles(current_user)
     current_user.addresses.where(is_sold: true)
   end
-
-  def former_bottles
-  end
-
-  def show
-  end
-  # The point of this model is: 
-  # 1. Create a user account using Devise
-  # 2. Edit personal detail
 
 end

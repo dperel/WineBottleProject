@@ -18,8 +18,8 @@ class UsersController < ApplicationController
 
   def show
      @user = current_user
-     # User.current_bottles(current_user)
-     @user_addresses = current_user.addresses
+     @current_bottles = current_user.addresses.where(is_sold: false)
+     @former_bottles = current_user.addresses.where(is_sold: true)
      @all_users = User.all
   end
 

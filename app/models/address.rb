@@ -5,9 +5,10 @@ class Address < ActiveRecord::Base
   belongs_to :user
   belongs_to :vineyard 
 
-  validates :description,
-            presence: true, 
-            length: {maximum: 100}
+  validates_presence_of :vineyard_name, 
+                        :wine_type, 
+                        :vintage, 
+                        :provenance
   
   attr_accessor :address, 
                 :key_pair,

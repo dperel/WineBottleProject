@@ -9,7 +9,7 @@ class History < ActiveRecord::Base
     chain_client.block_chain = 'testnet3'
 
     transaction_data = chain_client.get_address_transactions(address)
-
+    binding.pry
     if transaction_data.length == 1
       prior_address = transaction_data[0]["inputs"][0]["addresses"][0] # this is a the source of the transaction
     else 
@@ -31,7 +31,7 @@ class History < ActiveRecord::Base
     
     @@history_array.map{|address| user_ids << Address.where(btc_address: address).pluck(:user_id)}
     @users = user_ids.map { |user_id| User.find(user_id)}.flatten
-    # binding.pry
+   
   end 
 
 end 
