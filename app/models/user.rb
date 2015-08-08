@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :addresses
   has_many :transactions
 
-  validates_presence_of :name, :city, :state, :country
+  validates_presence_of :name, :city, :country
 
   attr_accessor :address
 

@@ -62,7 +62,6 @@
     <% end %>
     <!-- closes @current_bottles.map -->
 
-  <!-- -------------------------------------- -->
   <hr>
   <strong>Your Former Cellar:</strong>
     <%= @former_bottles.map do |ad| %> 
@@ -92,5 +91,8 @@
     <br>
     <br>
     <% end %>
-    <!-- closes @current_bottles.map -->
-  
+    <!-- closes @former_bottles.map -->
+
+  <% end %>
+  <!-- ends if @user.addresses.count -->
+
