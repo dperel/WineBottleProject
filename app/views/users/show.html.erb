@@ -7,6 +7,11 @@
 
 <% end %> 
 <!-- ends if statement -->
+
+  <% if flash.now[:notice] %>
+    <div class="notice"><%= flash.now[:notice] %></div>
+  <% end %>
+   
   
   <h2>Most Recent Bottle</h2>
   <% if @user.addresses.count > 0 %>
