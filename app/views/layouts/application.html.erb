@@ -10,12 +10,12 @@
 <body>
 
   <!-- Navigation start -->
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
 
     <div class="container">
   
       <div class="navbar-header">
-        <a class="navbar-brand stem" Stem</a>
+        <a class="navbar-brand stem">Stem</a>
       </div>
   
       <div class="collapse navbar-collapse" id="custom-collapse">
@@ -33,19 +33,19 @@
 
           </li>
         </ul>
-   <% end %>
+
+   
             <ul class="nav navbar-nav navbar-right stem">
               <li class ="dropdown authentication greeting">                 
-              <% if user_signed_in? %>
                 <div>
                 <strong> Hello, <%=current_user.name %></strong>
                 </div>
-              <% else %>
+  <% else %>
                 <div>
                 <%= link_to "Sign up", new_user_registration_path, :class => 'authentication'%> |
                 <%= link_to "Log in", new_user_session_path, :class => 'authentication'  %>
                 </div>
-              <% end %>
+  <% end %>
               <li>
             </ul>
       </div>

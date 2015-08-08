@@ -2618,6 +2618,7 @@ Vertival margin, padding
 
 .home-section {
 	background-image: image-url("grape_hands.jpg");
+
 }
 
 .greeting {
@@ -2631,5 +2632,21 @@ Vertival margin, padding
 }
 
 .unusable {
-	color: white;
+	color: black;
+}
+
+.jumbotron {
+	background-image: url("bottle_open.jpg") !important;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding-top: 7em;
+	padding-bottom: 8em;
+}
+
+
+.jumbotron h1 {
+	color:black;
+}
+.jumbotron p {
+	color: black;
 }
