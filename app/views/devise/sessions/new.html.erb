@@ -10,41 +10,32 @@
     </section>
 
 
-<div class="container">
+<!--     end of banner start of login form
+ -->
+<div class="container login">
+<div class=".col-md-offset-3">
 
-        <div class="row">
-
-          <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-
-            <h4 class="font-alt">Log in</h4>
+            <h4 class="font-alt">Log In</h4>
 
             <!-- Divider -->
             <hr class="divider-w mb-10">
             <!-- Divider -->
+            
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div><br><br>
 
 
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+            <div class="actions">
+              <%= f.submit "Log in" %>
+            </div>
+          <% end %>
+</div>
+</div>
