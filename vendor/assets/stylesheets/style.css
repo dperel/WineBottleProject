@@ -2621,15 +2621,14 @@ Vertival margin, padding
 
 }
 
-.greeting {
-	margin-top: 1.45em;
-	padding-right: 2.5em;
+
+.caption-content {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.intro-banner {
-	padding-top: 15em;
-	padding-left: 25em;
-}
 
 .unusable {
 	color: black;
@@ -2639,8 +2638,8 @@ Vertival margin, padding
 	background-image: url("bottle_open.jpg") !important;
 	background-repeat:no-repeat;
 	background-size:cover;
-	padding-top: 7em;
-	padding-bottom: 8em;
+	padding-top: 10em;
+	padding-bottom: 10em;
 }
 
 
@@ -2649,4 +2648,15 @@ Vertival margin, padding
 }
 .jumbotron p {
 	color: black;
+}
+
+/*login and sign-up styling
+*/
+.module-small {
+	background-image: url("grapes.jpg") !important;
+}
+
+.module-small .container {
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
