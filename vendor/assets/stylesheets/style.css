@@ -2645,10 +2645,9 @@ Vertival margin, padding
 
 .jumbotron h1 {
 	color:black;
+	font-weight: 800;
 }
-.jumbotron p {
-	color: black;
-}
+
 
 /*login and sign-up styling
 */
