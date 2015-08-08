@@ -11,18 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807144450) do
+ActiveRecord::Schema.define(version: 20150808204700) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "vineyard_id"
     t.string   "btc_address"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "description"
     t.string   "private_key"
     t.string   "public_key"
-    t.boolean  "is_sold",     default: false
+    t.boolean  "is_sold",                 default: false
+    t.string   "vineyard_name"
+    t.string   "wine_type"
+    t.integer  "vintage"
+    t.string   "designation"
+    t.string   "brand_name"
+    t.string   "provenance"
+    t.string   "stringified_description"
   end
 
   create_table "histories", force: :cascade do |t|
