@@ -30,5 +30,7 @@
 //= require contact
 //= require jquery.mb.YTPlayer.min
 //= require custom
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 //= require bootstrap-sprockets
