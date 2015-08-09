@@ -2618,18 +2618,60 @@ Vertival margin, padding
 
 .home-section {
 	background-image: image-url("grape_hands.jpg");
+
 }
 
-.greeting {
-	margin-top: 1.45em;
-	padding-right: 2.5em;
+
+.caption-content {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.intro-banner {
-	padding-top: 15em;
-	padding-left: 25em;
-}
 
 .unusable {
-	color: white;
+	color: black;
+}
+
+.jumbotron {
+	background-image: url("bottle_open.jpg") !important;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding-top: 10em;
+	padding-bottom: 10em;
+}
+
+
+.jumbotron h1 {
+	color:black;
+	font-weight: 800;
+}
+
+
+/*login and sign-up styling
+*/
+.module-small {
+	background-image: url("grapes.jpg") !important;
+}
+
+.module-small .container {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.login {
+	text-align: center;
+}
+
+.col-md-offset-3 {
+	display: inline-block !important;
+}
+
+.signup {
+	padding-top: 3em;
+}
+
+.signup .col-sm-5 {
+	padding-top: 1em;
 }

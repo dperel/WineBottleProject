@@ -10,64 +10,52 @@
     </section>
 
 
-<div class="container">
 
-        <div class="row">
-
-          <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-
-            <h4 class="font-alt">Sign Up</h4>
-
-            <!-- Divider -->
-            <hr class="divider-w mb-10">
-            <!-- Divider -->
-
-
+<div class="container signup">
+<div class="col-sm-5 col-sm-offset-1 mb-sm-40">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name %><br>
     <%= f.text_field :name, autofocus: true %>
   </div> <br>
 
   <div class="field">
-    <%= f.label :city %>
+    <%= f.label :city %><br>
     <%= f.text_field :city %>
   </div> <br>
 
     <div class="field">
-    <%= f.label :state %>
+    <%= f.label :state %><br>
     <%= f.text_field :state %>
   </div> <br>
 
   <div class="field">
-    <%= f.label  :country %>
+    <%= f.label  :country %><br>
     <%= f.text_field :country %>
   </div> <br>
 
   <div class="field">
-    <%= f.label :business_name %>
+    <%= f.label :business_name %><br>
     <%= f.text_field :business_name %>
   </div> <br>
 
-
+</div>
+<div class="col-sm-5">
   <div class="field">
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.email_field :email %>
   </div><br>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em><br>
-    <% end %>
+    <%= f.label :password %><br>
     <%= f.password_field :password, autocomplete: "off" %>
-  </div><br>
+  </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div><br>
 
@@ -81,3 +69,7 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %><br>
+
+</div>
+</div>
+</div>
