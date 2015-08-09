@@ -2637,6 +2637,7 @@ Vertival margin, padding
 .jumbotron {
 	background-image: url("bottle_open.jpg") !important;
 	background-repeat:no-repeat;
+	background-size:cover;
 	padding-top: 10em;
 	padding-bottom: 10em;
 }
@@ -2655,19 +2656,22 @@ Vertival margin, padding
 }
 
 .module-small .container {
-	height: 40vh;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 .login {
 	text-align: center;
-	z-index: 1;
 }
 
 .col-md-offset-3 {
 	display: inline-block !important;
-	z-index: 1;
 }
 
 .signup {
 	padding-top: 3em;
+}
+
+.signup .col-sm-5 {
+	padding-top: 1em;
 }
