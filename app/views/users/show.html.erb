@@ -80,6 +80,7 @@
       <li>Address: <%=@user.addresses.last.btc_address%></li>
       <li>Created at <%=@user.addresses.last.created_at%></li>
       <li>Bottle ID #<%=@user.addresses.last.id%></li>
+      <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>
     </ul>
     <hr>
   <% end %>
@@ -93,6 +94,7 @@
       <li>Bitcoin Address: <%= ad.btc_address %></li>
       <li>Bottle ID #<%= ad.id%></li>
       <li>Is_Sold? #<%= ad.is_sold%></li>
+      <li><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></li>
       <li>Transaction Date: <%= ad.created_at%>.</li>
       <!-- Bottled at: vineyard_name: 
       Purchased: // or, if vineyard, registered: -->
@@ -133,6 +135,7 @@
       <li>Bitcoin Address: <%= ad.btc_address %></li>
       <li>Bottle ID #<%= ad.id%></li>
       <li>Is_Sold? #<%= ad.is_sold%></li>
+      <li><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></li>
       <li>Transaction Date: <%= ad.created_at%>.</li>
       <!-- Bottled at: vineyard_name: 
       Purchased: // or, if vineyard, registered: -->
