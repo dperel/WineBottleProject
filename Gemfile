@@ -37,6 +37,10 @@ gem 'rails-erd'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # provides a rails panel
+  gem 'meta_request'
+
   # makes returned data objects more readable; prepend returned object in the Rails console to see an awesome print version
   gem "awesome_print", require: "ap"
 
@@ -55,6 +59,7 @@ group :development, :test do
   gem 'paperclip'
   # safe password management
   gem 'figaro'
+  
   gem 'ffi'
   # user authentication management system
   gem 'devise'
