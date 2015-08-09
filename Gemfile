@@ -22,6 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# visualizes schema
+gem 'rails-erd'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,10 +37,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # makes returned data objects easier to read
-  gem 'awesome_print'
+
   # provides a rails panel
   gem 'meta_request'
+
+  # makes returned data objects more readable; prepend returned object in the Rails console to see an awesome print version
+  gem "awesome_print", require: "ap"
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -46,11 +51,17 @@ group :development, :test do
   gem 'pry'
   gem 'spring'
   gem 'chain-ruby', '~> 2.3.0'
+  # grants access to core blockchain technology
   gem 'chain'
+  # grants access to the bitcoin network
   gem 'bitcoin-ruby'
+  # allows for image upload
   gem 'paperclip'
+  # safe password management
   gem 'figaro'
+  
   gem 'ffi'
+  # user authentication management system
   gem 'devise'
   gem 'bootstrap-sass'
 

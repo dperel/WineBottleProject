@@ -1,6 +1,7 @@
 class Address < ActiveRecord::Base
 
   require 'bitcoin'
+  require "awesome_print"
 
   belongs_to :user
   belongs_to :vineyard 
