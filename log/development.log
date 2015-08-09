@@ -1511,3 +1511,124 @@ Completed 200 OK in 1079ms (Views: 805.3ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/assets/slider.css" for ::1 at 2015-08-08 23:34:07 -0400
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-08-08 23:43:01 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xAfHkxj9dbWVY8HjEB7Xg65rSHhRUd9FPdVVt4bFVNTXVejhju8Nq/bp+7eBji5NmWue3qW+J3WrHvBGeH//JQ=="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-08 23:43:02 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 901ms (Views: 899.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-08 23:43:03 -0400
+
+
+Started GET "/users/sign_in" for ::1 at 2015-08-08 23:43:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 706ms (Views: 697.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-08-08 23:43:22 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI8YvaaTJMGQRHb1FL3kCCpRgvwOMk0Dz+XRLUV5BjCiWMuvDQFPqeL9E65judfXqsGjkDJcNAqfNGUYvh/Z6Q==", "user"=>{"email"=>"anna@anna.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "anna@anna.com"]]
+Completed 401 Unauthorized in 189ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI8YvaaTJMGQRHb1FL3kCCpRgvwOMk0Dz+XRLUV5BjCiWMuvDQFPqeL9E65judfXqsGjkDJcNAqfNGUYvh/Z6Q==", "user"=>{"email"=>"anna@anna.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (6.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 739ms (Views: 641.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-08 23:43:23 -0400
+
+
+Started GET "/users/app/assets/images/corks.jpg" for ::1 at 2015-08-08 23:43:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/images/corks.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (203.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-08-08 23:43:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hD/1gf+QL5yEyDDbBdIO7aOASmkGBWgachxYwKT5al3q6CaTVAJE9PZxVYBy1j0yIxBrBTprERMizez1X5+1hA==", "user"=>{"email"=>"anna@anna.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "anna@anna.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-08 19:11:41.606631"], ["current_sign_in_at", "2015-08-09 03:43:33.545659"], ["sign_in_count", 4], ["updated_at", "2015-08-09 03:43:33.550584"], ["id", 3]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-08-08 23:43:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 583ms (Views: 581.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-08 23:43:34 -0400
+
+
+Started GET "/users/3" for ::1 at 2015-08-08 23:43:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 3]]
+  [1m[36mAddress Load (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 3]]
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 1305ms (Views: 1296.2ms | ActiveRecord: 0.8ms)

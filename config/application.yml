@@ -11,3 +11,6 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 key_secret: 'd1787df1af0db4f79b883a73262239cf'
 faucet_key_secret: 'd16003f7364b0546bfd364543e22872c9f139d0447ffc5a4508c113ca49a145e'
+annas_fake_password: 'annae123'
+sarahs_fake_password: 'david123'
+davids_fake_password: 'david123'
