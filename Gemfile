@@ -37,6 +37,8 @@ gem 'rails-erd'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # makes returned data objects more readable; prepend returned object in the Rails console to see an awesome print version
+  gem "awesome_print", require: "ap"
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
