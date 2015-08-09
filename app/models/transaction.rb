@@ -12,6 +12,7 @@ class Transaction < ActiveRecord::Base
     receiver_address(receiver_id, bottle_description)
     transfer_balance(params)
     change_to_sold(params)
+    binding.pry
   end
 
   def receiver_address(receiver_id, bottle_description)

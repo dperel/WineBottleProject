@@ -24,10 +24,4 @@ class User < ActiveRecord::Base
     current_user.addresses.where(is_sold: true)
   end
 
-  def show
-  end
-  # The point of this model is: 
-  # 1. Create a user account using Devise
-  # 2. Edit personal detail
-
 end
