@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
 
   attr_accessor :address
 
+  has_many :addresses
+  has_many :transactions
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise  :database_authenticatable, 
@@ -10,9 +13,6 @@ class User < ActiveRecord::Base
           :rememberable, 
           :trackable, 
           :validatable
-
-  has_many :addresses
-  has_many :transactions
 
   validates_presence_of :name, 
                         :city, 
