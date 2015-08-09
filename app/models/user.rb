@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+  require "awesome_print"
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise  :database_authenticatable, 
