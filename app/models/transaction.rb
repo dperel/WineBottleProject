@@ -6,13 +6,12 @@ class Transaction < ActiveRecord::Base
 
   belongs_to :user
 
-  ANGELS_SHARE = 10000
+  ANGELS_SHARE = 10000 # in satoshis
 
   def make_transaction(receiver_id, bottle_description, params)
     receiver_address(receiver_id, bottle_description)
     transfer_balance(params)
     change_to_sold(params)
-    binding.pry
   end
 
   def receiver_address(receiver_id, bottle_description)

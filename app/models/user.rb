@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  attr_accessor :address
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise  :database_authenticatable, 
@@ -12,9 +14,9 @@ class User < ActiveRecord::Base
   has_many :addresses
   has_many :transactions
 
-  validates_presence_of :name, :city, :country
-
-  attr_accessor :address
+  validates_presence_of :name, 
+                        :city, 
+                        :country
 
   def self.current_bottles(current_user)
     current_user.addresses.where(is_sold: false)

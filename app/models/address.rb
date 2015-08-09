@@ -24,9 +24,5 @@ class Address < ActiveRecord::Base
      self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
      self.save
   end
-
-# The point of this model should be: 
-# 1. Create a BTC address (bottle holder) and link it to a bottle serial number
-# 2. Check the balance of any BTC address (bottle holder) to see if it contains the bottle 
-
+  
 end

@@ -9,10 +9,6 @@ class Address_Maker
 
   Bitcoin.network = :testnet3
 
-  # goal: 
-  # 1. Generate a BTC address
-  # 2. Pass it to a user or vineyard 
-
   def initialize
      @key_pair = Bitcoin::generate_key
      @priv_key = @key_pair[0]
