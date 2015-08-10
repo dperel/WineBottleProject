@@ -17,10 +17,10 @@ class UsersController < ApplicationController
   end
 
   def show
-     @user = current_user
-     @current_bottles = current_user.addresses.where(is_sold: false)
-     @former_bottles = current_user.addresses.where(is_sold: true)
-     @all_users = User.all
+    @user = current_user
+    @current_bottles = current_user.addresses.where(is_sold: false)
+    @former_bottles = current_user.addresses.where(is_sold: true)
+    @all_users = User.all
   end
 
   private

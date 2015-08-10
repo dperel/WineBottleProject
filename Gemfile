@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # visualizes schema
 gem 'rails-erd'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -84,6 +85,10 @@ group :development, :test do
   gem 'bootstrap-sass'
 
   gem 'rspec-rails', '~> 3.3.3'
+
+  gem 'gmaps4rails'
+  
+  gem 'geocoder'
 
 end
 
