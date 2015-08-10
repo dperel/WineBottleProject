@@ -49,4 +49,12 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  # FactoryGirl syntax methods, which let you use things like create( :user ) in your tests, 
+  # which uses FactoryGirl to generate a database object.
+  # helper methods to sign_in a user for a specific scope. This could be used as sign_in 
+  # create( :user ) at the beginning of your controller test methods, and sign_in nil to simulate an anonymous user.
+  config.include FactoryGirl::Syntax::Methods
+  config.include Devise::TestHelpers, type: :controller
+  config.include Warden::Test::Helpers
 end

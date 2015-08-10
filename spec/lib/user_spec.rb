@@ -15,7 +15,6 @@ describe User do
       password: "Mittens1",
       city: "Moscow",
       country: "Russia")
-    binding.pry
     expect(user).to be_valid
   end
 

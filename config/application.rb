@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module WineProject
+    
   class Application < Rails::Application
 
     config.generators do|g|
@@ -20,7 +21,7 @@ module WineProject
         g.fixture_replacement :factory_girl, dir: "spec/factories"
     # factory_girltells Rails to generatefactories instead of fixtures, and to save them in thespec/factoriesdirectory.
     end
-    
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
