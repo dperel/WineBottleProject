@@ -55,5 +55,29 @@ describe User do
     expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
   end
 
+  it "knows when it was created" do
+    user = User.create(
+      name: "Anna",
+      email: "anna@annaershova.com",
+      password: "Mittens1",
+      city: "Moscow",
+      country: "Russia")
+    expect {user.created_at}.to_not raise_error
+    expect(user.created_at.to_datetime === Time.now.utc.to_datetime).to eq(true)
+  end
+
+  xit "knows when it was updated" do
+    user = User.create(
+      name: "Anna",
+      email: "anna@annaershova.com",
+      password: "Mittens1",
+      city: "Moscow",
+      country: "Russia")
+    user = User.update(name: "Bob")
+    expect {user.updated_at}.to_not raise_error
+    expect(user.updated_at.to_datetime ===  Time.now.utc.to_datetime).to eq(true)
+    expect(user.updated_at.to_datetime).to be > user.created_at.to_datetime
+  end
+
 end
 
