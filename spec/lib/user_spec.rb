@@ -1,6 +1,44 @@
 require 'rails_helper'
+require 'factory_girl_rails'
 
 describe User do
+  
+## Instance Method Tests Start
+
+  describe '#current_bottles' do
+    before do
+      @user = build(:user)
+      @address = build(:address)
+      @address.user_id = @user.id
+      @address.generate_btc_address_and_keys
+      @address.save
+      @user.save
+    end
+
+        it 'should return an array of bottles that where is_sold is false' do
+          expect(@user.current_bottles).to include @address
+        end
+
+  end
+
+  describe '#former_bottles' do
+    before do
+      @user = build(:user)
+      @address = build(:address)
+      @address.user_id = @user.id
+      @address.is_sold = true
+      @address.generate_btc_address_and_keys
+      @address.save
+      @user.save
+    end
+
+        it 'should return an array of bottles that where is_sold is true' do
+          expect(@user.former_bottles).to include @address
+        end
+
+  end
+
+## Instance Method Tests End
 
   describe 'associations' do
 
@@ -65,6 +103,7 @@ describe User do
     end
 
   end # ends descibe associations
+
 
 end
 

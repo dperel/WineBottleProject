@@ -1,4 +1,4 @@
-class ChainMaker
+class ChainWrapper
 
   attr_accessor :chain_client
 
