@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
                         :city, 
                         :country
 
+
   def self.current_bottles(current_user)
     current_user.addresses.where(is_sold: false)
   end

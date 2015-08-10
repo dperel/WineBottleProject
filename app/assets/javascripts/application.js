@@ -28,6 +28,8 @@
 //= require wow.min
 //= require owl.carousel.min
 //= require contact
+//= require underscore
+//= require gmaps/google
 //= require jquery.mb.YTPlayer.min
 //= require custom
 //= require_tree .

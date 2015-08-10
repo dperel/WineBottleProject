@@ -16,6 +16,7 @@ class Transaction < ActiveRecord::Base
 
   def receiver_address(receiver_id, bottle_description)
     @address = Address.new
+    @address.last_location = User.find(receiver_id]).stringified_location 
     @address.user_id = receiver_id
     @address.description = bottle_description
     @address.generate_btc_address_and_keys

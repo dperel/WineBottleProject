@@ -9,6 +9,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if @user.state.present? 
+      @user.stringified_description = "#{@user.city}, #{@user.state}, #{@user.country}"
+      
+    else 
+      @user.stringified_description = "#{@user.city}, #{@user.country}"
+    end
     if @user.save 
       redirect_to @user
     else 
