@@ -93,8 +93,6 @@ group :development, :test do
 
   gem 'factory_girl_rails'
 
-  gem 'gmaps4rails'
-
   gem 'geocoder'
 
 end
