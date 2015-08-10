@@ -17,7 +17,6 @@ class Transaction < ActiveRecord::Base
 
   def receiver_address(sending_address, receiver_id)
     @address = Address.new
-    binding.pry
     @address.last_location = User.find(receiver_id).stringified_location 
     @address.user_id = receiver_id
     @address.vineyard_name = sending_address.vineyard_name
@@ -35,7 +34,6 @@ class Transaction < ActiveRecord::Base
   def assign_location(receiver_id)
     @address.last_location = User.find(receiver_id).stringified_location
     lat_long = Geocoder.coordinates(@address.last_location)
-    binding.pry
     @address.latitude = lat_long[0]
     @address.longitude = lat_long[1]
     @address.save

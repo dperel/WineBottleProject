@@ -32,12 +32,6 @@ class History < ActiveRecord::Base
     @users = user_ids.map { |user_id| User.find(user_id)}.flatten
   end 
 
-  def self.past_locations
-    #Need to get hash of location stringified location and their coords?
-    @past_address_objects = []
-    @@history_array.map{|address| @past_address_objects << Address.where(btc_address: address)
-    @past_address_objects.flatten
-   binding.pry
-  end
+
 
 end 

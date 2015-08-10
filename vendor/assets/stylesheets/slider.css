@@ -2,16 +2,16 @@
 General Styles - FlexSlider
 ------------------------------------------------------------------- */
 
-.flex-direction-nav a,
+/*.flex-direction-nav a,
 .flex-control-nav > li > a {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	   -moz-transition: all 0.3s ease-in-out 0s;
 		-ms-transition: all 0.3s ease-in-out 0s;
 		 -o-transition: all 0.3s ease-in-out 0s;
 			transition: all 0.3s ease-in-out 0s;
-}
+}*/
 
-.flex-direction-nav a {
+/*.flex-direction-nav a {
 	position: absolute;
 	display: block;
 	height: 100%;
@@ -21,9 +21,9 @@ General Styles - FlexSlider
 	overflow: hidden;
 	opacity: 0;
 	margin:0;
-}
+}*/
 
-.flex-direction-nav .flex-prev {
+/*.flex-direction-nav .flex-prev {
 	opacity: 0;
 	left: 0;
 	cursor: url(../images/prev-light.png), e-resize;
@@ -70,12 +70,12 @@ General Styles - FlexSlider
 .flex-control-nav > li > a.flex-active {
 	background: #fff;
 }
-
+*/
 /* -------------------------------------------------------------------
 Hero Slider
 ------------------------------------------------------------------- */
 
-.hero-slider {
+/*.hero-slider {
 	margin: 0!important;
 }
 
@@ -115,10 +115,10 @@ Hero Slider
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
 }
-
+*/
 /* Caption */
 
-.hs-caption {
+/*.hs-caption {
 	position: relative;
 	display: table;
 	height: 100%;
@@ -139,13 +139,13 @@ Hero Slider
 	vertical-align: middle;
 	text-align: center;
 }
-
+*/
 
 /* -------------------------------------------------------------------
 General Styles - Owlcarousel
 ------------------------------------------------------------------- */
 
-.owl-controls {
+/*.owl-controls {
 	margin-top: 40px;
 }
 
@@ -182,3 +182,4 @@ General Styles - Owlcarousel
 	color: #111;
 }
 
+*/
