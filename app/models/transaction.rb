@@ -6,19 +6,38 @@ class Transaction < ActiveRecord::Base
 
   belongs_to :user
 
-  ANGELS_SHARE = 10000 # in satoshis
+  ANGELS_SHARE = 10000 
 
-  def make_transaction(receiver_id, bottle_description, params)
-    receiver_address(receiver_id, bottle_description)
+  def make_transaction(sending_address, receiver_id, params)
+    receiver_address(sending_address, receiver_id)
+    assign_location(receiver_id)
     transfer_balance(params)
     change_to_sold(params)
   end
 
-  def receiver_address(receiver_id, bottle_description)
+  def receiver_address(sending_address, receiver_id)
     @address = Address.new
+    binding.pry
+    @address.last_location = User.find(receiver_id).stringified_location 
     @address.user_id = receiver_id
-    @address.description = bottle_description
+    @address.vineyard_name = sending_address.vineyard_name
+    @address.wine_type = sending_address.wine_type
+    @address.vintage = sending_address.vintage
+    @address.brand_name = sending_address.brand_name
+    @address.stringified_description = sending_address.stringified_description
+    @address.designation = sending_address.designation
+    @address.provenance = sending_address.provenance
+    @address.description = sending_address.description
     @address.generate_btc_address_and_keys
+    @address.save
+  end
+
+  def assign_location(receiver_id)
+    @address.last_location = User.find(receiver_id).stringified_location
+    lat_long = Geocoder.coordinates(@address.last_location)
+    binding.pry
+    @address.latitude = lat_long[0]
+    @address.longitude = lat_long[1]
     @address.save
   end
 

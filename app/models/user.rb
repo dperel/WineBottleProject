@@ -22,8 +22,6 @@ class User < ActiveRecord::Base
                         :city, 
                         :country
 
-  # validates_uniqueness_of :email Devise takes care of that
-
   def self.current_bottles(current_user)
     current_user.addresses.where(is_sold: false)
   end

@@ -9,6 +9,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if @user.state.present? 
+      @user.stringified_description = "#{@user.city}, #{@user.state}, #{@user.country}"
+    else 
+      @user.stringified_description = "#{@user.city}, #{@user.country}"
+    end
     if @user.save 
       redirect_to @user
     else 
@@ -18,6 +23,10 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    if @user.stringified_location.blank? 
+      @user.stringified_location = "#{@user.city}, #{@user.state}, #{@user.country}"
+      @user.save
+    end
     @current_bottles = current_user.addresses.where(is_sold: false)
     @former_bottles = current_user.addresses.where(is_sold: true)
     @all_users = User.all
