@@ -22,7 +22,6 @@ class User < ActiveRecord::Base
                         :city, 
                         :country
 
-<<<<<<< HEAD
   # validates_uniqueness_of :email Devise takes care of that
 
   def current_bottles
