@@ -2,12 +2,6 @@ require 'rails_helper'
 
 describe User do
 
-   # {:email=>["can't be blank"],
-   # :password=>["can't be blank"],
-   # :name=>["can't be blank"],
-   # :city=>["can't be blank"],
-   # :country=>["can't be blank"]}>
-
   it "is valid with a name, email, password, city, and country" do
     user = User.new(
       name: "Anna",
@@ -66,14 +60,36 @@ describe User do
     expect(user.created_at.to_datetime === Time.now.utc.to_datetime).to eq(true)
   end
 
-  xit "knows when it was updated" do
+  it "can be a vineyard" do
+    user = User.create(
+      name: "Anna",
+      email: "anna@annaershova.com",
+      password: "Mittens1",
+      city: "Moscow",
+      country: "Russia",
+      is_vineyard: true)
+    expect(user.is_vineyard).to eq(true)
+  end
+
+  it "can have a business name" do
+    user = User.create(
+      name: "Anna",
+      email: "anna@annaershova.com",
+      password: "Mittens1",
+      city: "Moscow",
+      country: "Russia",
+      business_name: "Awesome Vineyard")
+    expect(user).to be_valid
+  end
+
+  it "knows when it was updated" do
     user = User.create(
       name: "Anna",
       email: "anna@annaershova.com",
       password: "Mittens1",
       city: "Moscow",
       country: "Russia")
-    user = User.update(name: "Bob")
+    user.update(name: "Bob")
     expect {user.updated_at}.to_not raise_error
     expect(user.updated_at.to_datetime ===  Time.now.utc.to_datetime).to eq(true)
     expect(user.updated_at.to_datetime).to be > user.created_at.to_datetime
