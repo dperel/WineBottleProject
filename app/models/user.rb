@@ -24,12 +24,12 @@ class User < ActiveRecord::Base
 
   # validates_uniqueness_of :email Devise takes care of that
 
-  def self.current_bottles(current_user)
-    current_user.addresses.where(is_sold: false)
+  def current_bottles
+    addresses.where(is_sold: false)
   end
 
-  def self.former_bottles(current_user)
-    current_user.addresses.where(is_sold: true)
+  def former_bottles
+    addresses.where(is_sold: true)
   end
 
 end

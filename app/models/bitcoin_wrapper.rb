@@ -1,4 +1,4 @@
-class AddressMaker
+class BitcoinWrapper
 
   require 'bitcoin'
 
