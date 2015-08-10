@@ -18,7 +18,6 @@ class AddressesController < ApplicationController
     @address = Address.new
     @address.user_id = current_user.id
     @address.vineyard_name = params["address"]["vineyard_name"].strip
-    binding.pry
     @address.wine_type = params["address"]["wine_type"].strip
     @address.vintage = params["address"]["vintage"].strip
     @address.provenance = params["address"]["provenance"].strip

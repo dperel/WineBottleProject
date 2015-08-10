@@ -2,9 +2,10 @@ class Address < ActiveRecord::Base
   
   geocoded_by :stringified_location
   after_validation :geocode
-  #geocoder gem will take the first symbol and geocode it 
+  
+
   require 'bitcoin'
-  require "awesome_print"
+  require 'awesome_print'
 
   belongs_to :user
   belongs_to :vineyard 
@@ -24,17 +25,17 @@ class Address < ActiveRecord::Base
 
   def assign_last_location(params)
     receiver = User.find(params["address"]["current_user"])
-    receiver.stringified_location = "#{receiver.city} #{receiver.state},#{receiver.country}"
+    receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
     self.stringified_location = receiver.stringified_location
     self.save
   end
 
   def generate_btc_address_and_keys 
-     key_pair = Bitcoin::generate_key
-     self.private_key = key_pair[0]
-     self.public_key = key_pair[1]
-     self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
-     self.save
+    key_pair = Bitcoin::generate_key
+    self.private_key = key_pair[0]
+    self.public_key = key_pair[1]
+    self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
+    self.save
   end
   
 end

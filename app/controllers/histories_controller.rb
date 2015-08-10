@@ -1,17 +1,16 @@
 class HistoriesController < ApplicationController
-geocoded_by :address
-after_validation :geocode
 
   def create
     address = params["address"]["sending_btc_address"]
     History.history_array
     History.get_history(address)
     @users = History.past_owners
-    binding.pry 
-    @addresses = Address.
-    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude ##Need to get lat and long 
-      marker.lng user.longitude
+  
+    @past_address_objects = History.past_locations
+   
+    @hash = Gmaps4rails.build_markers(@past_address_objects) do | marker|
+      marker.lat address.latitude ##Need to get lat and long 
+      marker.lng address.longitude
     end 
     
   end
