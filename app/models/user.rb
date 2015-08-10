@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
           :validatable
 
   validates_presence_of :name, 
+                        :email, 
+                        :password,
                         :city, 
                         :country
 
