@@ -81,7 +81,7 @@ describe User do
       it 'should return an array of bottles that where is_sold is false' do
         expect(@user.current_bottles).to include @address
       end
-    end # end #current bottles
+    end # end #currentgit  bottles
 
     describe '#former_bottles' do
       before do
