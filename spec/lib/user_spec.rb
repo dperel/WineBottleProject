@@ -36,7 +36,7 @@ describe User do
 
     # test for length of password -- devise is working correctly
     it "is invalid with a password that is too short" do
-      user = User.new(password: "Mittens")
+      user = build(:user, password: "Mittens")
       expect(user).to_not be_valid
       expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
     end
