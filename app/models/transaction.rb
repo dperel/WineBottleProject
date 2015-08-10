@@ -8,31 +8,39 @@ class Transaction < ActiveRecord::Base
 
   ANGELS_SHARE = 10000 
 
+  # def initialize
+  #   sending_address_object = Address.where(btc_address: params[:address][:sending_btc_address])
+  #   sending_address = sending_address_object[0]
+  #   binding.pry
+  #   receiver_id = params[:address][:user_id]
+  # end
+
+  # runner
   def make_transaction(sending_address, receiver_id, params)
-    receiver_address(sending_address, receiver_id)
-    assign_location(receiver_id)
-    transfer_balance(params)
-    change_to_sold(params)
+    receiver_address(sending_address, receiver_id) # calls one method
+    assign_location(receiver_id) # calls another method
+    transfer_balance(params) # calls another method
+    change_to_sold(params) # calls another method
   end
 
   def receiver_address(sending_address, receiver_id)
     @address = Address.new
-    binding.pry
     @address.last_location = User.find(receiver_id).stringified_location 
-    @address.user_id = receiver_id
-    @address.vineyard_name = sending_address.vineyard_name
-    @address.wine_type = sending_address.wine_type
-    @address.vintage = sending_address.vintage
-    @address.brand_name = sending_address.brand_name
-    @address.stringified_description = sending_address.stringified_description
-    @address.designation = sending_address.designation
-    @address.provenance = sending_address.provenance
-    @address.description = sending_address.description
-    @address.generate_btc_address_and_keys
+      @address.user_id = receiver_id
+      @address.vineyard_name = sending_address.vineyard_name
+      @address.wine_type = sending_address.wine_type
+      @address.vintage = sending_address.vintage
+      @address.brand_name = sending_address.brand_name
+      @address.stringified_description = sending_address.stringified_description
+      @address.designation = sending_address.designation
+      @address.provenance = sending_address.provenance
+      @address.description = sending_address.description
+      @address.generate_btc_address_and_keys
     @address.save
   end
 
   def assign_location(receiver_id)
+    binding.pry
     @address.last_location = User.find(receiver_id).stringified_location
     lat_long = Geocoder.coordinates(@address.last_location)
     @address.latitude = lat_long[0]
