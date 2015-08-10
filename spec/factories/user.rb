@@ -6,6 +6,9 @@ FactoryGirl.define do
     password "Mittens1"
     city "New York"
     country "USA"
+    business_name "Awesome Vineyard"
+    created_at Time.now
+    updated_at Time.now
   end
 
   factory :address do

@@ -29,7 +29,7 @@
       <%= f.label :brand_name %>
     <li>  <%= f.text_field :brand_name, :placeholder => "brand (optional)"%>
     </li> 
-
+      <%= f.hidden_field :current_user, :value => current_user.id%>
     <br>
     <%= f.submit "Submit" %> 
     </ul>

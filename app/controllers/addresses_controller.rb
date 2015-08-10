@@ -3,7 +3,7 @@ class AddressesController < ApplicationController
   require 'bitcoin'
   Bitcoin.network = :testnet3
 
-   def new # following pressing a 'register a new bottle' button
+  def new # following pressing a 'register a new bottle' button
     @address = Address.new
     @address.user_id = current_user.id
     @address.generate_btc_address_and_keys
@@ -23,6 +23,7 @@ class AddressesController < ApplicationController
     @address.provenance = params["address"]["provenance"].strip
     @address.designation = params["address"]["designation"].strip
     @address.brand_name = params["address"]["brand_name"].strip
+    @address.assign_last_location(params)
     if @address.designation.present? && @address.brand_name.present?
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})."
     elsif @address.designation.present? 

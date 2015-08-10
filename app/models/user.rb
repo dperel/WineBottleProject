@@ -16,12 +16,13 @@ class User < ActiveRecord::Base
           :trackable, 
           :validatable
 
-  validates_presence_of :name, 
+  validates_presence_of :name,
                         :email, 
                         :password,
                         :city, 
                         :country
 
+<<<<<<< HEAD
   # validates_uniqueness_of :email Devise takes care of that
 
   def current_bottles
