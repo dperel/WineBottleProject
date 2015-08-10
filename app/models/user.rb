@@ -16,7 +16,8 @@ class User < ActiveRecord::Base
           :trackable, 
           :validatable
 
-  validates_presence_of :email, 
+  validates_presence_of :name,
+                        :email, 
                         :password,
                         :city, 
                         :country
