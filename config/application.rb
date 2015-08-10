@@ -7,7 +7,21 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module WineProject
+    
   class Application < Rails::Application
+
+    config.generators do|g|
+        g.test_framework :rspec,
+            fixtures: true, # generates a fixture for each model
+            view_specs: false, # skip generating view specs
+            helper_specs: false, # skips generating specs for helper files
+            routing_specs: false, # omits spec file for config/routes.rb
+            controller_specs: true, 
+            request_specs: false # kips RSpec’s defaults for adding integration-levelspecs inspec/requests. 
+        g.fixture_replacement :factory_girl, dir: "spec/factories"
+    # factory_girltells Rails to generatefactories instead of fixtures, and to save them in thespec/factoriesdirectory.
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -24,3 +38,4 @@ module WineProject
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
