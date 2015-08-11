@@ -7,7 +7,7 @@ describe User do
     expect(build(:user)).to be_valid
   end
   
-  describe 'associations' do
+  describe 'associtations' do
 
     it "is valid with a name, email, password, city, and country" do
       user = build(:user)
