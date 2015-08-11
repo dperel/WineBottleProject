@@ -25,7 +25,7 @@
     <strong>Most recent bottle created:</strong>
     <ul>
       <li><%=@user.addresses.last.stringified_description%></li>
-      <li><%=image_tag @user.addresses.last.avatar.url(:medium)%></li>
+      <li><%=image_tag @user.addresses.last.avatar.url%></li>
       <li>Address: <%=@user.addresses.last.btc_address%></li>
       <li>Created at <%=@user.addresses.last.created_at%></li>
       <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>

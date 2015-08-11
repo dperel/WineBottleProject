@@ -41,7 +41,6 @@ class History < ActiveRecord::Base
         addresess_for_map << address.btc_address
       wine_story.addresess_for_map = addresess_for_map
       wine_story.save
-      binding.pry
      end # ends inner do
     end # ends outer do
   end 
