@@ -9,7 +9,6 @@ class HistoriesController < ApplicationController
     display = []
     for_google.map{|addr| display << Address.where(btc_address: addr)}
     @real_data = display.flatten
-    binding.pry
     # @addresses = History.find(params["address"]["address_id_for_history"]).addresses_for_map 
   end
     # #Needs to be triggered after a transaction 
