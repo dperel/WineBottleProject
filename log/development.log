@@ -2299,3 +2299,1115 @@ Migrating to AddAttachmentAvatarToAddresses (20150811175915)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+
+
+Started GET "/users/10" for ::1 at 2015-08-11 14:51:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mAddress Load (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 775ms (Views: 479.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/simpletextrotator.self-d494ed011929e690db8ec1263acdca124527ca308cd0fe38637e14aa0a4ad68e.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/et-line-font.self-2816ad89d4005ecc57c7af1b51023f4f51c436270397a296740c46f371b7902c.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/flexslider.self-4ba9bfeb629152f2bfa9b1fafafd244d3502e6df4f3525b745a1827ab0d636f3.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/magnific-popup.self-2fc3ff0f8854fa57f06de88e6d2619da5c3fefd51fe4f19458e71a41b315faec.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/owl.carousel.self-8ece58a45bf8e21d1b36c1292a5a81b8c6998511fc11d62ce1a537efd2f1fcba.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/animate.self-772192f6f1558e2f1a12907a99babcbc80092379fb1bacfbfbb0edd252173773.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/style.self-9c76a371a70cbeb204de110217f6cb9aee659908c1ec4edf2399c1fb609e4e5a.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/histories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/wine_faucet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/verifications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/application.self-844eb9160f3a4b26c0db070e8ca0838af9482818aa101fb3fff5658e01b5e44b.css?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for ::1 at 2015-08-11 14:51:03 -0400
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/histories.self-1e51e4c3212ef5f74c142f68925e611c0fbcefafbc0c52e2a1ccf08ee373f9c0.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/verifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/wine_faucet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/assets/application.self-a5709765b44be42b8b8136c4d09343a9330a03cdbaa8d972fe792ecd9e98467d.js?body=1" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-08-11 14:51:04 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.4ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 14:51:04 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-11 14:51:06 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered wine_faucets/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 397ms (Views: 396.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:51:06 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-11 14:52:28 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pyaueenwXg6R6NmqqwhpIcnJRvU30t/YQXK1uDhfo0PV0UWaT5qb+sJ6LR7sEMXXt7ayOeo3DSNsV/Bb7wFMpQ==", "address"=>{"vineyard_name"=>"Anna's Vineyard", "wine_type"=>"Cognac", "vintage"=>"1993", "provenance"=>"Minnesota", "designation"=>"Expensive", "brand_name"=>"Le Congard", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9465a79710 @tempfile=#<Tempfile:/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/RackMultipart20150811-12243-8qgqjr.jpeg>, @original_filename="Cognac.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"address[avatar]\"; filename=\"Cognac.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "current_user"=>"10"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 10], ["vineyard_name", "Anna's Vineyard"], ["wine_type", "Cognac"], ["vintage", 1993], ["provenance", "Minnesota"], ["designation", "Expensive"], ["brand_name", "Le Congard"], ["latitude", "-34.6036844"], ["longitude", "-58.3815591"], ["created_at", "2015-08-11 18:52:28.792875"], ["updated_at", "2015-08-11 18:52:28.792875"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["stringified_description", "1993 Anna's Vineyard Cognac from Minnesota, Expensive (Le Congard)."], ["private_key", "71f9e5b9e6251a483e266216408d40424c0ab5460f50a959bcb89879dc8af7ca"], ["public_key", "0454f44f88bae672836d62fedf4126aebe0a6f1c699791e79c4138a55a389760ae6b19ba2babbd43d653f0bd148cfedd068bd21baceee356f3771bed1d7134b619"], ["btc_address", "mkJogGDQC2jP268kWAo952oTEcCPYJ4byY"], ["updated_at", "2015-08-11 18:52:28.891639"], ["id", 322]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 1652ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/10" for ::1 at 2015-08-11 14:52:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 10]]
+  [1m[36mAddress Load (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 505ms (Views: 490.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:52:30 -0400
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-08-11 14:52:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.8ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 14:52:30 -0400
+
+
+Started GET "/users/10" for ::1 at 2015-08-11 14:53:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 10]]
+  [1m[36mAddress Load (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 484ms (Views: 471.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/flexslider.self-4ba9bfeb629152f2bfa9b1fafafd244d3502e6df4f3525b745a1827ab0d636f3.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/simpletextrotator.self-d494ed011929e690db8ec1263acdca124527ca308cd0fe38637e14aa0a4ad68e.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/magnific-popup.self-2fc3ff0f8854fa57f06de88e6d2619da5c3fefd51fe4f19458e71a41b315faec.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/et-line-font.self-2816ad89d4005ecc57c7af1b51023f4f51c436270397a296740c46f371b7902c.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/owl.carousel.self-8ece58a45bf8e21d1b36c1292a5a81b8c6998511fc11d62ce1a537efd2f1fcba.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/animate.self-772192f6f1558e2f1a12907a99babcbc80092379fb1bacfbfbb0edd252173773.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/style.self-9c76a371a70cbeb204de110217f6cb9aee659908c1ec4edf2399c1fb609e4e5a.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/histories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/verifications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/wine_faucet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/application.self-844eb9160f3a4b26c0db070e8ca0838af9482818aa101fb3fff5658e01b5e44b.css?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-11 14:53:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/histories.self-1e51e4c3212ef5f74c142f68925e611c0fbcefafbc0c52e2a1ccf08ee373f9c0.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/verifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/wine_faucet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/assets/application.self-a5709765b44be42b8b8136c4d09343a9330a03cdbaa8d972fe792ecd9e98467d.js?body=1" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/images/small/missing.png" for ::1 at 2015-08-11 14:53:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/small/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.9ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 14:53:24 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-11 14:54:57 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered wine_faucets/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 482ms (Views: 458.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:54:58 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-11 14:56:01 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJfpVigmgO1iGmTc4qhhnAexqfpNSLpoc2MjBCw735M6YAK1jkxFGTGIkGilsM1qec5dNpCtaJNeRmbn+2UwdQ==", "address"=>{"vineyard_name"=>"Flatiron Vines", "wine_type"=>"Flat Sparkling White", "vintage"=>"2012", "provenance"=>"New York ", "designation"=>"", "brand_name"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9465802748 @tempfile=#<Tempfile:/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/RackMultipart20150811-12243-d3y4lk.jpg>, @original_filename="Sparkling Wine.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"address[avatar]\"; filename=\"Sparkling Wine.jpg\"\r\nContent-Type: image/jpeg\r\n">, "current_user"=>"10"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+Command :: file -b --mime '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/96bcd53e4c2996b4ab96182f1fe3449420150811-12243-10xna58.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]'
+Command :: convert '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/9e50c739ee43d20be542b68e9cd8c98820150811-12243-7z4z0y'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]'
+Command :: convert '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/3ff08b0110836d3b19a157722593a1c520150811-12243-49ftyb.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/9e50c739ee43d20be542b68e9cd8c98820150811-12243-1nu7wmv'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/var/folders/8q/cxblwn7505s9jb420932zq800000gn/T/96bcd53e4c2996b4ab96182f1fe3449420150811-12243-60dtu.jpg'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 10], ["vineyard_name", "Flatiron Vines"], ["wine_type", "Flat Sparkling White"], ["vintage", 2012], ["provenance", "New York"], ["designation", ""], ["brand_name", ""], ["avatar_file_name", "Sparkling_Wine.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 62192], ["avatar_updated_at", "2015-08-11 18:56:01.643517"], ["latitude", "-34.6036844"], ["longitude", "-58.3815591"], ["created_at", "2015-08-11 18:56:02.554323"], ["updated_at", "2015-08-11 18:56:02.554323"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?  [["stringified_description", "2012 Flatiron Vines Flat Sparkling White from New York."], ["private_key", "1a3098538c11870741131470a50f178cc4ac1fda6068e53cf0fca0c9a0160b54"], ["public_key", "049e859e378b92d3e4b8402ce9a7e1df29606efaeea556222bd25435bff579253c69cda062fc999bdf0873703294aa5d3a6b25750fec2f050775b8f4f9dedee498"], ["btc_address", "mpKSasx1zCAwedCpCsYUkFCEUwJkyvmx6f"], ["updated_at", "2015-08-11 18:56:02.667422"], ["id", 323]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 1988ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/10" for ::1 at 2015-08-11 14:56:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mAddress Load (0.2ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 578ms (Views: 565.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 14:56:04 -0400
+
+
+Started GET "/system/addresses/avatars/000/000/323/small/Sparkling_Wine.jpg?1439319361" for ::1 at 2015-08-11 14:56:04 -0400
+
+ActionController::RoutingError (No route matches [GET] "/system/addresses/avatars/000/000/323/small/Sparkling_Wine.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.9ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 14:56:04 -0400
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses"  ORDER BY "addresses"."id" DESC LIMIT 1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT 1  [["id", 322]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses"  ORDER BY "addresses"."id" DESC LIMIT 1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses"  ORDER BY "addresses"."id" DESC LIMIT 1
+
+
+Started GET "/users/10" for ::1 at 2015-08-11 15:00:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mAddress Load (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 487ms (Views: 475.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/simpletextrotator.self-d494ed011929e690db8ec1263acdca124527ca308cd0fe38637e14aa0a4ad68e.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/et-line-font.self-2816ad89d4005ecc57c7af1b51023f4f51c436270397a296740c46f371b7902c.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/flexslider.self-4ba9bfeb629152f2bfa9b1fafafd244d3502e6df4f3525b745a1827ab0d636f3.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/magnific-popup.self-2fc3ff0f8854fa57f06de88e6d2619da5c3fefd51fe4f19458e71a41b315faec.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/owl.carousel.self-8ece58a45bf8e21d1b36c1292a5a81b8c6998511fc11d62ce1a537efd2f1fcba.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/animate.self-772192f6f1558e2f1a12907a99babcbc80092379fb1bacfbfbb0edd252173773.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/style.self-9c76a371a70cbeb204de110217f6cb9aee659908c1ec4edf2399c1fb609e4e5a.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/histories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/verifications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/wine_faucet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/application.self-844eb9160f3a4b26c0db070e8ca0838af9482818aa101fb3fff5658e01b5e44b.css?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/histories.self-1e51e4c3212ef5f74c142f68925e611c0fbcefafbc0c52e2a1ccf08ee373f9c0.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/verifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/wine_faucet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/application.self-a5709765b44be42b8b8136c4d09343a9330a03cdbaa8d972fe792ecd9e98467d.js?body=1" for ::1 at 2015-08-11 15:00:38 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 15:00:38 -0400

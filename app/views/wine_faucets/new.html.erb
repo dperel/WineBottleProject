@@ -4,7 +4,7 @@
 
   <br>
   <ul>
-  <%= form_for @address do |f| %> 
+  <%= form_for @address, :html =>{:multipart => true} do |f| %> 
     
       <%= f.label :vineyard_name %>
     <li>  <%= f.text_field :vineyard_name, :placeholder => "vineyard name"%>
@@ -28,6 +28,10 @@
     
       <%= f.label :brand_name %>
     <li>  <%= f.text_field :brand_name, :placeholder => "brand (optional)"%>
+    </li> 
+
+    <%= f.label :avatar %>
+    <li>  <%= f.file_field :avatar%>
     </li> 
       <%= f.hidden_field :current_user, :value => current_user.id%>
     <br>

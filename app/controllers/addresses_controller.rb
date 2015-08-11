@@ -26,6 +26,7 @@ class AddressesController < ApplicationController
     @address.provenance = params["address"]["provenance"].strip
     @address.designation = params["address"]["designation"].strip
     @address.brand_name = params["address"]["brand_name"].strip
+    @address.avatar = params["address"]["avatar"]
     
     @address.assign_last_location(params)
     if @address.designation.present? && @address.brand_name.present?
@@ -54,13 +55,13 @@ class AddressesController < ApplicationController
     @user_addresses = Addresses.find(params[:user_id])
   end
 
-  # private
-
-  # def address_params
-  #   params.require(:address).permit(:name)
-  # end
-
   def assign_bitcoin_keys
+  end
+
+  private
+
+  def address_params
+    params.require(:address).permit(:avatar)
   end
 
 end
