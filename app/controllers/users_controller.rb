@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
-  attr_accessor :user, 
-                :user_addresses
+  attr_accessor :user
+                # :user_addresses
 
   def create
     @user = User.new(user_params)
