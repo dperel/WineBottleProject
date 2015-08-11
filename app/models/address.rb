@@ -22,6 +22,18 @@ class Address < ActiveRecord::Base
 
   Bitcoin.network = :testnet3
 
+  def transfer_old_attributes(sending_address)
+    old_address = sending_address
+    new_address = self 
+    attrs_for_transfer = ["vineyard_name", "wine_type", "vintage", "provenance",
+      "brand_name", "stringified_location", "designation", "stringified_description"]
+    new_address.attributes.each do |key, value|
+      if attrs_for_transfer.include?(key) 
+        new_address.send("#{key}=", sending_address.attributes[key])
+      end
+    end
+  end
+
   def assign_last_location(params)
     receiver = User.find(params["address"]["current_user"])
     receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
@@ -34,7 +46,6 @@ class Address < ActiveRecord::Base
     self.private_key = key_pair[0]
     self.public_key = key_pair[1]
     self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
-    self.save
   end
   
 end

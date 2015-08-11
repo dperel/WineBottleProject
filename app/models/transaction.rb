@@ -6,45 +6,28 @@ class Transaction < ActiveRecord::Base
 
   belongs_to :user
 
-
   ANGELS_SHARE = 10000 
 
-  def sending_address(params)
-    sending_address_object = Address.where(btc_address: params[:address][:sending_btc_address])
-    sending_address_object[0]
-  end
-
-  def receiver_id (params)
-    params[:address][:user_id]
-  end
-
-  def make_transaction(sending_address, receiver_id, params)
-    receiver_address(sending_address, receiver_id) # calls one method
-    assign_location(receiver_id) # calls another method
+  def make_transaction(previous_address, recipient, params)
+    receiver_address(previous_address, recipient) # calls one method
+    assign_location(recipient) # calls another method
     transfer_balance(params) # calls another method
     change_to_sold(params) # calls another method
   end
 
-  def receiver_address(sending_address, receiver_id)
+  def receiver_address(previous_address, recipient)
     @address = Address.new
-    @address.last_location = User.find(receiver_id).stringified_location 
-      @address.user_id = receiver_id
-      @address.attributes.merge(sending_address.attributes)
-      # @address.vineyard_name = sending_address.vineyard_name
-      # @address.wine_type = sending_address.wine_type
-      # @address.vintage = sending_address.vintage
-      # @address.brand_name = sending_address.brand_name
-      # @address.stringified_description = sending_address.stringified_description
-      # @address.designation = sending_address.designation
-      # @address.provenance = sending_address.provenance
-      # @address.description = sending_address.description
-      # @address.generate_btc_address_and_keys
+    @address.generate_btc_address_and_keys
+    @address.current_location = recipient.stringified_location 
+    @address.user_id = recipient.id
+    @address.transfer_old_attributes(previous_address)
     @address.save
   end
 
-  def assign_location(receiver_id)
-    @address.last_location = User.find(receiver_id).stringified_location
-    lat_long = Geocoder.coordinates(@address.last_location)
+
+  def assign_location(recipient)
+    @address.current_location = recipient.stringified_location
+    lat_long = Geocoder.coordinates(@address.current_location)
     @address.latitude = lat_long[0]
     @address.longitude = lat_long[1]
     @address.save
