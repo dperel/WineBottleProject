@@ -18,9 +18,7 @@ class UsersController < ApplicationController
   # helper methods for show
   def assign_stringified_location
     @user = current_user
-    if @user.city.blank? || @user.country.blank? 
-      @user.stringified_location = ""
-    elsif @user.state.present? 
+    if @user.state.present? 
       @user.stringified_location = "#{@user.city}, #{@user.state}, #{@user.country}"
     else 
       @user.stringified_location = "#{@user.city}, #{@user.country}"
