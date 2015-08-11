@@ -8,7 +8,7 @@ class TransactionsController < ApplicationController
     @address = Address.new
     @address.generate_btc_address_and_keys
     
-    @transaction.make_transaction(previous_address, receiver_id, params)
+    @transaction.make_transaction(previous_address, recipient, params)
     redirect_to user_path(current_user)
   end
 
