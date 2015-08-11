@@ -25,7 +25,6 @@ class UsersController < ApplicationController
     else 
       @user.stringified_location = "#{@user.city}, #{@user.country}"
     end
-    binding.pry
     @user.save
   end
 
