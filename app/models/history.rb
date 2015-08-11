@@ -1,4 +1,5 @@
 class History < ActiveRecord::Base
+  belongs_to :address
 
   def self.history_array(address)
     @@history_array = []
@@ -30,5 +31,18 @@ class History < ActiveRecord::Base
     @users = []
     @@history_array.map{|address| user_ids << Address.where(btc_address: address).pluck(:user_id)}
     @users = user_ids.map { |user_id| User.find(user_id)}.flatten
+  end 
+
+  def self.make_history(address, wine_story)
+    past_addresses = History.get_history(address).map{|address| Address.where(btc_address: address)}
+    addresess_for_map = []
+    past_addresses.each do |address|
+      address.each do |address|
+        addresess_for_map << address.btc_address
+      wine_story.addresess_for_map = addresess_for_map
+      wine_story.save
+      binding.pry
+     end # ends inner do
+    end # ends outer do
   end 
 end

@@ -262,7 +262,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   meta_request
-  paperclip
+  paperclip (~> 4.3)
   pry
   rails (= 4.2.0)
   rails-erd

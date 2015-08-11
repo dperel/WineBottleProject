@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810050221) do
+ActiveRecord::Schema.define(version: 20150811192608) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id"
@@ -34,11 +34,17 @@ ActiveRecord::Schema.define(version: 20150810050221) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "last_location"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "histories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "address_id"
+    t.text     "addresess_for_map"
   end
 
   create_table "transactions", force: :cascade do |t|
