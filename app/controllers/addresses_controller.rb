@@ -18,7 +18,7 @@ class AddressesController < ApplicationController
 
   def create  # following pressing 'register a new bottle' and then 'submit'
     @address = Address.new
-    binding.pry
+    # binding.pry
     @address.user_id = current_user.id
     @address.vineyard_name = params["address"]["vineyard_name"].strip
     @address.wine_type = params["address"]["wine_type"].strip
