@@ -27,20 +27,13 @@ class Transaction < ActiveRecord::Base
 
   def receiver_address(sending_address, receiver_id)
     @address = Address.new
+    @address.generate_btc_address_and_keys
     @address.last_location = User.find(receiver_id).stringified_location 
-      @address.user_id = receiver_id
-      @address.attributes.merge(sending_address.attributes)
-      # @address.vineyard_name = sending_address.vineyard_name
-      # @address.wine_type = sending_address.wine_type
-      # @address.vintage = sending_address.vintage
-      # @address.brand_name = sending_address.brand_name
-      # @address.stringified_description = sending_address.stringified_description
-      # @address.designation = sending_address.designation
-      # @address.provenance = sending_address.provenance
-      # @address.description = sending_address.description
-      # @address.generate_btc_address_and_keys
+    @address.user_id = receiver_id
+    @address.transfer_old_attributes(sending_address)
     @address.save
   end
+
 
   def assign_location(receiver_id)
     @address.last_location = User.find(receiver_id).stringified_location
