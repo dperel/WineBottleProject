@@ -1,7 +1,8 @@
 class History < ActiveRecord::Base
 
-  def self.history_array
+  def self.history_array(address)
     @@history_array = []
+      @@history_array << address
   end
 
   def self.get_history(address) 
