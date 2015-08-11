@@ -3,53 +3,29 @@ class UsersController < ApplicationController
   attr_accessor :user, 
                 :user_addresses
 
-  # WE DON'T NEED THIS, DO WE?              
-  # def new 
-  #   @user = User.new
-  # end
-
   def create
     @user = User.new(user_params)
-
-    if @user.state.present? 
-      @user.stringified_description = "#{@user.city}, #{@user.state}, #{@user.country}"
-    else 
-      @user.stringified_description = "#{@user.city}, #{@user.country}"
-    end
-
-    if @user.save 
-      redirect_to @user
-    else 
-      redirect_to '/users/new'
-    end
+    @user.save ? (redirect_to @user) : (redirect_to '/users/new')
   end
 
-  # def stringified_description
-  #   @user.stringified_description = 
-  # end
-
-  # see your cellar
-  def show
+  def show # see your cellar
     @user = current_user
-    check_for_blank_stringified_location
-    # if @user.stringified_location.blank? 
-    #   @user.stringified_location = "#{@user.city}, #{@user.state}, #{@user.country}"
-    #   @user.save
-    # end
-    binding.pry
+    assign_stringified_location
     assign_cellar
-    # can we just replace this with current_user?
-    # @current_bottles = current_user.current_bottles
-    # @former_bottles = current_user.former_bottles
-    # do we need to call this?
-    @all_users = User.all
+    @all_users = User.all # for a drop-down for selling bottles
   end
 
-  def check_for_blank_stringified_location
+  # helper methods for show
+  def assign_stringified_location
     @user = current_user
-    if @user.stringified_location.blank? 
+    if @user.city.blank? || @user.country.blank? 
+      @user.stringified_location = ""
+    elsif @user.state.present? 
       @user.stringified_location = "#{@user.city}, #{@user.state}, #{@user.country}"
+    else 
+      @user.stringified_location = "#{@user.city}, #{@user.country}"
     end
+    binding.pry
     @user.save
   end
 

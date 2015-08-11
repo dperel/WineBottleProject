@@ -85,11 +85,10 @@ describe User do
       it 'should return an array of bottles that where is_sold is false' do
         expect(@user.current_bottles).to include @address
       end
-      it 'is an appropriate class' do
+      it 'is an array' do
         expect(@user.former_bottles.to_a).to be_an Array 
-
       end
-    end # end #currentgit  bottles
+    end # end #current bottles
 
     describe '#former_bottles' do
       before do
@@ -104,7 +103,7 @@ describe User do
       it 'should return an array of bottles that where is_sold is true' do
         expect(@user.former_bottles).to include @address
       end
-      it 'is an appropriate class' do
+      it 'is an array' do
         expect(@user.former_bottles.to_a).to be_an Array 
       end
     end # end #former bottles
