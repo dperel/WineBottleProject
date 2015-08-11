@@ -16,18 +16,20 @@ class User < ActiveRecord::Base
           :trackable, 
           :validatable
 
-  validates_presence_of :name, 
+  validates_presence_of :name,
                         :email, 
                         :password,
                         :city, 
                         :country
 
-  def self.current_bottles(current_user)
-    current_user.addresses.where(is_sold: false)
+  # validates_uniqueness_of :email Devise takes care of that
+
+  def current_bottles
+    addresses.where(is_sold: false)
   end
 
-  def self.former_bottles(current_user)
-    current_user.addresses.where(is_sold: true)
+  def former_bottles
+    addresses.where(is_sold: true)
   end
 
 end

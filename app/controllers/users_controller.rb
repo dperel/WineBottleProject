@@ -1,42 +1,41 @@
 class UsersController < ApplicationController
   
-  attr_accessor :user, 
-                :user_addresses
-
-  def new 
-    @user = User.new
-  end
+  attr_accessor :user
+                # :user_addresses
 
   def create
     @user = User.new(user_params)
-    if @user.state.present? 
-      @user.stringified_description = "#{@user.city}, #{@user.state}, #{@user.country}"
-    else 
-      @user.stringified_description = "#{@user.city}, #{@user.country}"
-    end
-    if @user.save 
-      redirect_to @user
-    else 
-      redirect_to '/users/new'
-    end
+    @user.save ? (redirect_to @user) : (redirect_to '/users/new')
   end
 
-  def show
+  def show # see your cellar
     @user = current_user
-    if @user.stringified_location.blank? 
+    assign_stringified_location
+    assign_cellar
+    @all_users = User.all # for a drop-down for selling bottles
+  end
+
+  # helper methods for show
+  def assign_stringified_location
+    @user = current_user
+    if @user.state.present? 
       @user.stringified_location = "#{@user.city}, #{@user.state}, #{@user.country}"
-      @user.save
+    else 
+      @user.stringified_location = "#{@user.city}, #{@user.country}"
     end
-    @current_bottles = current_user.addresses.where(is_sold: false)
-    @former_bottles = current_user.addresses.where(is_sold: true)
-    @all_users = User.all
+    @user.save
+  end
+
+  def assign_cellar
+    @current_bottles = current_user.current_bottles
+    @former_bottles = current_user.former_bottles
   end
 
   private
 
-  def user_params
-    params.require(:id)
-  end
+    def user_params
+      params.require(:id)
+    end
 
 end 
 

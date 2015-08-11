@@ -35,8 +35,6 @@ gem 'rails-erd'
 
 gem 'gmaps4rails'
 
-gem 'geocoder'
-
 gem 'underscore-rails'
 
 # Use ActiveModel has_secure_password
@@ -59,7 +57,7 @@ group :development, :test do
   gem 'meta_request'
 
   # makes returned data objects more readable; prepend returned object in the Rails console to see an awesome print version
-  gem "awesome_print", require: "ap"
+  gem 'awesome_print', require: "ap"
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -94,6 +92,8 @@ group :development, :test do
   gem 'factory_girl_rails'
 
   gem 'geocoder'
+
+  gem 'faker'
 
 end
 

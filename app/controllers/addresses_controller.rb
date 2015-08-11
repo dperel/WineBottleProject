@@ -3,19 +3,22 @@ class AddressesController < ApplicationController
   require 'bitcoin'
   Bitcoin.network = :testnet3
 
-  def new # following pressing a 'register a new bottle' button
-    @address = Address.new
-    @address.user_id = current_user.id
-    @address.generate_btc_address_and_keys
-    if @address.save
-      redirect_to user_path(current_user)
-    else 
-      redirect_to '/addresses/new'
-    end
-  end 
+  # def new # following pressing 'register a new bottle' and then 'submit'
+  #   @address = Address.new
+  #   # binding.pry
+  #   @address.user_id = current_user.id
+  #   @address.generate_btc_address_and_keys
 
-  def create
+  #   if @address.save
+  #     redirect_to user_path(current_user)
+  #   else 
+  #     redirect_to '/addresses/new'
+  #   end
+  # end 
+
+  def create  # following pressing 'register a new bottle' and then 'submit'
     @address = Address.new
+    binding.pry
     @address.user_id = current_user.id
     @address.vineyard_name = params["address"]["vineyard_name"].strip
     @address.wine_type = params["address"]["wine_type"].strip
@@ -23,6 +26,7 @@ class AddressesController < ApplicationController
     @address.provenance = params["address"]["provenance"].strip
     @address.designation = params["address"]["designation"].strip
     @address.brand_name = params["address"]["brand_name"].strip
+    
     @address.assign_last_location(params)
     if @address.designation.present? && @address.brand_name.present?
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})."
@@ -34,14 +38,15 @@ class AddressesController < ApplicationController
       @address.stringified_description = 
         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}."
     end
+
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]
     @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
+
     @address.save
     new_address = @address
     WineFaucet.transfer_balance(new_address)
-
     redirect_to user_path(current_user)
   end
 
@@ -49,10 +54,13 @@ class AddressesController < ApplicationController
     @user_addresses = Addresses.find(params[:user_id])
   end
 
-  private
+  # private
 
-  def address_params
-    params.require(:address).permit(:name)
+  # def address_params
+  #   params.require(:address).permit(:name)
+  # end
+
+  def assign_bitcoin_keys
   end
 
 end
