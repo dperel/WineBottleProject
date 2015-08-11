@@ -37,7 +37,5 @@ class History < ActiveRecord::Base
     @past_address_objects = []
     @@history_array.map{|address| @past_address_objects << Address.where(btc_address: address)
     @past_address_objects.flatten
-   binding.pry
-  end
 
 end 

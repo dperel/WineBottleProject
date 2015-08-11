@@ -29,28 +29,20 @@ class Transaction < ActiveRecord::Base
     @address = Address.new
     @address.last_location = User.find(receiver_id).stringified_location 
       @address.user_id = receiver_id
-      binding.pry
-      # @address.attributes.merge(sending_address.attributes)
-      @address.vineyard_name = sending_address.vineyard_name
-      @address.wine_type = sending_address.wine_type
-      @address.vintage = sending_address.vintage
-      @address.brand_name = sending_address.brand_name
-      @address.stringified_description = sending_address.stringified_description
-      @address.designation = sending_address.designation
-      @address.provenance = sending_address.provenance
-      @address.description = sending_address.description
-      @address.generate_btc_address_and_keys
+      @address.attributes.merge(sending_address.attributes)
+      # @address.vineyard_name = sending_address.vineyard_name
+      # @address.wine_type = sending_address.wine_type
+      # @address.vintage = sending_address.vintage
+      # @address.brand_name = sending_address.brand_name
+      # @address.stringified_description = sending_address.stringified_description
+      # @address.designation = sending_address.designation
+      # @address.provenance = sending_address.provenance
+      # @address.description = sending_address.description
+      # @address.generate_btc_address_and_keys
     @address.save
   end
 
-  #what does this do? this seems more about assigning coordinates of a prior location
-  #lets call it assign_last_location for now. but it seems weird to do it in retrospect at all.
-  #this looks like the kind of thing that should be called in the present tense on Address in the create action too
-  #and it looks like it creates a footprint that could be like our Get History
-  #why not just push to an array called "bottle_history"?
-
   def assign_location(receiver_id)
-    binding.pry
     @address.last_location = User.find(receiver_id).stringified_location
     lat_long = Geocoder.coordinates(@address.last_location)
     @address.latitude = lat_long[0]
