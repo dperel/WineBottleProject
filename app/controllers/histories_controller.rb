@@ -8,12 +8,12 @@ class HistoriesController < ApplicationController
       @addresses = []
       past_addresses.each do |address|
         address.each do |address|
-        @addresses << address
-      end
-    end 
-   end
-   @addresses
-  end # ends create
+          @addresses << address
+        end # ends inner do
+      end # ends outer do
+    end # ends if
+    @addresses
+    end # ends create
 
 end # ends controller
 
