@@ -9272,3 +9272,13 @@ Processing by HistoriesController#create as HTML
   [1m[36mHistory Load (0.2ms)[0m  [1mSELECT "histories".* FROM "histories" WHERE "histories"."address_id" = ?[0m  [["address_id", 359]]
   [1m[35mCACHE (0.0ms)[0m  SELECT "histories".* FROM "histories" WHERE "histories"."address_id" = ?  [["address_id", 359]]
 Completed 401 Unauthorized in 439002ms
+
+
+Started POST "/histories" for ::1 at 2015-08-11 17:39:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47TjWXCZCuni39kvElWfem5Dh/fR2lOl67RaH1c5v8MgCRFyvUVvIKLMYlyQEJdjT10qE5tZorGUg8hsjjnRSg==", "address"=>{"sending_btc_address"=>"mmZ9QgWFGb3YoQc1fCneHQN4gBs6b5qW3P", "address_id_for_history"=>"349"}, "commit"=>"Get History"}
+  [1m[35mHistory Load (0.3ms)[0m  SELECT "histories".* FROM "histories" WHERE "histories"."address_id" IS NULL
+  [1m[36mHistory Load (0.3ms)[0m  [1mSELECT "histories".* FROM "histories" WHERE "histories"."address_id" = ?[0m  [["address_id", 359]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "histories".* FROM "histories" WHERE "histories"."address_id" = ?  [["address_id", 359]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "histories".* FROM "histories" WHERE "histories"."address_id" = ?[0m  [["address_id", 359]]
