@@ -75,7 +75,7 @@ group :development, :test do
   gem 'bitcoin-ruby'
 
   # allows for image upload
-  gem 'paperclip'
+  gem 'paperclip', "~> 4.3"
 
   # safe password management
   gem 'figaro'
