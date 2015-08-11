@@ -1,4 +1,4 @@
-class AddLatitudeLongitudeToAddress < ActiveRecord::Migration
+class AddLatitudeLongitudeToAddresses < ActiveRecord::Migration
   def change
     add_column :addresses, :latitude, :string
     add_column :addresses, :longitude, :string

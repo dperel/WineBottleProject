@@ -2,8 +2,12 @@ require 'rails_helper'
 require 'factory_girl_rails'
 
 describe User do
+
+  it 'has a valid factory' do
+    expect(build(:user)).to be_valid
+  end
   
-  describe 'associations' do
+  describe 'associtations' do
 
     it "is valid with a name, email, password, city, and country" do
       user = build(:user)
@@ -36,7 +40,7 @@ describe User do
     end
 
     it "is invalid with a password that is too short" do
-      user = build(:user, password: "Mittens")
+      user = build(:user, password: Faker::Internet.password(6) )
       expect(user).to_not be_valid
       expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
     end
@@ -47,8 +51,8 @@ describe User do
     end
 
     it "can have a business name" do
-      user = build(:user)
-      expect(user["business_name"]).to eq("Awesome Vineyard")
+      user = build(:user, business_name: Faker::Commerce.product_name)
+      expect(user).to be_valid
     end
 
     it "knows when it was created" do
@@ -59,7 +63,7 @@ describe User do
 
     it "knows when it was updated" do
       user = build(:user)
-      user = build(:user, name: "Bob")
+      user = build(:user, name: Faker::Name.name)
       expect {user.updated_at}.to_not raise_error
       expect(user.updated_at.to_datetime ===  Time.now.utc.to_datetime).to eq(true)
       expect(user.updated_at.to_datetime).to be > user.created_at.to_datetime
@@ -71,7 +75,7 @@ describe User do
 
     describe '#current_bottles' do
       before do
-        @user = build(:user)
+        @user = build(:user, id: 3)
         @address = build(:address)
         @address.user_id = @user.id
         @address.generate_btc_address_and_keys
@@ -81,11 +85,14 @@ describe User do
       it 'should return an array of bottles that where is_sold is false' do
         expect(@user.current_bottles).to include @address
       end
-    end # end #currentgit  bottles
+      it 'is an array' do
+        expect(@user.former_bottles.to_a).to be_an Array 
+      end
+    end # end #current bottles
 
     describe '#former_bottles' do
       before do
-        @user = build(:user)
+        @user = build(:user, id: 3)
         @address = build(:address)
         @address.user_id = @user.id
         @address.is_sold = true
@@ -95,6 +102,9 @@ describe User do
       end
       it 'should return an array of bottles that where is_sold is true' do
         expect(@user.former_bottles).to include @address
+      end
+      it 'is an array' do
+        expect(@user.former_bottles.to_a).to be_an Array 
       end
     end # end #former bottles
 
