@@ -6,7 +6,17 @@ class Transaction < ActiveRecord::Base
 
   belongs_to :user
 
+
   ANGELS_SHARE = 10000 
+
+  def sending_address(params)
+    sending_address_object = Address.where(btc_address: params[:address][:sending_btc_address])
+    sending_address_object[0]
+  end
+
+  def receiver_id (params)
+    params[:address][:user_id]
+  end
 
   def make_transaction(sending_address, receiver_id, params)
     receiver_address(sending_address, receiver_id)
@@ -17,7 +27,6 @@ class Transaction < ActiveRecord::Base
 
   def receiver_address(sending_address, receiver_id)
     @address = Address.new
-    binding.pry
     @address.last_location = User.find(receiver_id).stringified_location 
     @address.user_id = receiver_id
     @address.vineyard_name = sending_address.vineyard_name
@@ -32,12 +41,24 @@ class Transaction < ActiveRecord::Base
     @address.save
   end
 
+  #what does this do? this seems more about assigning coordinates of a prior location
+  #lets call it assign_last_location for now. but it seems weird to do it in retrospect at all.
+  #this looks like the kind of thing that should be called in the present tense on Address in the create action too
+  #and it looks like it creates a footprint that could be like our Get History
+  #why not just push to an array called "bottle_history"?
+
   def assign_location(receiver_id)
-    @address.last_location = User.find(receiver_id).stringified_location
-    lat_long = Geocoder.coordinates(@address.last_location)
-    @address.latitude = lat_long[0]
-    @address.longitude = lat_long[1]
-    @address.save
+    binding.pry
+    if @address.last_location
+      @address.last_location = User.find(receiver_id).stringified_location
+      lat_long = Geocoder.coordinates(@address.last_location)
+      @address.latitude = lat_long[0]
+      @address.longitude = lat_long[1]
+      @address.save
+    else
+      @address.save
+    end
+
   end
 
   def transfer_balance(params)

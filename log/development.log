@@ -1,0 +1,338 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLatitudeLongitudeToAddresses (20150810031955)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLatitudeLongitudeToAddresses (20150810031955)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.8ms)[0m  [1mALTER TABLE "addresses" ADD "latitude" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "addresses" ADD "longitude" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150810031955"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddLastLocationToAddresses (20150810033201)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "addresses" ADD "last_location" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150810033201"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddStringifiedLocationToUsers (20150810050221)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "stringified_location" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150810050221"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:37:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+Completed 500 Internal Server Error in 23ms
+
+SyntaxError (/Users/sarahalder/WineBottleProject/app/models/transaction.rb:21: formal argument cannot be an instance variable
+  def make_transaction(sending_address, receiver_id, @params)
+                                                            ^):
+  app/models/transaction.rb:21: formal argument cannot be an instance variable
+  app/models/transaction.rb:21: formal argument cannot be an instance variable
+  app/controllers/transactions_controller.rb:4:in `create'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (151.2ms)
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:39:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:43:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:44:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:46:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk"]]
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:47:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk"]]
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:48:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk"]]
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:50:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUTrObZLCD7DFvwPLucCNe75BtfXwJi099WkL5lWGT0EkYg7jAADyaF47Yl3AeDNYkP4U7a2iyXd6ZyYCaIocw==", "address"=>{"address_description"=>"", "sending_btc_address"=>"mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk", "sending_private_key"=>"d30c4978a3c97d9c8c2e98f6282edf30ceff66ecce706474bcba364501f889da", "user_id"=>"3"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mrpPVVVZmSoKGNHwtAE9fq39XvVj7NCAxk"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 500 Internal Server Error in 224ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/transaction.rb:47:in `assign_location'
+  app/models/transaction.rb:23:in `make_transaction'
+  app/controllers/transactions_controller.rb:7:in `create'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (164.9ms)
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 18:02:12 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered wine_faucets/new.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 3808ms (Views: 3751.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:02:17 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 18:02:48 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfEHtR1NzdgIzMnoSlm1mVh2JAWPHYrhSGpB/l7yRP7EJGS3JwbGL2qi2G4Tv1dh1Mzage5rmXBiVnlJzgZ1sA==", "address"=>{"vineyard_name"=>"trump winery", "wine_type"=>"merlot", "vintage"=>"1999", "provenance"=>"south africa", "designation"=>"", "brand_name"=>"", "current_user"=>"4"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["vineyard_name", "trump winery"], ["wine_type", "merlot"], ["vintage", 1999], ["provenance", "south africa"], ["designation", ""], ["brand_name", ""], ["latitude", "40.7127837"], ["longitude", "-74.0059413"], ["created_at", "2015-08-10 22:02:48.184801"], ["updated_at", "2015-08-10 22:02:48.184801"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?  [["stringified_description", "1999 trump winery merlot from south africa."], ["private_key", "acea502fc1174e35b65df89ae71cb208945c1432b7a7bde95946d61981aa3c84"], ["public_key", "04819269cd0d89d845ac35a281c2c0a6551af9e6cc0bc90cbe254705def3059a0407a35e180c8659378d73e7efd42cbf2863913e36feb55dae3e0ee4abcc0032fa"], ["btc_address", "mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6"], ["updated_at", "2015-08-10 22:02:48.269627"], ["id", 58]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 851ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-10 18:02:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 734ms (Views: 692.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:02:49 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 18:02:49 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 18:03:22 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered wine_faucets/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 736ms (Views: 734.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:03:23 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 18:03:38 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XaDFmwFxBvOKbVE/LIWTf3OhTNczsiQehF+cO1sEi8so+AUVk7P7KxHpMKlVPS1cXR7tz242wFQLUbHfZgjYQ==", "address"=>{"vineyard_name"=>"CT Vinez", "wine_type"=>"Chardonnay", "vintage"=>"2003", "provenance"=>"atlanta", "designation"=>"", "brand_name"=>"", "current_user"=>"4"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["vineyard_name", "CT Vinez"], ["wine_type", "Chardonnay"], ["vintage", 2003], ["provenance", "atlanta"], ["designation", ""], ["brand_name", ""], ["latitude", "40.7127837"], ["longitude", "-74.0059413"], ["created_at", "2015-08-10 22:03:38.825026"], ["updated_at", "2015-08-10 22:03:38.825026"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?  [["stringified_description", "2003 CT Vinez Chardonnay from atlanta."], ["private_key", "de1f5c5a3251c5be6b0a3103c1f551e9d81733d44cc5c66ea8e5519de53cb73a"], ["public_key", "0412b1a0b74b3d975956f813a28facd795e1d5db864a4fc6c92323d34083b47a119415fff1a82355e96f4b580f250d6f4b01c5ced3a5b6f042aec136086067215c"], ["btc_address", "n1Fnt8XQcBMb2GpwQWXm7xJ4LPUTSADoo4"], ["updated_at", "2015-08-10 22:03:38.908730"], ["id", 59]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 975ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-10 18:03:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mAddress Load (0.2ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mAddress Load (0.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 686ms (Views: 668.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:03:40 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 18:03:40 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 18:03:43 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered wine_faucets/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 633ms (Views: 632.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:03:44 -0400
+
+
+Started GET "/" for ::1 at 2015-08-10 18:32:58 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered home/index.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 953ms (Views: 946.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:32:59 -0400
+
+
+Started GET "/users/4" for ::1 at 2015-08-10 18:33:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 4]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 4]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 753ms (Views: 734.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 18:33:05 -0400
+
+
+Started POST "/verifications" for ::1 at 2015-08-10 18:33:12 -0400
+Processing by VerificationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ygqzqkM5ouq35yyWpzVgcA6jzfCcUxctnSNasA7xfmwH39CoeXKpHdWJPRD+04KIghkzdP0lBLy3H2IHngVPIg==", "address"=>{"sending_btc_address"=>"mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6"}, "commit"=>"Verrrrrify"}
+  Rendered verifications/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1664ms (Views: 615.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 18:33:13 -0400
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 18:33:22 -0400
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X5oKOd9wx4l6//SNrlLP4RYIymS+gDfMi1fK32EmTimST2k75TvMfhiR5Qv3tC0ZmrI04N/2JF2ha/Jo8dJ/Zw==", "address"=>{"address_description"=>"1999 trump winery merlot from south africa.", "sending_btc_address"=>"mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6", "sending_private_key"=>"acea502fc1174e35b65df89ae71cb208945c1432b7a7bde95946d61981aa3c84", "user_id"=>"1"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "brand_name", "stringified_description", "designation", "provenance", "private_key", "public_key", "btc_address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["vineyard_name", "trump winery"], ["wine_type", "merlot"], ["vintage", 1999], ["brand_name", ""], ["stringified_description", "1999 trump winery merlot from south africa."], ["designation", ""], ["provenance", "south africa"], ["private_key", "bf8d3e9d53bc052094cd07684a527d287c8b3db5674c0bd5235f6983f4c91ef8"], ["public_key", "04331158cfb0d56b0b46175811afb25c92d75c383284e0387ee7bd19a71bf04b563eee74ef5d70b7be0b2aacf23b55e37a019af5043a19900d8a6625c912bd71ef"], ["btc_address", "mvQFBs1PhkjMnJo2oigc64PazhPLB3HDyw"], ["created_at", "2015-08-10 22:33:22.778224"], ["updated_at", "2015-08-10 22:33:22.778224"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 49ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/transaction.rb:47:in `assign_location'
+  app/models/transaction.rb:23:in `make_transaction'
+  app/controllers/transactions_controller.rb:7:in `create'
+
+
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (69.2ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/sarahalder/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (147.2ms)
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 18:34:43 -0400
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X5oKOd9wx4l6//SNrlLP4RYIymS+gDfMi1fK32EmTimST2k75TvMfhiR5Qv3tC0ZmrI04N/2JF2ha/Jo8dJ/Zw==", "address"=>{"address_description"=>"1999 trump winery merlot from south africa.", "sending_btc_address"=>"mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6", "sending_private_key"=>"acea502fc1174e35b65df89ae71cb208945c1432b7a7bde95946d61981aa3c84", "user_id"=>"1"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  [["btc_address", "mo1ZepQUJnrJeuorRBRJJM3yEs9Wy8mwr6"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "brand_name", "stringified_description", "designation", "provenance", "private_key", "public_key", "btc_address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["vineyard_name", "trump winery"], ["wine_type", "merlot"], ["vintage", 1999], ["brand_name", ""], ["stringified_description", "1999 trump winery merlot from south africa."], ["designation", ""], ["provenance", "south africa"], ["private_key", "35eccc50b38e5538aed0fa894f1e5c62f6f140ca9b3ee0b03f0ef4454cb0d549"], ["public_key", "04e572fc57ecf13d44e3f1015fbf3826be13dc40f67c21f845a5d474cfdce014a962725eef2ea3059d3ac176f4114f14d15c5c6156cee40f09cd17b704ccc5bb12"], ["btc_address", "n4mdHaNg11SvbaRk2P8RSWciX3aZwomjtj"], ["created_at", "2015-08-10 22:34:43.472044"], ["updated_at", "2015-08-10 22:34:43.472044"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
