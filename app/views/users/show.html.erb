@@ -82,7 +82,6 @@
       <li>Created at <%=@user.addresses.last.created_at%></li>
       <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>
       <li>Bottle ID #<%=@user.addresses.last.id%></li>
-      <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>
     </ul>
     <hr>
   <% end %>
@@ -93,9 +92,9 @@
       <ul>
       <!-- get rid of btc address before final presentation -->
       <li><%= ad.stringified_description %></li>
+      <li><%=image_tag ad.avatar.url(:thumb)%></li>
       <li>Bitcoin Address: <%= ad.btc_address %></li>
       <li>Bottle ID #<%= ad.id%></li>
-      <li>Is_Sold? #<%= ad.is_sold%></li>
       <li><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></li>
       <li>Transaction Date: <%= ad.created_at%>.</li>
       <!-- Bottled at: vineyard_name: 
@@ -118,6 +117,7 @@
 
       <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+       <%= f.hidden_field :address_id_for_history, :value => ad.id %>
        <%= f.submit "Get History" %> 
         </ul>
       <% end %>
@@ -136,7 +136,6 @@
       <li><%= ad.stringified_description %></li>
       <li>Bitcoin Address: <%= ad.btc_address %></li>
       <li>Bottle ID #<%= ad.id%></li>
-      <li>Is_Sold? #<%= ad.is_sold%></li>
       <li><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></li>
       <li>Transaction Date: <%= ad.created_at%>.</li>
       <!-- Bottled at: vineyard_name: 
@@ -149,7 +148,8 @@
       <!-- closes verify -->
 
       <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
-       <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+      <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %> 
+      <%= f.hidden_field :address_id_for_history, :value => ad.id %>
        <%= f.submit "Get History" %> 
         </ul>
       <% end %>

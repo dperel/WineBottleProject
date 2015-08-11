@@ -19,7 +19,8 @@ class Transaction < ActiveRecord::Base
   def make_transaction(sending_address, receiver_id, params)
     receiver_address(sending_address, receiver_id) # calls one method
     assign_location(receiver_id) # calls another method
-    transfer_balance(params) # calls another method
+    transfer_balance(params)
+    MakeHistory.run
     change_to_sold(params) # calls another method
   end
 
@@ -27,7 +28,6 @@ class Transaction < ActiveRecord::Base
     @address = Address.new
     @address.last_location = User.find(receiver_id).stringified_location 
       @address.user_id = receiver_id
-      binding.pry
       # @address.attributes.merge(sending_address.attributes)
       @address.vineyard_name = sending_address.vineyard_name
       @address.wine_type = sending_address.wine_type
@@ -37,8 +37,9 @@ class Transaction < ActiveRecord::Base
       @address.designation = sending_address.designation
       @address.provenance = sending_address.provenance
       @address.description = sending_address.description
+      @address.avatar = sending_address.avatar
       @address.generate_btc_address_and_keys
-    @address.save
+      @address.save
   end
 
   def assign_location(receiver_id)
