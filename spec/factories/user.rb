@@ -4,7 +4,7 @@ FactoryGirl.define do
     # id 3 # for testing instance methods
     name { Faker::Name.name }
     email { Faker::Internet.email }
-    password { Faker::Internet.password(10, 20) }
+    password { Faker::Internet.password(8, 20) }
     city { Faker::Address.city }
     country { Faker::Address.country }
     created_at Time.now

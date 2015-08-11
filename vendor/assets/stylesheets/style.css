@@ -2608,7 +2608,7 @@ Vertival margin, padding
 .authentication {
 	color: white;
 	margin-top: 1.3em;
-	padding-left: 1em;
+	margin-left: 3em;
 	list-style: none;
 }
 
@@ -2674,4 +2674,8 @@ Vertival margin, padding
 
 .signup .col-sm-5 {
 	padding-top: 1em;
+}
+
+.name {
+	float: left;
 }

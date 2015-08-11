@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
   
-  attr_accessor :user
-                # :user_addresses
-
   def create
     @user = User.new(user_params)
     @user.save ? (redirect_to @user) : (redirect_to '/users/new')
@@ -34,7 +31,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:id)
+      params.require(:user).permit(:id, :name, :email, :password, :city, :state, :country, :business_name, :stringified_location, :is_vineyard )
     end
 
 end 

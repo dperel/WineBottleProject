@@ -1,17 +1,14 @@
 class TransactionsController < ApplicationController
 
   def create
-    # create a new instance
     @transaction = Transaction.new
+    previous_address = Address.where(btc_address: params[:address][:sending_btc_address]).first
+    recipient = User.find(params[:address][:user_id]) 
 
-    # create arguments
-    sending_address = Address.where(btc_address: params[:address][:sending_btc_address]).first
-    receiver_id = params[:address][:user_id]
-
-    # call the runner and passes the arguments into it
-    @transaction.make_transaction(sending_address, receiver_id, params)
-
-    # redirect
+    @address = Address.new
+    @address.generate_btc_address_and_keys
+    
+    @transaction.make_transaction(previous_address, receiver_id, params)
     redirect_to user_path(current_user)
   end
 
