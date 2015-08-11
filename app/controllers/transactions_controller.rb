@@ -3,8 +3,6 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.new
     previous_address = Address.where(btc_address: params[:address][:sending_btc_address]).first
-
-
     recipient = User.find(params[:address][:user_id]) 
 
     @address = Address.new
