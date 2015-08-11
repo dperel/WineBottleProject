@@ -4,7 +4,7 @@ require 'factory_girl_rails'
 describe User do
 
   it 'has a valid factory' do
-    expect(FactoryGirl.build(:user)).to be_valid
+    expect(build(:user)).to be_valid
   end
   
   describe 'associations' do
@@ -40,7 +40,7 @@ describe User do
     end
 
     it "is invalid with a password that is too short" do
-      user = build(:user, password: "Mittens")
+      user = build(:user, password: Faker::Internet.password(6) )
       expect(user).to_not be_valid
       expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
     end
@@ -51,8 +51,8 @@ describe User do
     end
 
     it "can have a business name" do
-      user = build(:user)
-      expect(user["business_name"]).to eq("Awesome Vineyard")
+      user = build(:user, business_name: Faker::Commerce.product_name)
+      expect(user).to be_valid
     end
 
     it "knows when it was created" do
@@ -63,7 +63,7 @@ describe User do
 
     it "knows when it was updated" do
       user = build(:user)
-      user = build(:user, name: "Bob")
+      user = build(:user, name: Faker::Name.name)
       expect {user.updated_at}.to_not raise_error
       expect(user.updated_at.to_datetime ===  Time.now.utc.to_datetime).to eq(true)
       expect(user.updated_at.to_datetime).to be > user.created_at.to_datetime

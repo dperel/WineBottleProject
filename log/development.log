@@ -690,3 +690,375 @@ Started GET "/assets/slider.css" for ::1 at 2015-08-10 16:42:53 -0400
 
 
 Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 16:42:53 -0400
+
+
+Started GET "/" for ::1 at 2015-08-10 17:04:25 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 1084ms (Views: 1066.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 17:04:28 -0400
+
+
+Started GET "/fonts/et-line.woff" for ::1 at 2015-08-10 17:04:29 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/et-line.woff"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (238.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (215.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (8.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (402.0ms)
+
+
+Started GET "/fonts/et-line.ttf" for ::1 at 2015-08-10 17:04:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/et-line.ttf"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (295.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (254.1ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-10 17:04:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (197.7ms)
+Completed 200 OK in 1168ms (Views: 1071.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 17:04:37 -0400
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 17:04:48 -0400
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wVWZM/I7P7bWEZ9QHXNV5qU5t1s4IEi18PrhZKqhL9qptrRDXtpub+HEzFhPu21gteZJPSgwWO9w9QLK2oNpPA==", "address"=>{"address_description"=>"0 arr abv from wewq, qr.", "sending_btc_address"=>"n3r3dCpdFvRRunHwHN94nArccaqnjdRjBY", "sending_private_key"=>"dfc630419d798ff08786a589e4dc29d673a84369e0fc0f2bc5f8a2ddf0ba055e", "user_id"=>"1"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  ORDER BY "addresses"."id" ASC LIMIT 1  [["btc_address", "n3r3dCpdFvRRunHwHN94nArccaqnjdRjBY"]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  begin transaction
+  [1m[36mSQL (5.7ms)[0m  [1mINSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "brand_name", "stringified_description", "designation", "provenance", "private_key", "public_key", "btc_address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["vineyard_name", "arr"], ["wine_type", "abv"], ["vintage", 0], ["brand_name", ""], ["stringified_description", "0 arr abv from wewq, qr."], ["designation", "qr"], ["provenance", "wewq"], ["private_key", "409d60f93cfb8cb3f3befd0fe67b402d0789cb138a4a40be2e9afffdec4363dc"], ["public_key", "047ef8751c5afa7c35e9762c0951ab59784763af77f913bc7ea2aaf8fcc34a29aa55b65415015fd45ea3c7c54e54419701d406fee1b94c6186c5ead42affe24b95"], ["btc_address", "moj4bEmEg6KSi2PNZ8jH3sqq8NisTxjhCG"], ["created_at", "2015-08-10 21:17:59.248625"], ["updated_at", "2015-08-10 21:17:59.248625"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 794248ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/transaction.rb:47:in `assign_location'
+  app/models/transaction.rb:21:in `make_transaction'
+  app/controllers/transactions_controller.rb:12:in `create'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (55.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (155.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (208.0ms)
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 17:18:03 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered wine_faucets/new.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 995ms (Views: 913.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 17:18:05 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 17:18:16 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5V04sp78UzPxvQ/Vt42AKTpaUpLs8gDfRDoxQvm0bI2NvhXCMh0C6sZoXN3lRbivKoWs9PziEIXENdLsiZYqaw==", "address"=>{"vineyard_name"=>"123", "wine_type"=>"123", "vintage"=>"123", "provenance"=>"123", "designation"=>"123", "brand_name"=>"123", "current_user"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 2], ["vineyard_name", "123"], ["wine_type", "123"], ["vintage", 123], ["provenance", "123"], ["designation", "123"], ["brand_name", "123"], ["created_at", "2015-08-10 21:18:17.243248"], ["updated_at", "2015-08-10 21:18:17.243248"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["stringified_description", "123 123 123 from 123, 123 (123)."], ["private_key", "eed1dbb103ade79035f6f140aa42a8c12e80b9f59a0e56b8001626c0613af760"], ["public_key", "04a8ff362ae7c3e0891358a506aff47c709a11f5743ce138d418ea27f9388af6644f07ff17c9ff01cb7282516f316876de0c98c9f587e5510b6706947db8b87986"], ["btc_address", "mnoP7FJoBc7nFGngx4Q8Qtu8fUbv5s4oRq"], ["updated_at", "2015-08-10 21:18:17.431497"], ["id", 32]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2156ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-10 17:18:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (151.3ms)
+Completed 200 OK in 1084ms (Views: 1042.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 17:18:20 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 17:18:20 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 17:18:26 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered wine_faucets/new.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 1063ms (Views: 1043.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 17:18:27 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 17:18:37 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gIntYVmL1MV3avK7h32YHhYmV5OZHoRYJPNWfRRm0M7oasAR9WqFHEC/obPVtaCYBvmp9YkOlAKk/LXTZESWKA==", "address"=>{"vineyard_name"=>"234", "wine_type"=>"234", "vintage"=>"234", "provenance"=>"234", "designation"=>"234", "brand_name"=>"", "current_user"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 2], ["vineyard_name", "234"], ["wine_type", "234"], ["vintage", 234], ["provenance", "234"], ["designation", "234"], ["brand_name", ""], ["created_at", "2015-08-10 21:18:37.682107"], ["updated_at", "2015-08-10 21:18:37.682107"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["stringified_description", "234 234 234 from 234, 234."], ["private_key", "54c7d703049196b23dbd43662c85ee8ccb0045dc5d194163c05bbc1e727880f7"], ["public_key", "04fa434a04316e57f84731e45e24271942988d987c32cc9146c7deef3ed2385c9c4b9c600aaaff6f404c76197bdffe28a6abdc77571df6e6e597fdba61fae0d0bd"], ["btc_address", "mr7SAwJMYjaHaTGzRXM4pJnwQFXhYsihVE"], ["updated_at", "2015-08-10 21:18:37.804389"], ["id", 33]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 1308ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-10 17:18:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (166.2ms)
+Completed 200 OK in 1066ms (Views: 1021.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 17:18:40 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 17:18:40 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 20:11:28 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered wine_faucets/new.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 1972ms (Views: 1890.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 20:11:33 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 20:12:27 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XAp14O5TaqpMw19a6Ad1Ui19uKKM5Fx0eveOICR+xF006ViQQrI7c3sWDFK6z03UPaJGxJz0TC76+G2OVFyCuw==", "address"=>{"vineyard_name"=>"abs", "wine_type"=>"abc", "vintage"=>"av", "provenance"=>"abc", "designation"=>"", "brand_name"=>"", "current_user"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (2.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 2], ["vineyard_name", "abs"], ["wine_type", "abc"], ["vintage", 0], ["provenance", "abc"], ["designation", ""], ["brand_name", ""], ["created_at", "2015-08-11 00:12:30.921237"], ["updated_at", "2015-08-11 00:12:30.921237"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["stringified_description", "0 abs abc from abc."], ["private_key", "cfe57496ed309da588c6fd224a6d718e8bf661a94eb3350c3764533919495fff"], ["public_key", "040c6fa1b4c1dd750d4dac3c438db559c2ae5998d2f05a5411448d0ef47d75b09844dc9c09b0cdd82ad42c66cbea4a0d3a3df2bc031054d28e40062f43364b47fc"], ["btc_address", "mobN3NPvYwm8XgxsUPc49XzX1BYuTdzXpG"], ["updated_at", "2015-08-11 00:12:31.772696"], ["id", 34]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 9211ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-10 20:12:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (2.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.6ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (1.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (433.0ms)
+Completed 200 OK in 9674ms (Views: 9540.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 20:12:49 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 20:12:53 -0400
+
+
+Started GET "/wine_faucets/new" for ::1 at 2015-08-10 20:13:33 -0400
+Processing by WineFaucetsController#new as HTML
+  [1m[35mUser Load (140.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered wine_faucets/new.html.erb within layouts/application (759.7ms)
+Completed 200 OK in 6430ms (Views: 6155.9ms | ActiveRecord: 140.9ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 20:13:41 -0400
+
+
+Started POST "/addresses" for ::1 at 2015-08-10 20:35:28 -0400
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hzMTmQh99PnUg4yeMsX2VhZ6HfcADE3zhCCOha2XR67v0D7ppJylIONW35ZgDc7QBqXjkRAcXakEL20r3bUBSA==", "address"=>{"vineyard_name"=>"Abc", "wine_type"=>"Merlot", "vintage"=>"234", "provenance"=>"NZYC", "designation"=>"", "brand_name"=>"", "current_user"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (5.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (2.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "provenance", "designation", "brand_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 2], ["vineyard_name", "Abc"], ["wine_type", "Merlot"], ["vintage", 234], ["provenance", "NZYC"], ["designation", ""], ["brand_name", ""], ["created_at", "2015-08-11 00:35:29.464302"], ["updated_at", "2015-08-11 00:35:29.464302"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "addresses" SET "stringified_description" = ?, "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["stringified_description", "234 Abc Merlot from NZYC."], ["private_key", "e8d45275b2715d4d58f1c197eed24e0d8ae10d185d15ba181ecb4533d737f646"], ["public_key", "0426c6cd4858de3549b3cb4ceb6598012f113600afa8989dc144740e524b91cff28066fc5793d93f488af7175ad1ed3e2b0b6be0d892ce352973a6716710e0ce6d"], ["btc_address", "mii8wqBEpsC5LhgDft34RVPPRVuM7HkD9K"], ["updated_at", "2015-08-11 00:35:29.623864"], ["id", 35]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 1794ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-10 20:35:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (211.2ms)
+Completed 200 OK in 1509ms (Views: 1429.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-10 20:35:33 -0400
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-10 20:35:34 -0400
+
+
+Started POST "/transactions" for ::1 at 2015-08-10 20:35:52 -0400
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0jv7NxM3KLBcMDRN2GnSxJwdMUpx+Txzbo4oWkdTVvDq8KccK2Ne/alk9llqZ/NAq+KoznX9KtNtdsPGT8LvQ==", "address"=>{"address_description"=>"0 arr abv from wewq, qr.", "sending_btc_address"=>"n3QcwYYhBeWg3xvaA8ZX53gpVnBLNDaCJc", "sending_private_key"=>"b71a8d7110e50e3bf03fe38232a516ffc00c5cda6d22b4fbc07e8dfa08a0b9ff", "user_id"=>"1"}, "commit"=>"Sell"}
+  [1m[35mAddress Load (6.2ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."btc_address" = ?  ORDER BY "addresses"."id" ASC LIMIT 1  [["btc_address", "n3QcwYYhBeWg3xvaA8ZX53gpVnBLNDaCJc"]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (13.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "addresses" ("user_id", "vineyard_name", "wine_type", "vintage", "brand_name", "stringified_description", "designation", "provenance", "private_key", "public_key", "btc_address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["vineyard_name", "arr"], ["wine_type", "abv"], ["vintage", 0], ["brand_name", ""], ["stringified_description", "0 arr abv from wewq, qr."], ["designation", "qr"], ["provenance", "wewq"], ["private_key", "6f67455402491ba03c2b6568bdc0e8d3bf577657ba5ad87cf37c6fd707e40196"], ["public_key", "04d721176cbc1b31e234b69408dcb71432b5b41ed617a0c9a3e5469cdbfac352142f2601f4c6cd6f6909448b8d4f2835c7ee65014f46c7b6d7dbf03f9f539acc1d"], ["btc_address", "mrHAZK3fbLZCxyQhWSRGDeWCh6QAnuouc1"], ["created_at", "2015-08-11 00:40:20.267883"], ["updated_at", "2015-08-11 00:40:20.267883"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.6ms)[0m  begin transaction
+  [1m[36mSQL (9.4ms)[0m  [1mUPDATE "addresses" SET "private_key" = ?, "public_key" = ?, "btc_address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["private_key", "ac75129c244c1076690079ddda7cc322d5209f7c31fbecf44a497ca8f1e0be00"], ["public_key", "04948c728e14f47cfebfbca4b3f5e02b621dd79d20f4bf82ea4450fa25434a2a7390c2346fbc28ec963ec2fe72baf28c29cb15818383387fd97a64cdd1b519da83"], ["btc_address", "mszMiAoJFbXrf3CuPbybmsy4ES8c7gQdWp"], ["updated_at", "2015-08-11 00:41:33.591962"], ["id", 36]]
+  [1m[35m (1.3ms)[0m  commit transaction

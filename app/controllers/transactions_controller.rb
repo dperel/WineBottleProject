@@ -15,7 +15,4 @@ class TransactionsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def show
-  end
-
 end

@@ -27,6 +27,8 @@ class Transaction < ActiveRecord::Base
     @address = Address.new
     @address.last_location = User.find(receiver_id).stringified_location 
       @address.user_id = receiver_id
+      binding.pry
+      # @address.attributes.merge(sending_address.attributes)
       @address.vineyard_name = sending_address.vineyard_name
       @address.wine_type = sending_address.wine_type
       @address.vintage = sending_address.vintage
