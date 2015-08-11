@@ -3,7 +3,6 @@ class Address < ActiveRecord::Base
   geocoded_by :stringified_location
   after_validation :geocode
   
-
   require 'bitcoin'
   require 'awesome_print'
 

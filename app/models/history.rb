@@ -5,8 +5,7 @@ class History < ActiveRecord::Base
   end
 
   def self.get_history(address) 
-    chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', 
-                                      key_secret: ENV['key_secret'])
+    chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
     chain_client.block_chain = 'testnet3'
 
     transaction_data = chain_client.get_address_transactions(address)
@@ -35,9 +34,8 @@ class History < ActiveRecord::Base
   def self.past_locations
     #Need to get hash of location stringified location and their coords?
     @past_address_objects = []
-    @@history_array.map{|address| @past_address_objects << Address.where(btc_address: address)
+    @@history_array.map{|address| @past_address_objects << Address.where(btc_address: address)}
     @past_address_objects.flatten
-   binding.pry
   end
 
 end 
