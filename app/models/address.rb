@@ -33,11 +33,10 @@ class Address < ActiveRecord::Base
     old_address = sending_address
     new_address = self 
     attrs_for_transfer = ["vineyard_name", "wine_type", "vintage", "provenance",
-      "brand_name", "stringified_location", "designation", "stringified_description"]
+                          "brand_name", "stringified_location", "designation", "stringified_description", 
+                          "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at"]
     new_address.attributes.each do |key, value|
-      if attrs_for_transfer.include?(key) 
-        new_address.send("#{key}=", sending_address.attributes[key])
-      end
+      new_address.send("#{key}=", sending_address.attributes[key]) if attrs_for_transfer.include?(key) 
     end
   end
 
