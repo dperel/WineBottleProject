@@ -8,25 +8,25 @@ class Transaction < ActiveRecord::Base
 
   ANGELS_SHARE = 10000 
 
-  def make_transaction(sending_address, receiver_id, params)
-    receiver_address(sending_address, receiver_id) # calls one method
-    assign_location(receiver_id) # calls another method
+  def make_transaction(previous_address, recipient, params)
+    receiver_address(previous_address, recipient) # calls one method
+    assign_location(recipient) # calls another method
     transfer_balance(params) # calls another method
     change_to_sold(params) # calls another method
   end
 
-  def receiver_address(sending_address, receiver_id)
+  def receiver_address(previous_address, recipient)
     @address = Address.new
     @address.generate_btc_address_and_keys
-    @address.current_location = User.find(receiver_id).stringified_location 
-    @address.user_id = receiver_id
-    @address.transfer_old_attributes(sending_address)
+    @address.current_location = recipient.stringified_location 
+    @address.user_id = recipient.id
+    @address.transfer_old_attributes(previous_address)
     @address.save
   end
 
 
-  def assign_location(receiver_id)
-    @address.current_location = User.find(receiver_id).stringified_location
+  def assign_location(recipient)
+    @address.current_location = recipient.stringified_location
     lat_long = Geocoder.coordinates(@address.current_location)
     @address.latitude = lat_long[0]
     @address.longitude = lat_long[1]
