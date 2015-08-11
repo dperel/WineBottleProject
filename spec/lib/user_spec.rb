@@ -75,7 +75,7 @@ describe User do
 
     describe '#current_bottles' do
       before do
-        @user = build(:user)
+        @user = build(:user, id: 3)
         @address = build(:address)
         @address.user_id = @user.id
         @address.generate_btc_address_and_keys
@@ -89,7 +89,7 @@ describe User do
 
     describe '#former_bottles' do
       before do
-        @user = build(:user)
+        @user = build(:user, id: 3)
         @address = build(:address)
         @address.user_id = @user.id
         @address.is_sold = true

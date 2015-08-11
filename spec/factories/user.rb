@@ -1,7 +1,7 @@
 FactoryGirl.define do
 
   factory :user do
-    id 3 # for testing instance methods
+    # id 3 # for testing instance methods
     name { Faker::Name.name }
     email { Faker::Internet.email }
     password { Faker::Internet.password(10, 20) }
