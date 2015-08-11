@@ -19,25 +19,27 @@ class Transaction < ActiveRecord::Base
   end
 
   def make_transaction(sending_address, receiver_id, params)
-    receiver_address(sending_address, receiver_id)
-    assign_location(receiver_id)
-    transfer_balance(params)
-    change_to_sold(params)
+    receiver_address(sending_address, receiver_id) # calls one method
+    assign_location(receiver_id) # calls another method
+    transfer_balance(params) # calls another method
+    change_to_sold(params) # calls another method
   end
 
   def receiver_address(sending_address, receiver_id)
     @address = Address.new
     @address.last_location = User.find(receiver_id).stringified_location 
-    @address.user_id = receiver_id
-    @address.vineyard_name = sending_address.vineyard_name
-    @address.wine_type = sending_address.wine_type
-    @address.vintage = sending_address.vintage
-    @address.brand_name = sending_address.brand_name
-    @address.stringified_description = sending_address.stringified_description
-    @address.designation = sending_address.designation
-    @address.provenance = sending_address.provenance
-    @address.description = sending_address.description
-    @address.generate_btc_address_and_keys
+      @address.user_id = receiver_id
+      binding.pry
+      # @address.attributes.merge(sending_address.attributes)
+      @address.vineyard_name = sending_address.vineyard_name
+      @address.wine_type = sending_address.wine_type
+      @address.vintage = sending_address.vintage
+      @address.brand_name = sending_address.brand_name
+      @address.stringified_description = sending_address.stringified_description
+      @address.designation = sending_address.designation
+      @address.provenance = sending_address.provenance
+      @address.description = sending_address.description
+      @address.generate_btc_address_and_keys
     @address.save
   end
 
@@ -49,16 +51,11 @@ class Transaction < ActiveRecord::Base
 
   def assign_location(receiver_id)
     binding.pry
-    if @address.last_location
-      @address.last_location = User.find(receiver_id).stringified_location
-      lat_long = Geocoder.coordinates(@address.last_location)
-      @address.latitude = lat_long[0]
-      @address.longitude = lat_long[1]
-      @address.save
-    else
-      @address.save
-    end
-
+    @address.last_location = User.find(receiver_id).stringified_location
+    lat_long = Geocoder.coordinates(@address.last_location)
+    @address.latitude = lat_long[0]
+    @address.longitude = lat_long[1]
+    @address.save
   end
 
   def transfer_balance(params)
