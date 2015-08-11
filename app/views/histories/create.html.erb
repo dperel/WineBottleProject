@@ -27,7 +27,7 @@
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
         var flightPlanCoordinates = [
-          <% @addresses.each do |address| %>
+          <% @real_data.each do |address| %>
             new google.maps.LatLng(<%= address.latitude.to_f %>, <%= address.longitude.to_f %>),
           <% end %>
         ];

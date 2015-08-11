@@ -8,16 +8,6 @@ class Transaction < ActiveRecord::Base
 
   ANGELS_SHARE = 10000 
 
-<<<<<<< HEAD
-  # def initialize
-  #   sending_address_object = Address.where(btc_address: params[:address][:sending_btc_address])
-  #   sending_address = sending_address_object[0]
-  #   binding.pry
-  #   receiver_id = params[:address][:user_id]
-  # end
-
-  # runner
-
   def make_transaction(previous_address, recipient, params)
     receiver_address(previous_address, recipient) # calls one method
     assign_location(recipient) # calls another method
