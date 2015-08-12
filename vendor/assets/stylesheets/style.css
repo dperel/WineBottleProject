@@ -2694,8 +2694,7 @@ Vertival margin, padding
 .gallery-item .gallery-caption .blocktrail{
 	font-size: .45em;
 }
-/*
-.gallery-description span {
-	visibility: hidden;
+
+.title {
+	text-align: center;
 }
-*/
