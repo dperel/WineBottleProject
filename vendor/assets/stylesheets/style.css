@@ -2686,9 +2686,13 @@ Vertival margin, padding
 .gallery-icon {
 	font-size: .5em;
 	margin: 3em;
-
 }
 
+.gallery-icon span {
+   	line-height: 1em;
+   	width: 100%
+}
 
-
-
+.gallery-icon span div {
+		font-size: .5em;
+}

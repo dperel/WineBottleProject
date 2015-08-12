@@ -18,20 +18,20 @@
       <%= @current_bottles.map do |ad| %>
       <div class="col-sm-6 col-md-3 col-lg-3">
         <div class="gallery-item">
-          <div class="gallery-image">
+          
             <a href="assets/images/section-1.jpg" class="gallery" title="Title 1">
             <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
               <div class="gallery-caption">
-                <div class="gallery-icon">
+
                   <span>
                       <div><%=ad.stringified_description%></div>
                       <div><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
 
                   </span>
-                </div>
+                
               </div>
             </a>
-          </div>
+          
         </div>
       </div>
       <% end %>
