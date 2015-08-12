@@ -17812,3 +17812,15 @@ NoMethodError (undefined method `[]' for nil:NilClass):
   Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
   Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.9ms)
   Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (259.7ms)
+
+
+Started PUT "/console/repl_sessions/d6b9a1abdc881e174c170f97771e0625" for ::1 at 2015-08-11 23:36:14 -0400
+
+
+Started PUT "/console/repl_sessions/d6b9a1abdc881e174c170f97771e0625" for ::1 at 2015-08-11 23:36:23 -0400
+
+
+Started PUT "/console/repl_sessions/d6b9a1abdc881e174c170f97771e0625" for ::1 at 2015-08-11 23:36:32 -0400
+
+
+Started PUT "/console/repl_sessions/d6b9a1abdc881e174c170f97771e0625" for ::1 at 2015-08-11 23:36:34 -0400
