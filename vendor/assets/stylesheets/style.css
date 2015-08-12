@@ -2698,3 +2698,7 @@ Vertival margin, padding
 .title {
 	text-align: center;
 }
+
+.warning {
+	margin-top: -5em;
+}
