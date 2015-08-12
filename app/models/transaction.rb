@@ -11,7 +11,7 @@ class Transaction < ActiveRecord::Base
   def make_transaction(previous_address, recipient, params)
     receiver_address(previous_address, recipient) # calls one method
     assign_location(recipient) # calls another method
-    transfer_balance(params) # calls another method
+    transfer_balance(params)
     change_to_sold(params) # calls another method
     MakeHistory.run
   end
@@ -20,10 +20,10 @@ class Transaction < ActiveRecord::Base
     @address = Address.new
     @address.generate_btc_address_and_keys
     @address.current_location = recipient.stringified_location 
+    @address.avatar = previous_address.avatar 
     @address.user_id = recipient.id
     @address.transfer_old_attributes(previous_address)
     @address.save
-    binding.pry
   end
 
 
@@ -42,28 +42,45 @@ class Transaction < ActiveRecord::Base
     chain_client.block_chain = 'testnet3'
     current_address_info = chain_client.get_address(sender_address)
     balance = current_address_info[0]["confirmed"]["balance"]
-    chain_client.transact(
-      inputs: 
-      [ 
-        {
-          address: sender_address,
-          private_key: sender_private_key
-        }
-      ],
-      outputs: 
-      [
-        {
-          address: @address.btc_address,
-          amount: balance.to_i - ANGELS_SHARE
-        }
-      ]
-    )
+    if balance == 0
+     false
+     binding.pry
+    else
+      chain_client.transact(
+        inputs: 
+        [ 
+          {
+            address: sender_address,
+            private_key: sender_private_key
+          }
+        ],
+        outputs: 
+        [
+          {
+            address: @address.btc_address,
+            amount: balance.to_i - ANGELS_SHARE
+          }
+        ]
+      )
+    end
   end
 
   def change_to_sold(params)
     target = Address.where(btc_address: params[:address][:sending_btc_address])
     target[0][:is_sold] = true
     target[0].save
+  end
+
+  def self.get_balance(previous_btc)
+    chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
+    chain_client.block_chain = 'testnet3'
+    current_address_info = chain_client.get_address(previous_btc)
+    balance = current_address_info[0]["confirmed"]["balance"]
+    if balance == 0 
+      return false
+    else 
+      return true 
+    end
   end
   
 end

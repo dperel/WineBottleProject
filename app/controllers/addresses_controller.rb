@@ -3,19 +3,6 @@ class AddressesController < ApplicationController
   require 'bitcoin'
   Bitcoin.network = :testnet3
 
-  # def new # following pressing 'register a new bottle' and then 'submit'
-  #   @address = Address.new
-  #   # binding.pry
-  #   @address.user_id = current_user.id
-  #   @address.generate_btc_address_and_keys
-
-  #   if @address.save
-  #     redirect_to user_path(current_user)
-  #   else 
-  #     redirect_to '/addresses/new'
-  #   end
-  # end 
-
   def create  # following pressing 'register a new bottle' and then 'submit'
     @address = Address.new
     @address.user_id = current_user.id
