@@ -11,81 +11,23 @@
 
 <section class="module">
   <div class="container">
-<h1> <strong>Your current cellar:</strong> </h1>
+<h3 class='title'> Current Bottles </h3><br><br>
     <div class="row multi-columns-row">
           <!-- Gallery item start -->          
       
       <%= @current_bottles.map do |ad| %>
       <div class="col-sm-6 col-md-3 col-lg-3">
         <div class="gallery-item">
-          <div class="gallery-image">
+          
             <a href="assets/images/section-1.jpg" class="gallery" title="Title 1">
             <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
-              <div class="gallery-caption">
-                <div class="gallery-icon">
-                  <span>
-                      <div><%=ad.stringified_description%></div>
-                      <div><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
+              <div class="gallery-description">
 
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <% end %>
-          <!-- Gallery item end -->
-    </div><!-- .row -->
-  </div>
-</section>
+                  
+                      <div class="description"><%=ad.stringified_description%></div>
+                      <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
 
-
-  <% if current_user && current_user.is_vineyard %>
-    <p> Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>.<br> 
-    </p>
-    <%= button_to "Register a new bottle", new_wine_faucet_path, method: :get %>
-   <% end %> 
- <!-- closes vineyard authentication -->
-  <br>  
-
-  <% if flash[:message] %>
-    <div class="message">
-      <%= flash[:message] %>
-    </div>
-  <% end %>
-  
-  <h2>Your Wine Cellar:</h2>
-<!-- 
-  <% if @user.addresses.count > 0 %>
-    <hr>
-    <strong>Most recent bottle created:</strong>
-    <ul>
-      <li><%=@user.addresses.last.stringified_description%></li>
-      <li><%=image_tag @user.addresses.last.avatar.url%></li>
-      <li>Address: <%=@user.addresses.last.btc_address%></li>
-      <li>Created at <%=@user.addresses.last.created_at%></li>
-      <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>
-      <li>Bottle ID #<%=@user.addresses.last.id%></li>
-    </ul>
-    <hr>
-  <% end %> -->
-  <!-- closes most recent bottles -->
-
-  
-    <%= @current_bottles.map do |ad| %> 
-      <ul>
-      <!-- get rid of btc address before final presentation -->
-      <li><%= ad.stringified_description %></li>
-      <li><%=image_tag ad.avatar.url(:thumb)%></li>
-      <li>Bitcoin Address: <%= ad.btc_address %></li>
-      <li>Bottle ID #<%= ad.id%></li>
-      <li><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></li>
-      <li>Transaction Date: <%= ad.created_at%>.</li>
-      <!-- Bottled at: vineyard_name: 
-      Purchased: // or, if vineyard, registered: -->
-
-      <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
+                  <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
         <%= f.hidden_field :address_description, :value => ad.stringified_description %>
         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
@@ -98,7 +40,6 @@
           <%= flash[:notice] %>
         </div>
       <% end %>
-
       <!-- to flash a message that sale has to have a recipient -->
 
       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
@@ -117,10 +58,77 @@
     <hr>
     <br>
     <br>
-    <% end %>
-    <!-- closes @current_bottles.map -->
+                
+              </div>
+            </a>
+          
+        </div>
+      </div>
+      <% end %>
+          <!-- Gallery item end -->
+    </div><!-- .row -->
+  </div>
+</section>
 
-  <hr>
+
+
+
+
+
+
+
+
+<section class="module">
+  <div class="container">
+<h3 class='title'> Past Bottles </h3><br><br>
+    <div class="row multi-columns-row">
+          <!-- Gallery item start -->          
+      
+      <%= @former_bottles.map do |ad| %>
+      <div class="col-sm-6 col-md-3 col-lg-3">
+        <div class="gallery-item">
+          
+            <a href="assets/images/section-1.jpg" class="gallery" title="Title 1">
+            <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
+              <div class="gallery-description">
+
+                  
+                      <div class="description"><%=ad.stringified_description%></div>
+                      <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
+
+    <hr>
+    <br>
+    <br>
+                
+              </div>
+            </a>
+          
+        </div>
+      </div>
+      <% end %>
+          <!-- Gallery item end -->
+    </div><!-- .row -->
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <% if current_user && current_user.is_vineyard %>
+    <p> Because you are a vineyard you can <strong> create an address that draws a balance from our testnet coin stash</strong>.<br> 
+    </p>
+    <%= button_to "Register a new bottle", new_wine_faucet_path, method: :get %>
+   <% end %> 
+ <!-- closes vineyard authentication -->
+  <br>  
+
+  
   <strong>Your Former Cellar:</strong>
     <%= @former_bottles.map do |ad| %> 
       <ul>
@@ -151,5 +159,3 @@
     <br>
     <% end %>
     <!-- closes @former_bottles.map -->
-
-
