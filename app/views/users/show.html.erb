@@ -21,13 +21,13 @@
           
             <a href="assets/images/section-1.jpg" class="gallery" title="Title 1">
             <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
-              <div class="gallery-caption">
+              <div class="gallery-description">
 
-                  <span>
-                      <div><%=ad.stringified_description%></div>
-                      <div><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
+                  
+                      <div class="description"><%=ad.stringified_description%></div>
+                      <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
 
-                  </span>
+                  
                 
               </div>
             </a>

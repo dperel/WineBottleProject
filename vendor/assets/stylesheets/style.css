@@ -2683,16 +2683,19 @@ Vertival margin, padding
 /*gallery styling
 */
 
-.gallery-icon {
-	font-size: .5em;
-	margin: 3em;
+.gallery-item {
+	line-height: 30px;
 }
 
-.gallery-icon span {
-   	line-height: 1em;
-   	width: 100%
+.gallery-item .gallery-caption span {
+	font-size: .45em;
 }
 
-.gallery-icon span div {
-		font-size: .5em;
+.gallery-item .gallery-caption .blocktrail{
+	font-size: .45em;
 }
+/*
+.gallery-description span {
+	visibility: hidden;
+}
+*/
