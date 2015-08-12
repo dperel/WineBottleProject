@@ -27,7 +27,7 @@ class Address < ActiveRecord::Base
   attr_accessor :address, 
                 :key_pair,
                 :priv_key,
-                :pub_key,
+                :pub_key, 
                 :stringified_location
 
   Bitcoin.network = :testnet3
@@ -46,7 +46,7 @@ class Address < ActiveRecord::Base
   def assign_last_location(params)
     receiver = User.find(params["address"]["current_user"])
     receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
-    self.stringified_location = receiver.stringified_location
+    self.current_location = receiver.stringified_location
     self.save
   end
 

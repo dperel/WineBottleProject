@@ -13,8 +13,8 @@ class AddressesController < ApplicationController
     @address.designation = params["address"]["designation"].strip
     @address.brand_name = params["address"]["brand_name"].strip
     @address.avatar = params["address"]["avatar"]
-    
     @address.assign_last_location(params)
+    
     if @address.designation.present? && @address.brand_name.present?
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})"
     elsif @address.designation.present? 
