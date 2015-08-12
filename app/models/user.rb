@@ -25,10 +25,13 @@ class User < ActiveRecord::Base
 
   def assign_stringified_location
     if self.state.present? 
+      binding.pry
       self.stringified_location = "#{self.city}, #{self.state}, #{self.country}"
     else 
+      binding.pry
       self.stringified_location = "#{self.city}, #{self.country}"
     end
+    binding.pry
     self.save
   end
 

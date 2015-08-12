@@ -2624,6 +2624,7 @@ Vertival margin, padding
 
 .caption-content {
 	position: absolute;
+	text-align: center;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -2702,3 +2703,19 @@ Vertival margin, padding
 .warning {
 	margin-top: -5em;
 }
+
+/*.current {
+	background-color: rgb(243, 231, 215);
+}*/
+
+
+.bottom {
+	background-image: url("grapes.jpg") !important;
+}
+
+.jumbotron h3 {
+	background-color: white;
+	display: inline-block;
+}
+
+
