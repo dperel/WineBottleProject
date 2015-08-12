@@ -14725,3 +14725,696 @@ Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 19:08:58 -0400
 
 
 Started GET "/assets/slider.css" for ::1 at 2015-08-11 19:16:36 -0400
+
+
+Started GET "/" for ::1 at 2015-08-11 22:06:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (182.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 22:06:34 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (149.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentAvatarToAddresses (20150811175915)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "addresses" ADD "avatar_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "addresses" ADD "avatar_content_type" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "addresses" ADD "avatar_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "addresses" ADD "avatar_updated_at" datetime
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150811175915"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddAddressIdToHistories (20150811191749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "histories" ADD "address_id" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150811191749"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to AddAddressesForMapToHistories (20150811192608)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "histories" ADD "addresess_for_map" text
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150811192608"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to RenameLastLocationToCurrentLocationInAddresses (20150811211149)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TEMPORARY TABLE "aaddresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vineyard_id" integer, "btc_address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar, "private_key" varchar, "public_key" varchar, "is_sold" boolean DEFAULT 'f', "vineyard_name" varchar, "wine_type" varchar, "vintage" integer, "designation" varchar, "brand_name" varchar, "provenance" varchar, "stringified_description" varchar, "url" varchar, "latitude" varchar, "longitude" varchar, "current_location" varchar, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime) 
+  [1m[36m (26.9ms)[0m  [1mSELECT * FROM "addresses"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (1, 3, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:38:25.748592', '2015-08-05 21:38:25.748592', 'THIS IS FRRRAANZIA.', '42bdc59e89405a7b584d2aa74d2c171dd06b4e16cbe8fad429c936c5495429a4', '049d54b317e1c056198742582b7a1437ae120f89b1acfd690ef45e5fd96353ef8d186704d12872b05dd0dc6df4b5e503d70183b3d9806d8a7ef50a66c6da205093', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (2, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:38:29.098020', '2015-08-05 21:38:29.098020', 'THIS IS FRRRAANZIA.', '250dad674b69b4e4551c0e90c82212665dbe22e7645b2f23ff482cafe79b7b21', '0486bf070f86f189241820d9419117166d01a87c44fc8f9002c4b56d1c911b9864f52f7e76ecca57a0a40f11f4557023f51249def87588187427644e49cf61fe63', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (3, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:40:09.828030', '2015-08-05 21:40:09.828030', 'THIS IS FRRRAANZIA.', '9f03be019cd83987ccef54a804cce3f69a8c5dad172677d3d7c0c723abfccfa0', '0414eb384ae1c11921a1ad3451ef68070c88840821cb9846d4a01cd98594b1b391ceee89b427ac3243da179967187c3f30fab3f22b51e09c82151c39370f2fa756', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (4, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:40:52.441651', '2015-08-05 21:40:52.441651', 'THIS IS FRRRAANZIA.', 'c691c527b3319d8495358cfbd4cc814e00f730f4e789205627e941b2d33136c6', '04e755b720aa428b088e1a8935ef1c2878f3c85ae64d5cfe67cf56483825289993d6addae34926ff92e710543c958a93e5871146cad1e7040132255d943ce7b6e2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (5, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:41:20.730884', '2015-08-05 21:41:20.730884', 'THIS IS FRRRAANZIA.', 'd05bb2f3bbe1643aaed9eac15ed357583e8b4cc0defab132780e707c7ed11cec', '0475d5384fc8b1f1e37742523adb04cf26334b05e44ec32f85956630f1d5c1a5f2397f19bb7b734fecb637acab8e10dd754b87f8fb8d39e6db3bee4942873af3b8', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (6, 3, NULL, 'mr5tKw3kpvhjZTi8MfXcwBggKKRMd5ss8e', '2015-08-06 16:16:52.956689', '2015-08-06 16:16:52.956689', 'THIS IS FRRRAANZIA.', '3fdd6485d72ccc46c4acd9ba68c8e34ddd14367477068680bda49a61e42caa74', '040712f30977bbc274fc6f402aa0a42e966433673347406fd5aa149bc09fdb3fa5e5aa5c9c65da79c1bfdb8f8448b2e82b0208d37ef08a817732d7e8e81fe6de2a', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (7, 3, NULL, 'ms5gozG3Tn4HBXWQdy6KDojn8Ftk2JoWoD', '2015-08-06 16:17:02.970615', '2015-08-06 16:17:02.970615', 'THIS IS FRRRAANZIA.', 'cf2c95c84ce6192ef8f6ac2d3e33708715c7c74f484cfd09add132cf3daf79a0', '04f42f404301d562bac6f368a5c0a441623a40ac56f08a37ff47d241ff4e2fb725e93aa5732d84de6b49ef92be29071bbaf59e1353e01c55d01ae434448de33249', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (8, 3, NULL, 'mhWv3ib3hGkNfQwix7eSuHGD9HndgkuENi', '2015-08-06 16:17:33.962087', '2015-08-06 16:17:33.962087', 'MO'' WINE', '54089f7512e0f8f81d4ad99fd69d6dc6020767003db72ec927e807a9f4acc491', '04e819b3e992f1ddeefedfeeebb93cc98707fa4c2818ca6d8ad4608151a2dfc9d04567bad5bd1996187386e19efa32c2f7d3a35032e4f252f83e9b13dbb0dee33d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (9, 2, NULL, 'mrHJc38hdw5e1F5M4aU83XD1XoT9UQpjn8', '2015-08-09 03:30:19.147953', '2015-08-09 03:53:44.790290', NULL, 'cabb3e500c5fbfe2d52e584034ec70a4f69d271c5991346095c443b6e0be2264', '04e2e41a8a0f2cd7121810c8565c7d2ba3bdde40cdbabf3a971857bafe927b7daf312104c7414a081e7b00295b8e605a682f21dc93730b1cd544c53ded7a31a9d6', 't', 'Abc', 'abc', 0, 'abc', '', 'abc', '0 Abc abc from abc, abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (10, 2, NULL, 'mvYZBFH2dzJ4ZNtU32uFs1WWqvGmfecfJh', '2015-08-09 03:33:29.912863', '2015-08-09 03:44:52.007249', NULL, '822d0f556f9a46a1d8511b27c436cde032e672938f26a724ba9359ba4b18709b', '048ac9a8d3cfd799fe6cb8ced67743c00255f4803773a174408ba94631b7aa29e969526453ac0ca80a1dc0f4e54090f6be74f1831a9f26bb0e512ac5d5fc474bcc', 't', 'Abc', 'abc', 0, 'abc', '', 'abc', '0 Abc abc from abc, abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (11, 2, NULL, 'mneQyfLi3z87eu3CtLhEiYPooYucuZPnrk', '2015-08-09 03:50:24.754593', '2015-08-09 04:20:07.027650', NULL, 'f85ecc5e541c8b3f2904e641593dc404f14f9996f9d009778a0468e2c36556f7', '046e6414617c04e865fad116b37d9329753e67693d0e9819752ab7e36f3305a4caadf30d47c52b3215e9cd1eb1923fc01c8b10b5a74a4f23071d07d29830649f0a', 't', '123', '123', 123, '13', '13', '132', '123 123 123 from 132, 13 (13).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (12, 2, NULL, 'mvrk5nbkHYCP6xEpyEJitSEmNyo4EUw7xy', '2015-08-09 03:50:40.657092', '2015-08-09 03:58:15.344256', NULL, '6eadefbfddfe1efec8f4872cd427dd5c543eac82d73deddd1adf4cefc10c368b', '04940e2d7b3c599b41b0609c58254027143f0467f5107aaefb154d9f8535e177a2750464d9f4df90b0502e026600254aed9a49120f1dc230e0f7f1cbd79400fd04', 't', '13', '123', 134, '1345', '134', '1234', '134 13 123 from 1234, 1345 (134).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (13, 2, NULL, 'n3r3dCpdFvRRunHwHN94nArccaqnjdRjBY', '2015-08-09 04:00:44.026738', '2015-08-09 04:00:44.026738', NULL, 'dfc630419d798ff08786a589e4dc29d673a84369e0fc0f2bc5f8a2ddf0ba055e', '04ee30227ee252ac8f0032bed5cc104fb11e7a835f6cc2ef8dec5401be1601fc8513c6311d534e812c1499b1394d723354311cad420d5d26033d3c5481004e2300', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (14, 2, NULL, 'muBKTSbh56auWUdMzqK3noib64BzUqgLxX', '2015-08-09 04:01:59.530914', '2015-08-09 04:01:59.530914', NULL, 'f8222b103fc91896c926a46bd0f90868e99fe177a4b856562f17c1d99a04d8bc', '0445c1f3c51045c18dcde0f7238ac5d1f90639a1a9aa0c0db560dfa9b95eeb4aab0eb7ba9a1fa089642ec85ec75d1add8174857a896b29c6041ad0b580e95e33d7', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (15, 2, NULL, 'mteZ6qcQR4FMHVoJZnctwKh1NCJ7JjYjyF', '2015-08-09 04:02:28.203677', '2015-08-09 04:02:28.203677', NULL, '7fc1cfd23eb1e813f315445a9077b6c97c1d0251077980b165a784e47e9ed606', '045fe561caf95385f277b2f748f151f956cb658c840b725f19a4d45cf9aa3f94573c91031372a1eceff012e2ca3155bfe84df19ead7265ca0cf78109d407edda42', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (16, 2, NULL, 'n2gYJdyeK5qpV8PyphvHUfVRSWGogbFAY2', '2015-08-09 04:03:06.862582', '2015-08-09 04:03:06.862582', NULL, '0b1772b1a29812d50dd7cf89824f5a66c413972e970ee8f31284ecc35c5082f3', '0451a0bbf993a4c4509570fa6ddf3e7d6dddd6948a6ebe3617e41a4187423128d452282f185e9c8d8c8263d95b70882b431de7d523c092d2d50b844d6196a0c7db', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (17, 2, NULL, 'n4PsERweKahD2b1q65D5H4F142efjEYg3w', '2015-08-09 04:04:24.425606', '2015-08-09 04:04:24.425606', NULL, 'd57595421ac9d4adc57465c76cbb9ca2a87305db395c3df915bc932fbf0ed8fe', '0444e3f28e8978146844a50e3b624fa80bdf06dbf5ff48d478138b1204cc7de9d6fe125ca74454a712aaf642e4a0858372e6198b965412376f637099156ee12e2a', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (18, 2, NULL, 'mmFsoxAH51vh3oy6F3SiNFk2Ce3xR7orCH', '2015-08-09 04:04:33.363246', '2015-08-09 04:04:33.363246', NULL, '9d782367fcfb77e5ef88389d8976ee4bd8ae98bfea8d3b64b0cc92f497418673', '04eff9f391d8374fbc8f41c94a48d336a326e9bef1e434b8870fc7527c3e65e1a9230bf9e07622ee3f2549dcc927cd146d5526d7d2d5177e53e8ad2f56998c1cb1', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (19, 2, NULL, 'mhJFDYCf2Kkw2ARCsN9UbrJAAzfH8hCzzU', '2015-08-09 04:04:56.187370', '2015-08-09 04:04:56.187370', NULL, 'dbec46d982bd98b3b7ee19528f1be48a5375e42c3e0eb27832a4bb5888c2dabb', '04e6f46350425ecbccaaabd0d7298401ad6edd5b0702dbebfbaf8407f46415b8aca879dd2e21ceac79b8d305dfbbd97429b470a4cf588258533d1d6930dd74190f', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (20, 2, NULL, 'msvsqj2C9AZH5gCBGAzEFxYoAXws1yS9VG', '2015-08-09 04:05:26.327130', '2015-08-09 04:05:26.327130', NULL, 'b7199a33ced04e57a754355ad4d32c861c859bb3d5963b2c73ef0539e24f2862', '044661d4d8eb369edf92d5e985bc283ed2f964ca8dbc906446227962aa5439e20cdc0ae47f92d1b764f3335c0a9f7ebf923d5bcfaf1f1de5ac6c3c341378969acf', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (21, 2, NULL, 'mmyf5bSkofk1AZCYcUP1Zo54ETgL9KN2HM', '2015-08-09 04:06:11.670018', '2015-08-09 04:06:11.670018', NULL, '2577b6848ba76f986aa817ecd7b255ed39009f00eb0e94401b05290570477111', '04220df3fde959d14b9ae479c5af9600be02fa3c7c4d25b7f83b829a04bae1048f20138b2b43911ba8da7e150d2a1fb4f7520d92d067a3a3cdeadd7133a4aa3919', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (22, 2, NULL, 'mp9G8iMEn52nqR4uC4dnyceLUpQNa4LD9U', '2015-08-09 04:06:24.851993', '2015-08-09 04:06:24.851993', NULL, '7456651a44a0d0eb3b131c0cf4f6c30fa194bfb2bb01364e6157eb46d3cd30f5', '043b7f9a58b0ff912dcc567df175fdad796c92198291e523650d644ba32900a86a255b2e5d4fa2af60f482273d183bb33668dcf32376c09c6ce48362cff6262da4', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (23, 2, NULL, 'myVd3MfzgZSjwiGVyLT79xDCoXMBkZHpRN', '2015-08-09 04:06:47.162209', '2015-08-09 04:06:47.162209', NULL, 'b47c5a5dbbc93b0efaaef87d1b266c79733db5ec686acdd54b1ba7567f04abfb', '04f4ccf8d432f9e0d248c905f98d8988cb6ee22f6f60bec5e773ca017de05f9523e296a34df0ac7380798ec0c1eed4aa0b41c0cc905191f889df552152901f337b', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (24, 2, NULL, 'mxTXSiVzJdKXDPf29yGg6eN7GSFHP5khfG', '2015-08-09 04:09:49.574541', '2015-08-09 04:09:49.574541', NULL, 'e8e147a95dade7f99e6de14e202908d551ea9ad6b2a6a795f29e61c9c49c20a4', '04c9019b8f763b9893250c74475364c2fcc7b09917b7d02efb03fda97425ef8762a3225ec475ada8900470412a8ca5ba163f93862598a9119d4b800c4cbea0ae01', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (25, 2, NULL, 'n3QcwYYhBeWg3xvaA8ZX53gpVnBLNDaCJc', '2015-08-09 04:09:54.746364', '2015-08-09 04:09:54.746364', NULL, 'b71a8d7110e50e3bf03fe38232a516ffc00c5cda6d22b4fbc07e8dfa08a0b9ff', '04ab7d86b4a80764645e100961e4b5817a02de58453201463669adadf5017b8f72c31c8ffabbec3621ab16fc16e7ed4138d7877d9eed1f2a4abfea47c7a24941b3', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (26, 2, NULL, 'mx3rMVm9JrUQAhfJwRnhcksRFJNQWQMZhv', '2015-08-09 04:10:11.501694', '2015-08-09 04:10:11.501694', NULL, 'e1315d66342fae2e42f15eb3da7d3c8f859f098f0bd133b1792fffa572390f77', '0477a1a78db84220c2ef3f3b79095da910b1892a05bc62fe2fec2f756bc52091a2a6840d26e84b97106c049dea3d8bbb426ae053b79623e6b3c4f996ee8ff3d2d2', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (27, 1, NULL, 'mhoQVHWBYuU7XXF6tp4Gf8xrWn1NP4tBTz', '2015-08-10 20:39:41.974851', '2015-08-10 20:39:41.974851', NULL, 'b9e2e6b0eb56f66b028c2c06fdf962d2f166dcf857bc5ca7233a1e64ef8076f0', '042659ce2e4160132783eea0d78ade06ddf1ee5cc5a55eaf25afa1202b2f4e3af58ddbaf5199d1b07c76b70ba7157f38aca396567ca3ebabfd4ed4526f89ab05a6', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (28, 2, NULL, 'mxr3HeAf4kDiitAcLCitbcNKvTj81eeVLA', '2015-08-10 20:40:16.927242', '2015-08-10 20:40:16.927242', NULL, '0b1899e75c59dfc8db1e51bb3d8bb19f7634cb9ea48b40e59050e2f03b26622c', '04679c6bf4b3fbe65247d00df3349654f7a8c650091ce19442dca949809fda3a9b8d084b23a3e567909bdf7c18e8e43e8acdaeec75a9bb021d540f9b0f24b5798d', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (29, 3, NULL, 'n3oypzdUqUaCPJRiM5xkri3Y4qQZD3adNR', '2015-08-10 20:40:46.131101', '2015-08-10 20:40:46.131101', NULL, 'c1ac285f0bd56edc9c0127eb152d05e50141b9d4ef34ae9df11829742ac1abff', '04bc029f6866f3eeb1cb545e30dc8695888dec76754e5251396fbac20bbdd9c22f0a11223f99c2c5d2e1c4af94fa308abc94b04c4c729c7946f7a0a63c1efc5724', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (30, 2, NULL, 'mmst6fpPfEBCsW6LQbKw9mMShKSuHxv9vS', '2015-08-10 20:42:51.123263', '2015-08-10 20:42:51.198580', NULL, '163f8e2806763e89b6f33eeb99f306152ffd5b3d160be8610303047c257a6937', '042c41b97e1dd2f52ae5027363c18df232b9ccdb46d4004eb167d2715c037fee4c55bfd91b493584de1522fcea8ddaececd0ad7519356ff81118a4a86ff25403ff', 'f', 'abc', 'abc', 0, '', '', 'abc', '0 abc abc from abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (31, 1, NULL, 'moj4bEmEg6KSi2PNZ8jH3sqq8NisTxjhCG', '2015-08-10 21:17:59.248625', '2015-08-10 21:17:59.248625', NULL, '409d60f93cfb8cb3f3befd0fe67b402d0789cb138a4a40be2e9afffdec4363dc', '047ef8751c5afa7c35e9762c0951ab59784763af77f913bc7ea2aaf8fcc34a29aa55b65415015fd45ea3c7c54e54419701d406fee1b94c6186c5ead42affe24b95', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (32, 2, NULL, 'mnoP7FJoBc7nFGngx4Q8Qtu8fUbv5s4oRq', '2015-08-10 21:18:17.243248', '2015-08-10 21:18:17.431497', NULL, 'eed1dbb103ade79035f6f140aa42a8c12e80b9f59a0e56b8001626c0613af760', '04a8ff362ae7c3e0891358a506aff47c709a11f5743ce138d418ea27f9388af6644f07ff17c9ff01cb7282516f316876de0c98c9f587e5510b6706947db8b87986', 'f', '123', '123', 123, '123', '123', '123', '123 123 123 from 123, 123 (123).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (33, 2, NULL, 'mr7SAwJMYjaHaTGzRXM4pJnwQFXhYsihVE', '2015-08-10 21:18:37.682107', '2015-08-10 21:18:37.804389', NULL, '54c7d703049196b23dbd43662c85ee8ccb0045dc5d194163c05bbc1e727880f7', '04fa434a04316e57f84731e45e24271942988d987c32cc9146c7deef3ed2385c9c4b9c600aaaff6f404c76197bdffe28a6abdc77571df6e6e597fdba61fae0d0bd', 'f', '234', '234', 234, '234', '', '234', '234 234 234 from 234, 234.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (34, 2, NULL, 'mobN3NPvYwm8XgxsUPc49XzX1BYuTdzXpG', '2015-08-11 00:12:30.921237', '2015-08-11 00:12:31.772696', NULL, 'cfe57496ed309da588c6fd224a6d718e8bf661a94eb3350c3764533919495fff', '040c6fa1b4c1dd750d4dac3c438db559c2ae5998d2f05a5411448d0ef47d75b09844dc9c09b0cdd82ad42c66cbea4a0d3a3df2bc031054d28e40062f43364b47fc', 'f', 'abs', 'abc', 0, '', '', 'abc', '0 abs abc from abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (35, 2, NULL, 'mii8wqBEpsC5LhgDft34RVPPRVuM7HkD9K', '2015-08-11 00:35:29.464302', '2015-08-11 00:35:29.623864', NULL, 'e8d45275b2715d4d58f1c197eed24e0d8ae10d185d15ba181ecb4533d737f646', '0426c6cd4858de3549b3cb4ceb6598012f113600afa8989dc144740e524b91cff28066fc5793d93f488af7175ad1ed3e2b0b6be0d892ce352973a6716710e0ce6d', 'f', 'Abc', 'Merlot', 234, '', '', 'NZYC', '234 Abc Merlot from NZYC.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (36, 1, NULL, 'mszMiAoJFbXrf3CuPbybmsy4ES8c7gQdWp', '2015-08-11 00:40:20.267883', '2015-08-11 00:41:33.591962', NULL, 'ac75129c244c1076690079ddda7cc322d5209f7c31fbecf44a497ca8f1e0be00', '04948c728e14f47cfebfbca4b3f5e02b621dd79d20f4bf82ea4450fa25434a2a7390c2346fbc28ec963ec2fe72baf28c29cb15818383387fd97a64cdd1b519da83', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (37, 2, NULL, 'mn1w8E7ji8weFkVQQpa9b1Rr4bhRP7byJe', '2015-08-11 15:40:08.483153', '2015-08-11 15:40:08.583192', NULL, 'b09bab843d003a625eb985630a5859d22c98bb9297e8d51627993cd8ab3279f5', '0481c9c35fdea639294b669c7d53beabcc2edbeccb4b79fa109c63fc9f0be40e66931da9db0d54aaf817a286a674de2f91fde8a1fda0aad38b82e273ab039272f2', 'f', 'WINE', 'Merlot', 2015, '', '', 'Flatiron', '2015 WINE Merlot from Flatiron.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (38, 2, NULL, 'mrg5Zqs4APMeHeNvnqdYfuf6VHJyHokHQk', '2015-08-11 15:50:16.969760', '2015-08-11 15:50:17.080811', NULL, '3b5cfa1842f538de4e8d1b730426ddabae921aa3ee9d518e920a006ef56838cc', '049d20d815cc527552724d3d9c8db709c49654595f0b366ac40f20c0120588a82969fbe5eed701ca22d7a225bdd6c9c7c43c361a372565d60d90c60c6428332c8d', 'f', 'Wine wine wine', 'Champagne', 2014, '', '', 'Flatiron', '2014 Wine wine wine Champagne from Flatiron.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aaddresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (39, 2, NULL, 'muX2acD8Ms87zhbTL8Md9evtdVpwJTS368', '2015-08-11 16:05:09.869417', '2015-08-11 16:05:09.999825', NULL, '865cefbb3f7afd439b5604d508d20bd26d327f697f2be1badb1455b6215ef320', '04aad01bf30c2f66ac36ba52da5e3f6536261deb243ff61a90424a86d1b39a3fbf28c4ce29d7ba59d3ab4b00de5a154eb07596f7e0bc213e63069579773d81cf8e', 'f', 'White Winter Wine', 'Cabernet Sauvignon', 2015, '', '', 'Brooklyn', '2015 White Winter Wine Cabernet Sauvignon from Brooklyn.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "addresses"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vineyard_id" integer, "btc_address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar, "private_key" varchar, "public_key" varchar, "is_sold" boolean DEFAULT 'f', "vineyard_name" varchar, "wine_type" varchar, "vintage" integer, "designation" varchar, "brand_name" varchar, "provenance" varchar, "stringified_description" varchar, "url" varchar, "latitude" varchar, "longitude" varchar, "current_location" varchar, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mSELECT * FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (1, 3, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:38:25.748592', '2015-08-05 21:38:25.748592', 'THIS IS FRRRAANZIA.', '42bdc59e89405a7b584d2aa74d2c171dd06b4e16cbe8fad429c936c5495429a4', '049d54b317e1c056198742582b7a1437ae120f89b1acfd690ef45e5fd96353ef8d186704d12872b05dd0dc6df4b5e503d70183b3d9806d8a7ef50a66c6da205093', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (2, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:38:29.098020', '2015-08-05 21:38:29.098020', 'THIS IS FRRRAANZIA.', '250dad674b69b4e4551c0e90c82212665dbe22e7645b2f23ff482cafe79b7b21', '0486bf070f86f189241820d9419117166d01a87c44fc8f9002c4b56d1c911b9864f52f7e76ecca57a0a40f11f4557023f51249def87588187427644e49cf61fe63', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (3, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:40:09.828030', '2015-08-05 21:40:09.828030', 'THIS IS FRRRAANZIA.', '9f03be019cd83987ccef54a804cce3f69a8c5dad172677d3d7c0c723abfccfa0', '0414eb384ae1c11921a1ad3451ef68070c88840821cb9846d4a01cd98594b1b391ceee89b427ac3243da179967187c3f30fab3f22b51e09c82151c39370f2fa756', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (4, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:40:52.441651', '2015-08-05 21:40:52.441651', 'THIS IS FRRRAANZIA.', 'c691c527b3319d8495358cfbd4cc814e00f730f4e789205627e941b2d33136c6', '04e755b720aa428b088e1a8935ef1c2878f3c85ae64d5cfe67cf56483825289993d6addae34926ff92e710543c958a93e5871146cad1e7040132255d943ce7b6e2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (5, 1, NULL, 'mwy5FX7MVgDutKYbXBxQG5q7EL6pmhHT58', '2015-08-05 21:41:20.730884', '2015-08-05 21:41:20.730884', 'THIS IS FRRRAANZIA.', 'd05bb2f3bbe1643aaed9eac15ed357583e8b4cc0defab132780e707c7ed11cec', '0475d5384fc8b1f1e37742523adb04cf26334b05e44ec32f85956630f1d5c1a5f2397f19bb7b734fecb637acab8e10dd754b87f8fb8d39e6db3bee4942873af3b8', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (6, 3, NULL, 'mr5tKw3kpvhjZTi8MfXcwBggKKRMd5ss8e', '2015-08-06 16:16:52.956689', '2015-08-06 16:16:52.956689', 'THIS IS FRRRAANZIA.', '3fdd6485d72ccc46c4acd9ba68c8e34ddd14367477068680bda49a61e42caa74', '040712f30977bbc274fc6f402aa0a42e966433673347406fd5aa149bc09fdb3fa5e5aa5c9c65da79c1bfdb8f8448b2e82b0208d37ef08a817732d7e8e81fe6de2a', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (7, 3, NULL, 'ms5gozG3Tn4HBXWQdy6KDojn8Ftk2JoWoD', '2015-08-06 16:17:02.970615', '2015-08-06 16:17:02.970615', 'THIS IS FRRRAANZIA.', 'cf2c95c84ce6192ef8f6ac2d3e33708715c7c74f484cfd09add132cf3daf79a0', '04f42f404301d562bac6f368a5c0a441623a40ac56f08a37ff47d241ff4e2fb725e93aa5732d84de6b49ef92be29071bbaf59e1353e01c55d01ae434448de33249', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (8, 3, NULL, 'mhWv3ib3hGkNfQwix7eSuHGD9HndgkuENi', '2015-08-06 16:17:33.962087', '2015-08-06 16:17:33.962087', 'MO'' WINE', '54089f7512e0f8f81d4ad99fd69d6dc6020767003db72ec927e807a9f4acc491', '04e819b3e992f1ddeefedfeeebb93cc98707fa4c2818ca6d8ad4608151a2dfc9d04567bad5bd1996187386e19efa32c2f7d3a35032e4f252f83e9b13dbb0dee33d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (9, 2, NULL, 'mrHJc38hdw5e1F5M4aU83XD1XoT9UQpjn8', '2015-08-09 03:30:19.147953', '2015-08-09 03:53:44.790290', NULL, 'cabb3e500c5fbfe2d52e584034ec70a4f69d271c5991346095c443b6e0be2264', '04e2e41a8a0f2cd7121810c8565c7d2ba3bdde40cdbabf3a971857bafe927b7daf312104c7414a081e7b00295b8e605a682f21dc93730b1cd544c53ded7a31a9d6', 't', 'Abc', 'abc', 0, 'abc', '', 'abc', '0 Abc abc from abc, abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (10, 2, NULL, 'mvYZBFH2dzJ4ZNtU32uFs1WWqvGmfecfJh', '2015-08-09 03:33:29.912863', '2015-08-09 03:44:52.007249', NULL, '822d0f556f9a46a1d8511b27c436cde032e672938f26a724ba9359ba4b18709b', '048ac9a8d3cfd799fe6cb8ced67743c00255f4803773a174408ba94631b7aa29e969526453ac0ca80a1dc0f4e54090f6be74f1831a9f26bb0e512ac5d5fc474bcc', 't', 'Abc', 'abc', 0, 'abc', '', 'abc', '0 Abc abc from abc, abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (11, 2, NULL, 'mneQyfLi3z87eu3CtLhEiYPooYucuZPnrk', '2015-08-09 03:50:24.754593', '2015-08-09 04:20:07.027650', NULL, 'f85ecc5e541c8b3f2904e641593dc404f14f9996f9d009778a0468e2c36556f7', '046e6414617c04e865fad116b37d9329753e67693d0e9819752ab7e36f3305a4caadf30d47c52b3215e9cd1eb1923fc01c8b10b5a74a4f23071d07d29830649f0a', 't', '123', '123', 123, '13', '13', '132', '123 123 123 from 132, 13 (13).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (12, 2, NULL, 'mvrk5nbkHYCP6xEpyEJitSEmNyo4EUw7xy', '2015-08-09 03:50:40.657092', '2015-08-09 03:58:15.344256', NULL, '6eadefbfddfe1efec8f4872cd427dd5c543eac82d73deddd1adf4cefc10c368b', '04940e2d7b3c599b41b0609c58254027143f0467f5107aaefb154d9f8535e177a2750464d9f4df90b0502e026600254aed9a49120f1dc230e0f7f1cbd79400fd04', 't', '13', '123', 134, '1345', '134', '1234', '134 13 123 from 1234, 1345 (134).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (13, 2, NULL, 'n3r3dCpdFvRRunHwHN94nArccaqnjdRjBY', '2015-08-09 04:00:44.026738', '2015-08-09 04:00:44.026738', NULL, 'dfc630419d798ff08786a589e4dc29d673a84369e0fc0f2bc5f8a2ddf0ba055e', '04ee30227ee252ac8f0032bed5cc104fb11e7a835f6cc2ef8dec5401be1601fc8513c6311d534e812c1499b1394d723354311cad420d5d26033d3c5481004e2300', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (14, 2, NULL, 'muBKTSbh56auWUdMzqK3noib64BzUqgLxX', '2015-08-09 04:01:59.530914', '2015-08-09 04:01:59.530914', NULL, 'f8222b103fc91896c926a46bd0f90868e99fe177a4b856562f17c1d99a04d8bc', '0445c1f3c51045c18dcde0f7238ac5d1f90639a1a9aa0c0db560dfa9b95eeb4aab0eb7ba9a1fa089642ec85ec75d1add8174857a896b29c6041ad0b580e95e33d7', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (15, 2, NULL, 'mteZ6qcQR4FMHVoJZnctwKh1NCJ7JjYjyF', '2015-08-09 04:02:28.203677', '2015-08-09 04:02:28.203677', NULL, '7fc1cfd23eb1e813f315445a9077b6c97c1d0251077980b165a784e47e9ed606', '045fe561caf95385f277b2f748f151f956cb658c840b725f19a4d45cf9aa3f94573c91031372a1eceff012e2ca3155bfe84df19ead7265ca0cf78109d407edda42', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (16, 2, NULL, 'n2gYJdyeK5qpV8PyphvHUfVRSWGogbFAY2', '2015-08-09 04:03:06.862582', '2015-08-09 04:03:06.862582', NULL, '0b1772b1a29812d50dd7cf89824f5a66c413972e970ee8f31284ecc35c5082f3', '0451a0bbf993a4c4509570fa6ddf3e7d6dddd6948a6ebe3617e41a4187423128d452282f185e9c8d8c8263d95b70882b431de7d523c092d2d50b844d6196a0c7db', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (17, 2, NULL, 'n4PsERweKahD2b1q65D5H4F142efjEYg3w', '2015-08-09 04:04:24.425606', '2015-08-09 04:04:24.425606', NULL, 'd57595421ac9d4adc57465c76cbb9ca2a87305db395c3df915bc932fbf0ed8fe', '0444e3f28e8978146844a50e3b624fa80bdf06dbf5ff48d478138b1204cc7de9d6fe125ca74454a712aaf642e4a0858372e6198b965412376f637099156ee12e2a', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (18, 2, NULL, 'mmFsoxAH51vh3oy6F3SiNFk2Ce3xR7orCH', '2015-08-09 04:04:33.363246', '2015-08-09 04:04:33.363246', NULL, '9d782367fcfb77e5ef88389d8976ee4bd8ae98bfea8d3b64b0cc92f497418673', '04eff9f391d8374fbc8f41c94a48d336a326e9bef1e434b8870fc7527c3e65e1a9230bf9e07622ee3f2549dcc927cd146d5526d7d2d5177e53e8ad2f56998c1cb1', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (19, 2, NULL, 'mhJFDYCf2Kkw2ARCsN9UbrJAAzfH8hCzzU', '2015-08-09 04:04:56.187370', '2015-08-09 04:04:56.187370', NULL, 'dbec46d982bd98b3b7ee19528f1be48a5375e42c3e0eb27832a4bb5888c2dabb', '04e6f46350425ecbccaaabd0d7298401ad6edd5b0702dbebfbaf8407f46415b8aca879dd2e21ceac79b8d305dfbbd97429b470a4cf588258533d1d6930dd74190f', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (20, 2, NULL, 'msvsqj2C9AZH5gCBGAzEFxYoAXws1yS9VG', '2015-08-09 04:05:26.327130', '2015-08-09 04:05:26.327130', NULL, 'b7199a33ced04e57a754355ad4d32c861c859bb3d5963b2c73ef0539e24f2862', '044661d4d8eb369edf92d5e985bc283ed2f964ca8dbc906446227962aa5439e20cdc0ae47f92d1b764f3335c0a9f7ebf923d5bcfaf1f1de5ac6c3c341378969acf', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (21, 2, NULL, 'mmyf5bSkofk1AZCYcUP1Zo54ETgL9KN2HM', '2015-08-09 04:06:11.670018', '2015-08-09 04:06:11.670018', NULL, '2577b6848ba76f986aa817ecd7b255ed39009f00eb0e94401b05290570477111', '04220df3fde959d14b9ae479c5af9600be02fa3c7c4d25b7f83b829a04bae1048f20138b2b43911ba8da7e150d2a1fb4f7520d92d067a3a3cdeadd7133a4aa3919', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (22, 2, NULL, 'mp9G8iMEn52nqR4uC4dnyceLUpQNa4LD9U', '2015-08-09 04:06:24.851993', '2015-08-09 04:06:24.851993', NULL, '7456651a44a0d0eb3b131c0cf4f6c30fa194bfb2bb01364e6157eb46d3cd30f5', '043b7f9a58b0ff912dcc567df175fdad796c92198291e523650d644ba32900a86a255b2e5d4fa2af60f482273d183bb33668dcf32376c09c6ce48362cff6262da4', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (23, 2, NULL, 'myVd3MfzgZSjwiGVyLT79xDCoXMBkZHpRN', '2015-08-09 04:06:47.162209', '2015-08-09 04:06:47.162209', NULL, 'b47c5a5dbbc93b0efaaef87d1b266c79733db5ec686acdd54b1ba7567f04abfb', '04f4ccf8d432f9e0d248c905f98d8988cb6ee22f6f60bec5e773ca017de05f9523e296a34df0ac7380798ec0c1eed4aa0b41c0cc905191f889df552152901f337b', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (24, 2, NULL, 'mxTXSiVzJdKXDPf29yGg6eN7GSFHP5khfG', '2015-08-09 04:09:49.574541', '2015-08-09 04:09:49.574541', NULL, 'e8e147a95dade7f99e6de14e202908d551ea9ad6b2a6a795f29e61c9c49c20a4', '04c9019b8f763b9893250c74475364c2fcc7b09917b7d02efb03fda97425ef8762a3225ec475ada8900470412a8ca5ba163f93862598a9119d4b800c4cbea0ae01', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (25, 2, NULL, 'n3QcwYYhBeWg3xvaA8ZX53gpVnBLNDaCJc', '2015-08-09 04:09:54.746364', '2015-08-09 04:09:54.746364', NULL, 'b71a8d7110e50e3bf03fe38232a516ffc00c5cda6d22b4fbc07e8dfa08a0b9ff', '04ab7d86b4a80764645e100961e4b5817a02de58453201463669adadf5017b8f72c31c8ffabbec3621ab16fc16e7ed4138d7877d9eed1f2a4abfea47c7a24941b3', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (26, 2, NULL, 'mx3rMVm9JrUQAhfJwRnhcksRFJNQWQMZhv', '2015-08-09 04:10:11.501694', '2015-08-09 04:10:11.501694', NULL, 'e1315d66342fae2e42f15eb3da7d3c8f859f098f0bd133b1792fffa572390f77', '0477a1a78db84220c2ef3f3b79095da910b1892a05bc62fe2fec2f756bc52091a2a6840d26e84b97106c049dea3d8bbb426ae053b79623e6b3c4f996ee8ff3d2d2', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (27, 1, NULL, 'mhoQVHWBYuU7XXF6tp4Gf8xrWn1NP4tBTz', '2015-08-10 20:39:41.974851', '2015-08-10 20:39:41.974851', NULL, 'b9e2e6b0eb56f66b028c2c06fdf962d2f166dcf857bc5ca7233a1e64ef8076f0', '042659ce2e4160132783eea0d78ade06ddf1ee5cc5a55eaf25afa1202b2f4e3af58ddbaf5199d1b07c76b70ba7157f38aca396567ca3ebabfd4ed4526f89ab05a6', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (28, 2, NULL, 'mxr3HeAf4kDiitAcLCitbcNKvTj81eeVLA', '2015-08-10 20:40:16.927242', '2015-08-10 20:40:16.927242', NULL, '0b1899e75c59dfc8db1e51bb3d8bb19f7634cb9ea48b40e59050e2f03b26622c', '04679c6bf4b3fbe65247d00df3349654f7a8c650091ce19442dca949809fda3a9b8d084b23a3e567909bdf7c18e8e43e8acdaeec75a9bb021d540f9b0f24b5798d', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (29, 3, NULL, 'n3oypzdUqUaCPJRiM5xkri3Y4qQZD3adNR', '2015-08-10 20:40:46.131101', '2015-08-10 20:40:46.131101', NULL, 'c1ac285f0bd56edc9c0127eb152d05e50141b9d4ef34ae9df11829742ac1abff', '04bc029f6866f3eeb1cb545e30dc8695888dec76754e5251396fbac20bbdd9c22f0a11223f99c2c5d2e1c4af94fa308abc94b04c4c729c7946f7a0a63c1efc5724', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (30, 2, NULL, 'mmst6fpPfEBCsW6LQbKw9mMShKSuHxv9vS', '2015-08-10 20:42:51.123263', '2015-08-10 20:42:51.198580', NULL, '163f8e2806763e89b6f33eeb99f306152ffd5b3d160be8610303047c257a6937', '042c41b97e1dd2f52ae5027363c18df232b9ccdb46d4004eb167d2715c037fee4c55bfd91b493584de1522fcea8ddaececd0ad7519356ff81118a4a86ff25403ff', 'f', 'abc', 'abc', 0, '', '', 'abc', '0 abc abc from abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (31, 1, NULL, 'moj4bEmEg6KSi2PNZ8jH3sqq8NisTxjhCG', '2015-08-10 21:17:59.248625', '2015-08-10 21:17:59.248625', NULL, '409d60f93cfb8cb3f3befd0fe67b402d0789cb138a4a40be2e9afffdec4363dc', '047ef8751c5afa7c35e9762c0951ab59784763af77f913bc7ea2aaf8fcc34a29aa55b65415015fd45ea3c7c54e54419701d406fee1b94c6186c5ead42affe24b95', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (32, 2, NULL, 'mnoP7FJoBc7nFGngx4Q8Qtu8fUbv5s4oRq', '2015-08-10 21:18:17.243248', '2015-08-10 21:18:17.431497', NULL, 'eed1dbb103ade79035f6f140aa42a8c12e80b9f59a0e56b8001626c0613af760', '04a8ff362ae7c3e0891358a506aff47c709a11f5743ce138d418ea27f9388af6644f07ff17c9ff01cb7282516f316876de0c98c9f587e5510b6706947db8b87986', 'f', '123', '123', 123, '123', '123', '123', '123 123 123 from 123, 123 (123).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (33, 2, NULL, 'mr7SAwJMYjaHaTGzRXM4pJnwQFXhYsihVE', '2015-08-10 21:18:37.682107', '2015-08-10 21:18:37.804389', NULL, '54c7d703049196b23dbd43662c85ee8ccb0045dc5d194163c05bbc1e727880f7', '04fa434a04316e57f84731e45e24271942988d987c32cc9146c7deef3ed2385c9c4b9c600aaaff6f404c76197bdffe28a6abdc77571df6e6e597fdba61fae0d0bd', 'f', '234', '234', 234, '234', '', '234', '234 234 234 from 234, 234.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (34, 2, NULL, 'mobN3NPvYwm8XgxsUPc49XzX1BYuTdzXpG', '2015-08-11 00:12:30.921237', '2015-08-11 00:12:31.772696', NULL, 'cfe57496ed309da588c6fd224a6d718e8bf661a94eb3350c3764533919495fff', '040c6fa1b4c1dd750d4dac3c438db559c2ae5998d2f05a5411448d0ef47d75b09844dc9c09b0cdd82ad42c66cbea4a0d3a3df2bc031054d28e40062f43364b47fc', 'f', 'abs', 'abc', 0, '', '', 'abc', '0 abs abc from abc.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (35, 2, NULL, 'mii8wqBEpsC5LhgDft34RVPPRVuM7HkD9K', '2015-08-11 00:35:29.464302', '2015-08-11 00:35:29.623864', NULL, 'e8d45275b2715d4d58f1c197eed24e0d8ae10d185d15ba181ecb4533d737f646', '0426c6cd4858de3549b3cb4ceb6598012f113600afa8989dc144740e524b91cff28066fc5793d93f488af7175ad1ed3e2b0b6be0d892ce352973a6716710e0ce6d', 'f', 'Abc', 'Merlot', 234, '', '', 'NZYC', '234 Abc Merlot from NZYC.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (36, 1, NULL, 'mszMiAoJFbXrf3CuPbybmsy4ES8c7gQdWp', '2015-08-11 00:40:20.267883', '2015-08-11 00:41:33.591962', NULL, 'ac75129c244c1076690079ddda7cc322d5209f7c31fbecf44a497ca8f1e0be00', '04948c728e14f47cfebfbca4b3f5e02b621dd79d20f4bf82ea4450fa25434a2a7390c2346fbc28ec963ec2fe72baf28c29cb15818383387fd97a64cdd1b519da83', 'f', 'arr', 'abv', 0, 'qr', '', 'wewq', '0 arr abv from wewq, qr.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (37, 2, NULL, 'mn1w8E7ji8weFkVQQpa9b1Rr4bhRP7byJe', '2015-08-11 15:40:08.483153', '2015-08-11 15:40:08.583192', NULL, 'b09bab843d003a625eb985630a5859d22c98bb9297e8d51627993cd8ab3279f5', '0481c9c35fdea639294b669c7d53beabcc2edbeccb4b79fa109c63fc9f0be40e66931da9db0d54aaf817a286a674de2f91fde8a1fda0aad38b82e273ab039272f2', 'f', 'WINE', 'Merlot', 2015, '', '', 'Flatiron', '2015 WINE Merlot from Flatiron.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (38, 2, NULL, 'mrg5Zqs4APMeHeNvnqdYfuf6VHJyHokHQk', '2015-08-11 15:50:16.969760', '2015-08-11 15:50:17.080811', NULL, '3b5cfa1842f538de4e8d1b730426ddabae921aa3ee9d518e920a006ef56838cc', '049d20d815cc527552724d3d9c8db709c49654595f0b366ac40f20c0120588a82969fbe5eed701ca22d7a225bdd6c9c7c43c361a372565d60d90c60c6428332c8d', 'f', 'Wine wine wine', 'Champagne', 2014, '', '', 'Flatiron', '2014 Wine wine wine Champagne from Flatiron.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "addresses" ("id","user_id","vineyard_id","btc_address","created_at","updated_at","description","private_key","public_key","is_sold","vineyard_name","wine_type","vintage","designation","brand_name","provenance","stringified_description","url","latitude","longitude","current_location","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (39, 2, NULL, 'muX2acD8Ms87zhbTL8Md9evtdVpwJTS368', '2015-08-11 16:05:09.869417', '2015-08-11 16:05:09.999825', NULL, '865cefbb3f7afd439b5604d508d20bd26d327f697f2be1badb1455b6215ef320', '04aad01bf30c2f66ac36ba52da5e3f6536261deb243ff61a90424a86d1b39a3fbf28c4ce29d7ba59d3ab4b00de5a154eb07596f7e0bc213e63069579773d81cf8e', 'f', 'White Winter Wine', 'Cabernet Sauvignon', 2015, '', '', 'Brooklyn', '2015 White Winter Wine Cabernet Sauvignon from Brooklyn.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aaddresses"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150811211149"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-08-11 22:06:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered home/_nav_bar.html.erb (55.1ms)
+  Rendered home/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 1628ms (Views: 1601.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/simpletextrotator.self-d494ed011929e690db8ec1263acdca124527ca308cd0fe38637e14aa0a4ad68e.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/et-line-font.self-2816ad89d4005ecc57c7af1b51023f4f51c436270397a296740c46f371b7902c.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/flexslider.self-4ba9bfeb629152f2bfa9b1fafafd244d3502e6df4f3525b745a1827ab0d636f3.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/magnific-popup.self-2fc3ff0f8854fa57f06de88e6d2619da5c3fefd51fe4f19458e71a41b315faec.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/style.self-b1c90489a21cd432ad3b10803ed5b6b04e20e0bd233b4206c2063e75de65518f.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/owl.carousel.self-8ece58a45bf8e21d1b36c1292a5a81b8c6998511fc11d62ce1a537efd2f1fcba.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/animate.self-772192f6f1558e2f1a12907a99babcbc80092379fb1bacfbfbb0edd252173773.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/verifications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:58 -0400
+
+
+Started GET "/assets/histories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/wine_faucet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/application.self-844eb9160f3a4b26c0db070e8ca0838af9482818aa101fb3fff5658e01b5e44b.css?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery-2.1.3.min.self-167adc1826a31cef2040f73c4d3996900974f3b4578f72e2c1bfb814d66ca2fb.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/appear.self-7a38302101eefd28689dd5a593987ea000a60ad587cce07db67838165246b330.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps.self-aba158bad4a74896539d82a91d1961fdff68b20780c3b1f06545d75744db1bf3.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/owl.carousel.min.self-ee217c0bc23f4d8dd78f1859aa30cfc915864228ad3d2077f9ad2befc8c4626e.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/custom.self-cb47d2ebc6fae1cbd58f524c019b6abaac26ab17c5b6c3bcbdd74b1d3ff3e95b.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/histories.self-1e51e4c3212ef5f74c142f68925e611c0fbcefafbc0c52e2a1ccf08ee373f9c0.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/addresses.self-7367de5284af23db3839a9c49a1a5f4b9f27794e299c386989a99418c061ef8d.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/verifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/wine_faucet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/assets/application.self-759b0e206098bdbdcf55baffb23217398fdaeaea3cd1514bd2fafd42d59037e1.js?body=1" for ::1 at 2015-08-11 22:06:59 -0400
+
+
+Started GET "/fonts/et-line.woff" for ::1 at 2015-08-11 22:06:59 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/et-line.woff"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (200.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (198.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (346.1ms)
+
+
+Started GET "/fonts/et-line.ttf" for ::1 at 2015-08-11 22:07:00 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/et-line.ttf"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (325.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (212.5ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:07:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (7.7ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" != ?)[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE ("users"."id" != ?)  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (2.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (128.8ms)
+Completed 200 OK in 249872ms (Views: 851.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:11:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" != ?)  [["id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (139.8ms)
+Completed 200 OK in 3318ms (Views: 601.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 22:11:20 -0400
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-08-11 22:11:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.8ms)
+
+
+Started GET "/images/thumb/missing.png" for ::1 at 2015-08-11 22:11:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (133.4ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 22:11:21 -0400

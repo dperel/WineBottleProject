@@ -5,11 +5,13 @@ class UsersController < ApplicationController
     @user.save ? (redirect_to @user) : (redirect_to '/users/new')
   end
 
-  def show # see your cellar
+  def show # after clicking 'see your cellar'
     @user = current_user
     assign_stringified_location
     assign_cellar
-    @all_users = User.all # for a drop-down for selling bottles
+    binding.pry
+    @users = User.where.not(id: current_user.id)
+     # for a drop-down for selling bottles
   end
 
   # helper methods for show
