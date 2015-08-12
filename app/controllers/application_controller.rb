@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  after_filter :configure_user_location, :only => :create, if: :devise_controller?
+
+  #AFTER devise finishes signing up, do that stringify thing
+
   # helper_method :current_user
 
   # def current_user
@@ -14,6 +18,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :city, :state, :country, :business_name, :password, :is_vineyard) }
+  end
+
+  def configure_user_location
+    @user.assign_stringified_location
   end
 
 

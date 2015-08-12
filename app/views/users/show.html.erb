@@ -5,16 +5,19 @@
     <div class="container ">
       <h1>Your Wine Cellar </h1>
       <br><br><br><br>
+      <% if current_user && current_user.is_vineyard %>
+        <h3 class='title'> <%= link_to "Register a new bottle", new_wine_faucet_path, method: :get %> </h3>
+      <% end %> 
     </div>
 </div>
 
 <!-- CURRENT BOTTLES-->
 
-<section class="module">
+<section class="module current">
   <div class="container">
 
         
-            <h3 class='title'> Current Bottles </h3><br><br>
+            <h2 class='title'> Current Bottles </h2><br><br>
 
             <div class="row multi-columns-row">
              
@@ -70,9 +73,9 @@
 
   <!-- FORMER BOTTLES  -->
 
-  <section class="module">
-    <div class="container">
-      <h3 class='title'> Former Bottles </h3><br><br>
+  <section class="module former">
+    <div class="container ">
+      <h2 class='title'> Former Bottles </h2><br><br>
         <div class="row multi-columns-row">
 
           <!-- Gallery item start --> 
@@ -98,6 +101,3 @@
 
 <!-- MAKE BOTTLE -->
 
-<% if current_user && current_user.is_vineyard %>
-   <h3 class='title'> <%= link_to "Register a new bottle", new_wine_faucet_path, method: :get %> </h3>
- <% end %> 
