@@ -10,8 +10,7 @@ class UsersController < ApplicationController
     assign_stringified_location
     assign_cellar
     binding.pry
-    @users = User.where.not(id: current_user.id)
-     # for a drop-down for selling bottles
+    @users = User.all_except_current(current_user) # for a drop-down menu for selling bottles
   end
 
   # helper methods for show

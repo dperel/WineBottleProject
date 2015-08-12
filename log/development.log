@@ -15418,3 +15418,271 @@ ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.pn
 
 
 Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 22:11:21 -0400
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:15:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE ("users"."id" != 2)
+  Rendered layouts/_nav_bar.html.erb (4.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mAddress Load (1.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (265.5ms)
+Completed 200 OK in 316896ms (Views: 1174.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:20:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" != 2)
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (146.5ms)
+Completed 200 OK in 2781ms (Views: 622.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:20:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mAddress Load (0.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'  [["user_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[35mAddress Load (0.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (116.4ms)
+Completed 200 OK in 4257ms (Views: 581.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-11 22:20:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_nav_bar.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "addresses" WHERE "addresses"."user_id" = ?  [["user_id", 2]]
+  [1m[36mAddress Load (0.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ?  ORDER BY "addresses"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 'f'[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" != 2)
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."user_id" = ? AND "addresses"."is_sold" = 't'[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 2609ms (Views: 594.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/slider.css" for ::1 at 2015-08-11 22:20:31 -0400
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-08-11 22:20:31 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (158.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (114.1ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (209.3ms)
+
+
+Started GET "/images/thumb/missing.png" for ::1 at 2015-08-11 22:20:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.2ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.2ms)
+
+
+Started GET "/assets/bottle_open.jpg" for ::1 at 2015-08-11 22:20:32 -0400
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-08-11 22:20:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (153.5ms)
+
+
+Started GET "/images/thumb/missing.png" for ::1 at 2015-08-11 22:20:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/annaershova/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.3ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/annaershova/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (146.5ms)
