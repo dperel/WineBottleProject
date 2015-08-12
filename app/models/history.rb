@@ -13,8 +13,10 @@ class History < ActiveRecord::Base
     transaction_data = chain_client.get_address_transactions(address)
     if transaction_data.length == 1
       prior_address = transaction_data[0]["inputs"][0]["addresses"][0] # this is a the source of the transaction
-    else 
+    elsif transaction_data.length > 1
       prior_address = transaction_data[1]["inputs"][0]["addresses"][0]
+    else 
+      prior_address = "mgEZRfavVcZ3MHkYSwfQGD2S2eZWZ7wdsZ"
     end
 
     if prior_address == "mgEZRfavVcZ3MHkYSwfQGD2S2eZWZ7wdsZ"# if the source == master faucet

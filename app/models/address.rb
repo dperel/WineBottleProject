@@ -2,6 +2,7 @@ class Address < ActiveRecord::Base
   
   require 'bitcoin'
   require 'awesome_print'
+   before_create :randomize_file_name
 
   belongs_to :user
   belongs_to :vineyard 
@@ -12,7 +13,9 @@ class Address < ActiveRecord::Base
 
   has_attached_file :avatar, 
                     :styles => {:medium => "300x300>", :thumb => "100x100>" }, 
-                    :default_url => "/images/:style/missing.png"
+                    :default_url => "/images/:style/missing.png",
+                    :path => ":rails_root/public/addresses/avatars/:basename_:style.:extension",
+                    :url => "/addresses/avatars/:basename_:style.:extension"
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
@@ -52,6 +55,12 @@ class Address < ActiveRecord::Base
     self.private_key = key_pair[0]
     self.public_key = key_pair[1]
     self.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
+  end
+
+  private
+   def randomize_file_name
+    extension = File.extname(avatar_file_name).downcase
+    self.avatar.instance_write(:file_name, "#{SecureRandom.hex(16)}#{extension}")
   end
   
 end
