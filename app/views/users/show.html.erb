@@ -57,7 +57,7 @@
     <strong>Most recent bottle created:</strong>
     <ul>
       <li><%=@user.addresses.last.stringified_description%></li>
-      <li><%=image_tag @user.addresses.last.avatar.url(:medium)%></li>
+      <li><%=image_tag @user.addresses.last.avatar.url%></li>
       <li>Address: <%=@user.addresses.last.btc_address%></li>
       <li>Created at <%=@user.addresses.last.created_at%></li>
       <li><a href="https://www.blocktrail.com/tBTC/address/<%=@user.addresses.last.btc_address%>">Find Me on the Blockchain</a></li>
@@ -84,10 +84,16 @@
         <%= f.hidden_field :address_description, :value => ad.stringified_description %>
         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
-        <%= f.collection_select( :user_id, @all_users, :id, :name, {:prompt => true}) %>
+        <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => true}) %>
         <%= f.submit "Sell" %> 
       <% end %>
       <!-- closes sell -->
+      <% if flash[:notice] %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <!-- to flash a message that sale has to have a recipient -->
 
       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>

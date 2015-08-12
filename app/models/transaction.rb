@@ -23,6 +23,7 @@ class Transaction < ActiveRecord::Base
     @address.user_id = recipient.id
     @address.transfer_old_attributes(previous_address)
     @address.save
+    binding.pry
   end
 
 

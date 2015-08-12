@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
                         :city, 
                         :country
 
-  # validates_uniqueness_of :email Devise takes care of that
+  scope :all_except_current, ->(user) { where.not(id: user) }
 
   def assign_stringified_location
     if self.state.present? 

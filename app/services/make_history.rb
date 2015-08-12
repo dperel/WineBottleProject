@@ -10,7 +10,6 @@ class MakeHistory
     wine_story = History.new
     wine_story.address_id = Address.last.id
     address = Address.last.btc_address
-    binding.pry
     History.history_array(address)
     History.make_history(address, wine_story) 
     wine_story.save
