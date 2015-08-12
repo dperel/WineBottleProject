@@ -23,6 +23,15 @@ class User < ActiveRecord::Base
 
   scope :all_except_current, ->(user) { where.not(id: user) }
 
+  def assign_stringified_location
+    if self.state.present? 
+      self.stringified_location = "#{self.city}, #{self.state}, #{self.country}"
+    else 
+      self.stringified_location = "#{self.city}, #{self.country}"
+    end
+    self.save
+  end
+
   def current_bottles
     addresses.where(is_sold: false)
   end
