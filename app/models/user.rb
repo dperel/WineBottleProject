@@ -23,6 +23,15 @@ class User < ActiveRecord::Base
 
   # validates_uniqueness_of :email Devise takes care of that
 
+  def assign_stringified_location
+    if self.state.present? 
+      self.stringified_location = "#{self.city}, #{self.state}, #{self.country}"
+    else 
+      self.stringified_location = "#{self.city}, #{self.country}"
+    end
+    self.save
+  end
+
   def current_bottles
     addresses.where(is_sold: false)
   end
