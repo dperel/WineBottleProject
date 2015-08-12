@@ -49,6 +49,11 @@
  <!-- closes vineyard authentication -->
   <br>  
 
+  <% if flash[:message] %>
+    <div class="message">
+      <%= flash[:message] %>
+    </div>
+  <% end %>
   
   <h2>Your Wine Cellar:</h2>
 <!-- 
@@ -93,6 +98,7 @@
           <%= flash[:notice] %>
         </div>
       <% end %>
+
       <!-- to flash a message that sale has to have a recipient -->
 
       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
