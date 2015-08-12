@@ -6,6 +6,7 @@ class TransactionsController < ApplicationController
       previous_btc = previous_address.btc_address
       if Transaction.get_balance(previous_btc)
         if params[:address][:user_id].blank? # cannot sell to no listed user
+          redirect_to request.referrer
           flash[:notice] = "Please choose a user."
         else # if there is a valid recipient
           recipient = User.find(params[:address][:user_id])

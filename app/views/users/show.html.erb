@@ -21,12 +21,13 @@
 
             <div class="row multi-columns-row">
              
-  
               <% if flash[:notice] %>
-                <div class="notice">
+                <div class="notice" style="color:red" style="text-align:center" >
                   <%= flash[:notice] %>
                 </div>
               <% end %>
+  
+          
           <!-- to flash a message that sale has to have a recipient -->
 
           <!-- Gallery item start --> 
@@ -34,7 +35,7 @@
               <%= @current_bottles.map do |ad| %>
                 <div class="col-sm-6 col-md-3 col-lg-3">
                   <div class="gallery-item">
-                
+          
                   <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
                     <div class="gallery-description">
                       <div class="description"><%=ad.stringified_description%></div>
