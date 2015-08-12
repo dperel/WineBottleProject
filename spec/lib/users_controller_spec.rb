@@ -27,7 +27,6 @@ RSpec.describe UsersController, :type => :controller do
   context "GET #show" do
     xit "assigns current user to @user" do
       user = build(:user)
-      # get :show, id: user.id
       expect(assigns(:user)).to eq(user)
     end
 
@@ -38,6 +37,7 @@ RSpec.describe UsersController, :type => :controller do
         user = build(:user)
         expect(user.class).to eq(User)
       end
+
       it "assigns a user with a stringified location" do
         user.stringified_location = "#{user.city}#{user.state}#{user.country}"
         expect(user.stringified_location).not_to be_empty
