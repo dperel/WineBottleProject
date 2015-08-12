@@ -9,6 +9,7 @@ class Transaction < ActiveRecord::Base
   ANGELS_SHARE = 10000 
 
   def make_transaction(previous_address, recipient, params)
+    binding.pry
     receiver_address(previous_address, recipient) # calls one method
     assign_location(recipient) # calls another method
     transfer_balance(params) # calls another method
@@ -20,10 +21,10 @@ class Transaction < ActiveRecord::Base
     @address = Address.new
     @address.generate_btc_address_and_keys
     @address.current_location = recipient.stringified_location 
+    @address.avatar = previous_address.avatar 
     @address.user_id = recipient.id
     @address.transfer_old_attributes(previous_address)
     @address.save
-    binding.pry
   end
 
 

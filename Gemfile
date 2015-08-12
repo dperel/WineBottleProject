@@ -37,6 +37,9 @@ gem 'gmaps4rails'
 
 gem 'underscore-rails'
 
+gem 'activesupport'
+#includes a hex generator to give our image files unique names
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -94,6 +97,7 @@ group :development, :test do
   gem 'geocoder'
 
   gem 'faker'
+
 
 end
 
