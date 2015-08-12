@@ -6,13 +6,19 @@ class AddressesController < ApplicationController
   def create  # following pressing 'register a new bottle' and then 'submit'
     @address = Address.new
     @address.user_id = current_user.id
-    @address.vineyard_name = params["address"]["vineyard_name"].strip
-    @address.wine_type = params["address"]["wine_type"].strip
-    @address.vintage = params["address"]["vintage"].strip
-    @address.provenance = params["address"]["provenance"].strip
-    @address.designation = params["address"]["designation"].strip
-    @address.brand_name = params["address"]["brand_name"].strip
-    @address.avatar = params["address"]["avatar"]
+    attrs_for_assignment = ["vineyard_name", "wine_type", "vintage", "provenance",
+                          "brand_name", "designation", "stringified_description", "avatar"]            
+    @address.attributes.each do |key, value|
+      if attrs_for_assignment.include?(key)
+        if !params["address"][key].nil?
+          binding.pry
+          value = params["address"][key] 
+          
+          value.strip
+        end
+      end
+    end
+
     
     @address.assign_last_location(params)
     if @address.designation.present? && @address.brand_name.present?
@@ -25,7 +31,7 @@ class AddressesController < ApplicationController
       @address.stringified_description = 
         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}."
     end
-
+    binding.pry
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]
@@ -41,8 +47,6 @@ class AddressesController < ApplicationController
     @user_addresses = Addresses.find(params[:user_id])
   end
 
-  def assign_bitcoin_keys
-  end
 
   private
 
