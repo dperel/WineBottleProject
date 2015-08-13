@@ -44,7 +44,6 @@ class Transaction < ActiveRecord::Base
     balance = current_address_info[0]["confirmed"]["balance"]
     if balance == 0
      false
-     binding.pry
     else
       chain_client.transact(
         inputs: 
