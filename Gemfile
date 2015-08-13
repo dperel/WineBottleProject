@@ -47,6 +47,8 @@ gem 'bootstrap-sass'
 gem 'rspec-rails', '~> 3.3.3'
 gem 'geocoder'
 
+gem 'font-awesome-rails'
+
 group :development, :test do
 
   gem 'capybara'
