@@ -24,6 +24,22 @@ class Address < ActiveRecord::Base
   geocoded_by :stringified_location
   after_validation :geocode
 
+
+  def assign_attributes_from_params (params)
+    attrs_for_assignment = ["vineyard_name", "wine_type", "vintage", "provenance", "brand_name", "designation", "stringified_description", "avatar"]
+    
+    self.attributes.each do |key, value|
+      if attrs_for_assignment.include?(key)
+        if !params["address"][key].nil?
+          value = params["address"][key] 
+          value.strip
+        end
+      end
+    end
+
+  end
+
+
   # Paperclip attributes:
   has_attached_file :avatar, 
                     :styles => {:medium => "300x300>", :thumb => "100x100>" }, 
@@ -32,8 +48,10 @@ class Address < ActiveRecord::Base
                     :url => "/addresses/avatars/:basename_:style.:extension"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
+
   def transfer_old_attributes(sending_address)
     old_address = sending_address
+    binding.pry
     new_address = self 
     attrs_for_transfer = ["vineyard_name", "wine_type", "vintage", "provenance",
                           "brand_name", "stringified_location", "designation", "stringified_description", 
@@ -49,6 +67,21 @@ class Address < ActiveRecord::Base
     self.current_location = receiver.stringified_location
     self.save
   end
+
+
+  def create_stringified_description
+    if self.designation.present? && self.brand_name.present?
+      self.stringified_description = "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}, #{self.designation} (#{self.brand_name})"
+    elsif self.designation.present? 
+      self.stringified_description = "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}, #{self.designation}"
+    elsif self.brand_name.present?
+      self.stringified_description = "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance} (#{self.brand_name})"
+    else 
+      self.stringified_description = 
+        "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}"
+    end
+  end
+
 
   def generate_btc_address_and_keys # sets Bitcoin address and a key pair using Bitcoin API
     key_pair = Bitcoin::generate_key

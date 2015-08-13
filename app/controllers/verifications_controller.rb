@@ -9,9 +9,9 @@ class VerificationsController < ApplicationController
     @address_balance = @response[0]["confirmed"]["balance"]
     @address_balance > 0 ? 
       @verification_status = 
-        "Your transaction is recorded in the blockchain. Your bottle can be now sold to another user." 
+        "Your transaction is recorded in the blockchain <br> <h1> Your bottle can be now sold to another user <h1>".html_safe
       : @verification_status = 
-        "Your transaction has not been yet recorded in the blockchain."
+        "Your transaction has not been yet recorded in the blockchain"
   end 
 
 end
