@@ -239,7 +239,7 @@ a,
 
 .btn.btn-d {
 	background: rgba(17, 17, 17, .8);
-	color: #fff;
+	color: rgb(150, 191, 185);
 }
 
 .btn.btn-d:hover,
@@ -2640,13 +2640,19 @@ Vertival margin, padding
 	background-repeat:no-repeat;
 	background-size:cover;
 	padding-top: 10em;
-	padding-bottom: 10em;
+	padding-bottom: 12em;
 }
 
 
 .jumbotron h1 {
+	margin-top: -.2em;
+	font-family: 'Montserrat', sans-serif;	
 	color:black;
-	font-weight: 800;
+}
+
+.jumbotron h3 {
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 3px;
 }
 
 
@@ -2690,6 +2696,7 @@ Vertival margin, padding
 
 .gallery-item .gallery-caption span {
 	font-size: .45em;
+	padding-top: 2em;
 }
 
 .gallery-item .gallery-caption .blocktrail{
@@ -2704,13 +2711,12 @@ Vertival margin, padding
 	margin-top: -5em;
 }
 
-/*.current {
-	background-color: rgb(243, 231, 215);
-}*/
+
+/*cellar styles*/
 
 
 .bottom {
-	background-image: url("grapes.jpg") !important;
+	background-image: url("grapes.jpg") ;
 }
 
 .jumbotron h3 {
@@ -2718,4 +2724,14 @@ Vertival margin, padding
 	display: inline-block;
 }
 
+.notice {
+	color: red;
+	position: absolute;
+	right: 35%;
+}
+
+.current h2 {
+	font-family: 'Montserrat', sans-serif;	
+	color:black;
+}
 

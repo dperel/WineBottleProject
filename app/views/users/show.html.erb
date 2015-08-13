@@ -10,25 +10,23 @@
       <% end %> 
     </div>
 </div>
-
+          
 <!-- CURRENT BOTTLES-->
 
 <section class="module current">
   <div class="container">
 
+    <% if flash[:notice] %>
+          <div class="notice" >
+            <%= flash[:notice] %>
+          </div>
+    <% end %>
         
             <h2 class='title'> Current Bottles </h2><br><br>
 
             <div class="row multi-columns-row">
              
-              <% if flash[:notice] %>
-                <div class="notice" style="color:red" style="text-align:center" >
-                  <%= flash[:notice] %>
-                </div>
-              <% end %>
-  
-          
-          <!-- to flash a message that sale has to have a recipient -->
+              
 
           <!-- Gallery item start --> 
 
@@ -40,28 +38,32 @@
                     <div class="gallery-description">
                       <div class="description"><%=ad.stringified_description%></div>
                       <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
-                       
-                      <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
-                        <%= f.hidden_field :address_description, :value => ad.stringified_description %>
-                        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-                        <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
-                        <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => true}) %>
-                        <%= f.submit "Sell" %>
-                      <% end %>
-                      <!-- closes transaction create (SELL) -->
+
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-                        <%= f.submit "Verify" %> 
+                        <%= f.submit "Verify", :class => 'verify_button btn btn-g btn-round btn-sm' %> 
                       <% end %>
                       <!-- closes verify create (VERIFY) -->
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :address_id_for_history, :value => ad.id %>
-                        <%= f.submit "Get History" %> 
+                        <%= f.submit "Get History", :class => 'history_button btn btn-g btn-round btn-sm' %> 
                       <% end %>
                       <!-- closes get history -->
+
+                      <%= form_for :address, :url => {:action=>"create", :controller=>"transactions"} do |f| %>
+                        <%= f.hidden_field :address_description, :value => ad.stringified_description %>
+                        <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
+                        <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
+                         <br>
+                        <%= f.submit "Sell", :class => 'sell_button btn btn-g btn-round btn-sm', :type => 'button' %> <br>
+                        <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => false}, {:data => 'dropdown'}) %>
+                        
+
+                      <% end %>
+                      <!-- closes transaction create (SELL) -->
            
                     </div> <!--  gallery description end -->
                   </div> <!-- gallery item end -->
