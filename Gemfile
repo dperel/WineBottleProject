@@ -45,6 +45,7 @@ gem 'ffi'
 # user authentication management system
 gem 'bootstrap-sass'
 gem 'rspec-rails', '~> 3.3.3'
+gem 'geocoder'
 
 group :development, :test do
 
@@ -59,7 +60,6 @@ group :development, :test do
   gem 'pry'
   gem 'spring'
   gem 'factory_girl_rails'
-  gem 'geocoder'
   gem 'faker'
 end
 
