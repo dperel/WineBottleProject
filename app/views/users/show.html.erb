@@ -30,7 +30,7 @@
 
           <!-- Gallery item start --> 
 
-              <%= @current_bottles.map do |ad| %>
+              <% @current_bottles.map do |ad| %>
                 <div class="col-sm-6 col-md-3 col-lg-3">
                   <div class="gallery-item">
           
@@ -57,8 +57,7 @@
                         <%= f.hidden_field :address_description, :value => ad.stringified_description %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
-                         <br>
-                        Sell to <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => false}, {:data => 'dropdown'}) %><br>
+                        Sell to <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => " "}, {:data => 'dropdown'}) %><br>
                         <%= f.submit "Send", :class => 'sell_button btn btn-g btn-round btn-sm', :type => 'button' %> <br>
                         
 
@@ -82,7 +81,7 @@
         <div class="row multi-columns-row">
 
           <!-- Gallery item start --> 
-          <%= @former_bottles.map do |ad| %>
+          <% @former_bottles.map do |ad| %>
             <div class="col-sm-6 col-md-3 col-lg-3">
               <div class="gallery-item">
             
