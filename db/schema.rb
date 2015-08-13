@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150811211149) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "vineyard_id"
@@ -74,8 +77,8 @@ ActiveRecord::Schema.define(version: 20150811211149) do
     t.string   "stringified_location"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "verifications", force: :cascade do |t|
     t.datetime "created_at", null: false
