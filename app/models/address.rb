@@ -51,7 +51,6 @@ class Address < ActiveRecord::Base
 
   def transfer_old_attributes(sending_address)
     old_address = sending_address
-    binding.pry
     new_address = self 
     attrs_for_transfer = ["vineyard_name", "wine_type", "vintage", "provenance",
                           "brand_name", "stringified_location", "designation", "stringified_description", 
@@ -65,7 +64,6 @@ class Address < ActiveRecord::Base
     receiver = User.find(params["address"]["current_user"])
     receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
     self.current_location = receiver.stringified_location
-    binding.pry
     self.save
   end
 
