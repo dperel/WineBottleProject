@@ -249,7 +249,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport
   awesome_print
   bitcoin-ruby
   bootstrap-sass

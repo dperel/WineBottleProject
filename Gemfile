@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-erd'
 gem 'gmaps4rails'
 gem 'underscore-rails'
-gem 'activesupport'
+# gem 'activesupport'
 #includes a hex generator to give our image files unique names
 gem 'devise'
 # Use ActiveModel has_secure_password
