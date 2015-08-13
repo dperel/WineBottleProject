@@ -9,8 +9,6 @@ class AddressesController < ApplicationController
     @address.assign_attributes_from_params(params)
     @address.assign_last_location(params)
     @address.create_stringified_description
-    
-
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]

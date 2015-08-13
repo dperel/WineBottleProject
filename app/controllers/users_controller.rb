@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    binding.pry
     @user.assign_stringified_location
-    binding.pry
     @user.save ? (redirect_to @user) : (redirect_to '/users/new')
   end
 
