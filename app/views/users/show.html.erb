@@ -41,14 +41,14 @@
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-                        <%= f.submit "Status", :class => 'verify_button btn btn-w btn-round btn-sm' %> 
+                        <%= f.submit "Status", :class => 'verify_button btn btn-w btn-round btn-m' %> 
                       <% end %>
                       <!-- closes verify create (VERIFY) -->
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :address_id_for_history, :value => ad.id %>
-                        <%= f.submit "History", :class => 'history_button btn btn-w btn-round btn-sm' %> 
+                        <%= f.submit "History", :class => 'history_button btn btn-w btn-round btn-m' %> 
                       <% end %>
                       <!-- closes get history -->
 
@@ -57,7 +57,7 @@
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
                         Sell to <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => " "}, {:data => 'dropdown'}) %><br>
-                        <%= f.submit "Send", :class => 'sell_button btn btn-w btn-round btn-sm', :type => 'button' %> <br>
+                        <%= f.submit "Send", :class => 'sell_button btn btn-w btn-round btn-m', :type => 'button' %> <br>
                         
 
                       <% end %>
