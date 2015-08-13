@@ -5,7 +5,25 @@
   <div class="page-loader">
     <div class="loader">Loading...</div>
   </div>
+  
+  <% if user_signed_in? %>
+  <!-- Home start -->
+  <section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" style="background-image: url(https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?q=80&fm=jpg&s=f500087a88b8b870139230b457826dc3); >
 
+    <div class="hs-caption">
+      <div class="caption-content intro-banner">
+        <div class="hs-title-size-4 font-alt mb-40">This is Stem
+        </div>
+        <div class="module-subtitle font-serif small-text fork">
+              <a href="https://github.com/dperel/WineBottleProject" target = "_blank" class="fork">Fork us on Github</a>
+        </div>
+      </div>
+    </div>
+
+  </section >
+  <!-- Home end -->
+  
+  <% else %>
   <!-- Home start -->
   <section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" style="background-image: url(https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?q=80&fm=jpg&s=f500087a88b8b870139230b457826dc3); >
 
@@ -147,5 +165,6 @@
       </div><!-- .container -->
     </section>
     <!-- Features end -->
+    
+    <% end %>
 
-  

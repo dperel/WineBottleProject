@@ -48,6 +48,8 @@ gem 'rspec-rails', '~> 3.3.3'
 gem 'geocoder'
 gem 'aws-sdk', '< 2.0'
 
+gem 'font-awesome-rails'
+
 group :development, :test do
 
   gem 'capybara'
