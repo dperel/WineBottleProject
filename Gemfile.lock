@@ -40,7 +40,6 @@ GEM
     autoprefixer-rails (5.2.1.1)
       execjs
       json
-    awesome_print (1.6.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -249,7 +248,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
   bitcoin-ruby
   bootstrap-sass
   byebug
