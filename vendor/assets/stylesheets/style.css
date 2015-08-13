@@ -2607,13 +2607,9 @@ Vertival margin, padding
 
 .authentication {
 	color: white;
-	margin-top: 1.3em;
-	margin-left: 3em;
+	margin-top: 1.4em;
+	right: 10%;
 	list-style: none;
-}
-
-.menu {
-	float: right;
 }
 
 .home-section {
@@ -2629,7 +2625,6 @@ Vertival margin, padding
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-
 
 .unusable {
 	color: black;
@@ -2733,5 +2728,34 @@ Vertival margin, padding
 .current h2 {
 	font-family: 'Montserrat', sans-serif;	
 	color:black;
+}
+
+/*verification styles
+*/
+
+.verify {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;	
+	color: black;
+}
+
+.verify h2, h3{
+	color:grey;
+}
+
+/*nav bar styling
+*/
+
+.top-text {
+	margin-top: 19px;
+}
+
+.options {
+	margin-top: 3px;
+
+}
+
+.stem {
+	margin-top: 1.5em;
 }
 
