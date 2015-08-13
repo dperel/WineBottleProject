@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
   scope :all_except_current, ->(user) { where.not(id: user) }
 
-  def assign_stringified_location
+  def assign_stringified_location # assigns stringified_location attribute from the attributes with which the user was created
     if self.state.present? 
       self.stringified_location = "#{self.city}, #{self.state}, #{self.country}"
     else 

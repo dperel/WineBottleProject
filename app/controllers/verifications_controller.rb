@@ -11,7 +11,7 @@ class VerificationsController < ApplicationController
       @verification_status = 
         "Your transaction is recorded in the blockchain. Your bottle can be now sold to another user." 
       : @verification_status = 
-        "Your purchase your transaction has not been yet recorded in the blockchain."
+        "Your transaction has not been yet recorded in the blockchain."
   end 
 
 end
