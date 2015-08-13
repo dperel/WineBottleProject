@@ -74,7 +74,7 @@ class Address < ActiveRecord::Base
       self.stringified_description = "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance} (#{self.brand_name})"
     else 
       self.stringified_description = 
-        "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}."
+        "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}"
     end
   end
 

@@ -2709,6 +2709,10 @@ Vertival margin, padding
 
 /*cellar styles*/
 
+.gallery-description {
+	font-family: 'Montserrat', sans-serif;
+	visibility: hidden;
+}
 
 .bottom {
 	background-image: url("grapes.jpg") ;

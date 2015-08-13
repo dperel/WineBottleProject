@@ -36,20 +36,19 @@
           
                   <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
                     <div class="gallery-description">
-                      <div class="description"><%=ad.stringified_description%></div>
-                      <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>
+                      <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>"><%=ad.stringified_description%></a></div>
 
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"verifications"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
-                        <%= f.submit "Status", :class => 'verify_button btn btn-g btn-round btn-sm' %> 
+                        <%= f.submit "Status", :class => 'verify_button btn btn-w btn-round btn-sm' %> 
                       <% end %>
                       <!-- closes verify create (VERIFY) -->
 
                       <%= form_for :address, :url => {:action=>"create", :controller=>"histories"} do |f| %>
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :address_id_for_history, :value => ad.id %>
-                        <%= f.submit "History", :class => 'history_button btn btn-g btn-round btn-sm' %> 
+                        <%= f.submit "History", :class => 'history_button btn btn-w btn-round btn-sm' %> 
                       <% end %>
                       <!-- closes get history -->
 
@@ -58,7 +57,7 @@
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
                         Sell to <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => " "}, {:data => 'dropdown'}) %><br>
-                        <%= f.submit "Send", :class => 'sell_button btn btn-g btn-round btn-sm', :type => 'button' %> <br>
+                        <%= f.submit "Send", :class => 'sell_button btn btn-w btn-round btn-sm', :type => 'button' %> <br>
                         
 
                       <% end %>
@@ -71,12 +70,9 @@
 
             </div><!-- .row end -->
   </div>
-</section>
 
   <!-- FORMER BOTTLES  -->
-
-  <section class="module former">
-    <div class="container ">
+  <div class="container ">
       <h2 class='title'> Former Bottles </h2><br><br>
         <div class="row multi-columns-row">
 
@@ -87,8 +83,7 @@
             
               <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
                 <div class="gallery-description">
-                  <div class="description"><%=ad.stringified_description%></div>
-                  <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>">Find Me on the Blockchain</a></div>     
+                  <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>"><%=ad.stringified_description%></a></div>     
                 </div> <!--  gallery description end -->
             </div> <!-- gallery item end -->
           </div> <!-- div col-sm-6 end -->
@@ -96,7 +91,9 @@
 
       </div><!-- .row end -->
     </div>
-  </section>
+</section>
+
+
 
 
 

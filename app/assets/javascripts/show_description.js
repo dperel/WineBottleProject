@@ -1,13 +1,18 @@
-// function hideStuff(){
-//   $('.gallery-description').children().mouseenter(function(){
-//    $(this).children().find('span').css('visibility','visible');
-//  })
-//   $('.gallery-description').children().mouseleave(function(){
-//    $(this).children().find('span').css('visibility','hidden');
-//   })
-// };
+function hideStuff(){
+  $('.gallery-description').parent().mouseenter(function(){
+    $(this).children().not('.' + 'gallery').css('visibility','visible');
+ })
+  $('.gallery-description').parent().mouseleave(function(){
+    $(this).children().not('.' + 'gallery').css('visibility','hidden');
+  })
+};
 
 
-// $(document).ready(function(){
-//   hideStuff();
-// })
+$(document).ready(function(){
+  hideStuff();
+})
+
+
+ 
+
+
