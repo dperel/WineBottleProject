@@ -1,7 +1,6 @@
 class Address < ActiveRecord::Base
   
   require 'bitcoin'
-  require 'awesome_print'
 
   before_create :randomize_file_name
   after_initialize :set_bitcoin_network # sets Bitcoin network environment; default for development is testnet

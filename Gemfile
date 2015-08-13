@@ -53,8 +53,6 @@ group :development, :test do
   gem 'byebug'
   # provides a rails panel
   gem 'meta_request'
-  # makes returned data objects more readable; prepend returned object in the Rails console to see an awesome print version
-  gem 'awesome_print', require: "ap"
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
