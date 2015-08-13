@@ -36,7 +36,8 @@ class Address < ActiveRecord::Base
         end
       end
     end
-
+    self.save
+    binding.pry
   end
 
 

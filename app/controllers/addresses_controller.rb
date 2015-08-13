@@ -14,6 +14,7 @@ class AddressesController < ApplicationController
     @address.public_key = key_pair[1]
     @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
     @address.save
+    binding.pry
     new_address = @address
     WineFaucet.transfer_balance(new_address)
     redirect_to user_path(current_user)
