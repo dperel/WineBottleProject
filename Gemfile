@@ -46,6 +46,7 @@ gem 'ffi'
 gem 'bootstrap-sass'
 gem 'rspec-rails', '~> 3.3.3'
 gem 'geocoder'
+gem 'aws-sdk', '< 2.0'
 
 group :development, :test do
 
