@@ -1,4 +1,5 @@
 class History < ActiveRecord::Base
+  
   belongs_to :address
 
   def self.history_array(address)

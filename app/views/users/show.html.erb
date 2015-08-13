@@ -1,14 +1,15 @@
 <%= render "layouts/nav_bar" %>
 
-
 <div class="jumbotron">
-    <div class="container ">
-      <h1>Your Wine Cellar </h1>
-      <br><br><br><br>
-      <% if current_user && current_user.is_vineyard %>
-        <h3 class='title'> <%= link_to "Register a new bottle", new_wine_faucet_path, method: :get %> </h3>
-      <% end %> 
-    </div>
+  <div class="container ">
+    <h1>Your Wine Cellar </h1>
+    <br><br><br><br>
+    <% if current_user && current_user.is_vineyard %>
+      <h3 class='title'> 
+        <%= link_to "Register a new bottle", new_wine_faucet_path, method: :get %> 
+      </h3>
+    <% end %> 
+  </div>
 </div>
           
 <!-- CURRENT BOTTLES-->
@@ -67,23 +68,20 @@
                   </div> <!-- gallery item end -->
                 </div> <!-- div col-sm-6 end -->
               <% end %> <!-- current bottles map end -->  
-
-            </div><!-- .row end -->
+    </div><!-- .row end -->
   </div>
 
   <!-- FORMER BOTTLES  -->
   <div class="container ">
       <h2 class='title'> Former Bottles </h2><br><br>
         <div class="row multi-columns-row">
-
           <!-- Gallery item start --> 
           <% @former_bottles.map do |ad| %>
             <div class="col-sm-6 col-md-3 col-lg-3">
               <div class="gallery-item">
-            
               <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
                 <div class="gallery-description">
-                  <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>"><%=ad.stringified_description%></a></div>     
+                  <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>"><%=ad.stringified_description%></a></div>    
                 </div> <!--  gallery description end -->
             </div> <!-- gallery item end -->
           </div> <!-- div col-sm-6 end -->
@@ -92,9 +90,6 @@
       </div><!-- .row end -->
     </div>
 </section>
-
-
-
 
 
 
