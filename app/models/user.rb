@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
 
-  require "awesome_print"
 
   attr_accessor :address
 
