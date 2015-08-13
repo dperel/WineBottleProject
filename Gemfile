@@ -32,6 +32,19 @@ gem 'devise'
 # gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'chain-ruby', '~> 2.3.0'
+# grants access to core blockchain technology
+gem 'chain'
+# grants access to the bitcoin network
+gem 'bitcoin-ruby'
+# allows for image upload
+gem 'paperclip', "~> 4.3"
+# safe password management
+gem 'figaro'
+gem 'ffi'
+# user authentication management system
+gem 'bootstrap-sass'
+gem 'rspec-rails', '~> 3.3.3'
 
 group :development, :test do
 
@@ -47,20 +60,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'pry'
   gem 'spring'
-  gem 'chain-ruby', '~> 2.3.0'
-  # grants access to core blockchain technology
-  gem 'chain'
-  # grants access to the bitcoin network
-  gem 'bitcoin-ruby'
-  # allows for image upload
-  gem 'paperclip', "~> 4.3"
-  # safe password management
-  gem 'figaro'
-  gem 'ffi'
-  # user authentication management system
-
-  gem 'bootstrap-sass'
-  gem 'rspec-rails', '~> 3.3.3'
   gem 'factory_girl_rails'
   gem 'geocoder'
   gem 'faker'
