@@ -1,5 +1,6 @@
 class AddressesController < ApplicationController
 
+  require 'bitcoin'
   Bitcoin.network = :testnet3
 
   def create  # following pressing 'register a new bottle' and then 'submit'
