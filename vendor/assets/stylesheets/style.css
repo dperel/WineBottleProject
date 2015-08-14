@@ -2772,3 +2772,8 @@ Vertival margin, padding
 	color: white !important;
 }
 
+.no_session {
+	float: right;
+	margin-top: 12px;
+}
+

@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="custom-collapse">
       
       <% if user_signed_in? %>
-        <ul class="nav navbar-nav navbar-right options">
+        <ul class="nav navbar-nav navbar-right stem">
           <li class ="dropdown authentication greeting">                 
           <div>
             <li><a><strong> Hello, <%=current_user.name %></strong></a></li>
@@ -16,13 +16,12 @@
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
           </div>
       <% else %>
-        <div>
+        <div class="no_session">
           <%= link_to "Sign up", new_user_registration_path, :class => 'authentication'%> |
           <%= link_to "Log in", new_user_session_path, :class => 'authentication'  %>
         </div>
       <% end %>
-
-        </ul>
       </div>
   </div>
 </nav>
+

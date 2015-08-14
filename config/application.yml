@@ -20,5 +20,3 @@ johns_fake_password: 'johns123'
 AWS_ACCESS_KEY_ID: 'AKIAI5OMCDAIXJYF5TFQ'
 AWS_SECRET_ACCESS_KEY: '6dsWY0VlGUUt4by4miwjB5hpe79aDWNHPNnbhUC5'
 S3_BUCKET_NAME: 'winestem-assets'
-
-
