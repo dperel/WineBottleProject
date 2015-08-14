@@ -16,17 +16,17 @@ class AddressesController < ApplicationController
      
      @address.assign_last_location(params)
      if @address.designation.present? && @address.brand_name.present?
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})"
      elsif @address.designation.present? 
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}"
      elsif @address.brand_name.present?
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})"
      else 
        @address.stringified_description = 
-         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}."
+         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}"
      end
  
      key_pair = Bitcoin::generate_key
