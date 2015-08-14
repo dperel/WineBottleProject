@@ -16,7 +16,7 @@
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
           </div>
       <% else %>
-        <div class="no_session">
+        <div class="no_session" style="float: right; margin-top: 12px;">
           <%= link_to "Sign up", new_user_registration_path, :class => 'authentication'%> |
           <%= link_to "Log in", new_user_session_path, :class => 'authentication'  %>
         </div>
