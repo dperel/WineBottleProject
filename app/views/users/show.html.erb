@@ -56,7 +56,7 @@ $(document).ready(function(){
                   <div class="gallery-item">
           
                   <%=image_tag(ad.avatar.url(:thumb), :class => "gallery")%>
-                    <div class="gallery-description">
+                    <div class="gallery-description" style="visibility: hidden;">
                       <div class="blocktrail"><a href="https://www.blocktrail.com/tBTC/address/<%=ad.btc_address%>"><%=ad.stringified_description%></a></div>
 
 
