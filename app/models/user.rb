@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
 
-
   attr_accessor :address
 
   has_many :addresses

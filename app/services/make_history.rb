@@ -1,5 +1,7 @@
 class MakeHistory 
-  attr_accessor :address_id, :btc_address
+
+  attr_accessor :address_id, 
+                :btc_address
 
   def initialize
     @address_id = Address.last.id

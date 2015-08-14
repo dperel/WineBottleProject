@@ -16,8 +16,8 @@ class TransactionsController < ApplicationController
         redirect_to request.referrer
       end 
     else 
-      flash[:notice] = "This bottle has not been recorded in the blockchain yet. Please wait a couple of minutes."
       redirect_to request.referrer
+      flash[:notice] = "This bottle has not been recorded in the blockchain yet. Please wait a couple of minutes."
     end 
   end 
 end

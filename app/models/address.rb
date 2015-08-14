@@ -39,7 +39,6 @@ class Address < ActiveRecord::Base
 
   end
 
-
   # Paperclip attributes:
   has_attached_file :avatar, 
                     :styles => {:medium => "300x300>", :thumb => "100x100>" }, 
@@ -67,7 +66,6 @@ class Address < ActiveRecord::Base
     self.save
   end
 
-
   def create_stringified_description
     if self.designation.present? && self.brand_name.present?
       self.stringified_description = "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}, #{self.designation} (#{self.brand_name})"
@@ -80,7 +78,6 @@ class Address < ActiveRecord::Base
         "#{self.vintage} #{self.vineyard_name} #{self.wine_type} from #{self.provenance}"
     end
   end
-
 
   def generate_btc_address_and_keys # sets Bitcoin address and a key pair using Bitcoin API
     key_pair = Bitcoin::generate_key
