@@ -27,7 +27,11 @@ class AddressesController < ApplicationController
        @address.stringified_description = 
          "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}"
      end
-    generate_bitcoin_keys
+    key_pair = Bitcoin::generate_key
+    @address.private_key = key_pair[0]
+    @address.public_key = key_pair[1]
+    @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
+    @address.save
     new_address = @address
     WineFaucet.transfer_balance(new_address)
     redirect_to user_path(current_user)
@@ -37,21 +41,11 @@ class AddressesController < ApplicationController
     @user_addresses = Addresses.find(params[:user_id])
   end
 
-  def generate_bitcoin_keys
-    key_pair = Bitcoin::generate_key
-    @address.private_key = key_pair[0]
-    @address.public_key = key_pair[1]
-    @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
-    @address.save
-  end
-
   private
 
   def address_params
     params.require(:address).permit(:avatar)
   end
-
-
 
 end
 
