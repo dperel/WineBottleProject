@@ -21,7 +21,7 @@ class Address < ActiveRecord::Base
                 :stringified_location
 
   # Geocoder helpers:
-  geocoded_by :stringified_location
+  geocoded_by :current_location #this must say current_location, not stringified_location in order to work 
   after_validation :geocode
 
 
@@ -60,9 +60,11 @@ class Address < ActiveRecord::Base
   end
 
   def assign_last_location(params) 
+    binding.pry
     receiver = User.find(params["address"]["current_user"])
     receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
     self.current_location = receiver.stringified_location
+    binding.pry
     self.save
   end
 
