@@ -21,6 +21,7 @@
 *= require owl.carousel
 *= require animate
 *= require style
+*= require custom
 *= require_tree . 
 */
 
