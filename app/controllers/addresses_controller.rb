@@ -1,6 +1,6 @@
 class AddressesController < ApplicationController
 
-  before_create :set_bitcoin_network
+  Bitcoin.network = :testnet3
 
   def create  # following pressing 'register a new bottle' and then 'submit'
      @address = Address.new
@@ -51,9 +51,7 @@ class AddressesController < ApplicationController
     params.require(:address).permit(:avatar)
   end
 
-  def set_bitcoin_network
-    Bitcoin.network = :testnet3
-  end
+
 
 end
 
