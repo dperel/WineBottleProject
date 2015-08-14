@@ -14,7 +14,7 @@
 
 *= require bootstrap.min
 *= require simpletextrotator
-*= require font-awesome
+* require font-awesome
 *= require et-line-font
 *= require magnific-popup
 *= require flexslider
@@ -24,15 +24,4 @@
 *= require_tree . 
 */
 
-@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
- @font-face {
-   font-family: 'et-line';
-   src: font-url('et-line.eot');
-   src: font-url('et-line.eot?#iefix') format('embedded-opentype'), 
-        font-url('et-line.woff') format('woff'), 
-        font-url('et-line.ttf') format('truetype'), 
-        font-url('et-line.svg#et-line') format('svg');
-   font-weight: normal;
-   font-style: normal;
- }
