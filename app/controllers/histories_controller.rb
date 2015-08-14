@@ -1,7 +1,6 @@
 class HistoriesController < ApplicationController
 
   def create 
-
     wine_story = History.where(address_id: params["address"]["address_id_for_history"])
     if wine_story.empty?
         redirect_to user_path(current_user)

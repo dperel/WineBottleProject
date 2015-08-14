@@ -27,7 +27,6 @@ class AddressesController < ApplicationController
        @address.stringified_description = 
          "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}."
      end
- 
     generate_bitcoin_keys
     new_address = @address
     WineFaucet.transfer_balance(new_address)
