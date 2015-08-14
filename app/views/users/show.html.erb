@@ -23,12 +23,13 @@
           </div>
     <% end %>
         
-            <h2 class='title'> Current Bottles </h2><br><br>
-
+            <h2 class='title'> 
+              Current Bottles 
+            </h2>
+            <br><br>
             <div class="row multi-columns-row">
              
               
-
           <!-- Gallery item start --> 
 
               <% @current_bottles.map do |ad| %>
@@ -58,9 +59,8 @@
                         <%= f.hidden_field :sending_btc_address, :value => ad.btc_address %>
                         <%= f.hidden_field :sending_private_key, :value => ad.private_key %>
                         Sell to <%= f.collection_select( :user_id, @users, :id, :name, {:prompt => " "}, {:data => 'dropdown'}) %><br>
-                        <%= f.submit "Send", :class => 'sell_button btn btn-w btn-round btn-m', :type => 'button' %> <br>
+                        <%= f.submit "Send", :class => 'sell_button btn btn-w btn-round btn-m'%> <br>
                         
-
                       <% end %>
                       <!-- closes transaction create (SELL) -->
            

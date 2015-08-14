@@ -1,6 +1,5 @@
 class AddressesController < ApplicationController
 
-  require 'bitcoin'
   Bitcoin.network = :testnet3
 
   def create  # following pressing 'register a new bottle' and then 'submit'
@@ -16,41 +15,43 @@ class AddressesController < ApplicationController
      
      @address.assign_last_location(params)
      if @address.designation.present? && @address.brand_name.present?
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation} (#{@address.brand_name})"
      elsif @address.designation.present? 
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}, #{@address.designation}"
      elsif @address.brand_name.present?
-      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})."
+      @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})"
       @address.stringified_description = "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance} (#{@address.brand_name})"
      else 
        @address.stringified_description = 
-         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}."
+         "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}"
      end
- 
-     key_pair = Bitcoin::generate_key
-     @address.private_key = key_pair[0]
-     @address.public_key = key_pair[1]
-     @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
- 
-     @address.save
-     new_address = @address
-     WineFaucet.transfer_balance(new_address)
-     redirect_to user_path(current_user)
-
+    generate_bitcoin_keys
+    new_address = @address
+    WineFaucet.transfer_balance(new_address)
+    redirect_to user_path(current_user)
   end
 
   def index
     @user_addresses = Addresses.find(params[:user_id])
   end
 
+  def generate_bitcoin_keys
+    key_pair = Bitcoin::generate_key
+    @address.private_key = key_pair[0]
+    @address.public_key = key_pair[1]
+    @address.btc_address = Bitcoin::pubkey_to_address(key_pair[1])
+    @address.save
+  end
 
   private
 
   def address_params
     params.require(:address).permit(:avatar)
   end
+
+
 
 end
 
