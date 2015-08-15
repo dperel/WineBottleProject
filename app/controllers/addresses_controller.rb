@@ -28,7 +28,6 @@ class AddressesController < ApplicationController
        @address.stringified_description = 
          "#{@address.vintage} #{@address.vineyard_name} #{@address.wine_type} from #{@address.provenance}"
      end
-    binding.pry
     key_pair = Bitcoin::generate_key
     @address.private_key = key_pair[0]
     @address.public_key = key_pair[1]
