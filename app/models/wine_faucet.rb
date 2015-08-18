@@ -6,7 +6,7 @@ class WineFaucet < ActiveRecord::Base
 
   def self.transfer_balance(new_address)
     set_faucet_address_and_private_key
-    new_chain_client = Chain::Client.new(key_id: '0465c861f92619e87714a3f1b9bad5bb', key_secret: ENV["key_secret"])
+    new_chain_client = Chain::Client.new(key_id: '0465c861f92619e87714a3f1b9bad5bb', key_secret: ENV['key_secret'])
     new_chain_client.block_chain = 'testnet3'
     new_chain_client.transact(
       inputs: 
