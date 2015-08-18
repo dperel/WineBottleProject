@@ -60,11 +60,9 @@ class Address < ActiveRecord::Base
   end
 
   def assign_last_location(params) 
-    binding.pry
     receiver = User.find(params["address"]["current_user"])
     receiver.stringified_location = "#{receiver.city}, #{receiver.state},#{receiver.country}"
     self.current_location = receiver.stringified_location
-    binding.pry
     self.save
   end
 

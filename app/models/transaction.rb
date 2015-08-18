@@ -38,7 +38,7 @@ class Transaction < ActiveRecord::Base
   def transfer_balance(params)
     sender_address = params[:address][:sending_btc_address]
     sender_private_key = params[:address][:sending_private_key]
-    chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
+    chain_client = Chain::Client.new(key_id: '0465c861f92619e87714a3f1b9bad5bb', key_secret: ENV["key_secret"])
     chain_client.block_chain = 'testnet3'
     current_address_info = chain_client.get_address(sender_address)
     balance = current_address_info[0]["confirmed"]["balance"]
@@ -71,7 +71,7 @@ class Transaction < ActiveRecord::Base
   end
 
   def self.get_balance(previous_btc)
-    chain_client = Chain::Client.new(key_id: '363d6e562d4c76b4f0ddc636934d71e3', key_secret: ENV['key_secret'])
+    chain_client = Chain::Client.new(key_id: '0465c861f92619e87714a3f1b9bad5bb', key_secret: ENV["key_secret"])
     chain_client.block_chain = 'testnet3'
     current_address_info = chain_client.get_address(previous_btc)
     balance = current_address_info[0]["confirmed"]["balance"]
